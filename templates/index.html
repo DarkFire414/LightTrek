@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            MC
+        </title>
+        <!-- Compiled and minified CSS -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+        
+        <!--
+            Htmx: Librería para hacer request de datos desde html a flask mediante intervalos
+            de tiempo
+        -->
+        <script src="https://unpkg.com/htmx.org@1.6.1"></script>
+
+        <!-- Compiled and minified JavaScript -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.13.0/moment.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+        <link rel="stylesheet" href="../static/loader.css">
+
+    </head>
+    <body> 
+        <h4 class="center">Simulación Montecarlo</h4>
+        {% if msg is defined %}
+            <p  class="center">{{msg}}</p>
+        {% endif %}
+        <div class="container margin">
+            <div class="row" style="display: flex; justify-content: center; align-items: center;">
+                <form action="" method="post" class="col s6">
+                    <div class="row">
+                        <h6>Establezca las condiciones iniciales</h6>
+                    </div>
+                    <div class="row">
+                        <div class="col s12 input-field">
+                            <input id="Num_fotones" name="Num_fotones" type="text" class="validate">
+                            <label for="Num_fotones">Número de fotones</label>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <h6>Parámetros del tejido</h6>
+                    </div>
+                    <div class="row">
+                        <div class="col s6 input-field">
+                            <input id="coef_abs" name="coef_abs" type="text" class="validate">
+                            <label for="coef_abs">Coef. de Absorción</label>
+                        </div>
+                        <div class="col s6 input-field">
+                            <input id="coef_esp" name="coef_esp" type="text" class="validate">
+                            <label for="coef_esp">Coef. de Esparcimiento</label>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col s6 input-field">
+                            <input id="coef_anis" name="coef_anis" type="text" class="validate">
+                            <label for="coef_anis">Coef. de Anisotropía</label>
+                        </div>
+                        <div class="col s6 input-field">
+                            <input id="ind_ref" name="ind_ref" type="text" class="validate">
+                            <label for="ind_ref">Índice de refracción</label>
+                        </div>
+                    </div>   
+                    <div class="row">
+                        <label>Tipo de fuente: </label>
+                        <select name="fuente" class="browser-default">
+                            <option value="" disabled selected>Elije un tipo de fuente</option>
+                            <option value="1">Puntual Isotrópica</option>
+                            <option value="2">Colimada</option>
+                            <option value="3">Haz finito</option>
+                        </select>
+                    </div>    
+                    <div class="center">
+                        <button type="submit" class="btn teal">Iniciar
+                            <div hx-get="/progress" hx-trigger="every 1s"></div>
+                        </button>
+                    </div>
+                </form>
+                
+                <div class="col s6" style="height: 100%;";>
+                    <canvas id="canvas" width="900" height="700"></canvas>
+                    {% if fileName is defined %}
+                        <ul>
+                            <li> - Número de fotones: {{Num_fotones}}</li>
+                            <li> - Coef. de Absorción: {{coef_abs}}</li>
+                            <li> - Coef. de Esparcimiento: {{coef_esp}}</li>
+                            <li> - Coef. de Anisotropía: {{coef_anis}}</li>
+                            <li> - Índice de refracción: {{ind_ref}}</li>
+                            <li> - Tipo de fuente: {{fuente}}</li>
+                        </ul>
+                        <div class="center">
+                            <a href="../{{fileName}}" download>
+                                <input type="button" class="btn-small black" value="Descargar archivo de simulación" />
+                            </a>
+                        </div>
+                    {% endif %}
+                </div>
+
+                <!--
+                    El siguiente script evita el reenvío del formulario con los mismos
+                    datos al recargar la página (no mover)
+                -->
+                <script>
+                    if ( window.history.replaceState ) {
+                        window.history.replaceState( null, null, window.location.href );
+                    }
+                </script>
+                      
+                <script type="text/javascript" src="./static/plot.js"></script>
+                
+                <script type="text/javascript">
+                    {% if x is defined %}
+                        //console.log("Simulación ejecutada");
+                        //removeData();
+                        updatePlot({{x|tojson}}, {{ y|tojson }});
+                    {% else %}
+                        //console.log("No sim");
+                    {% endif %}
+                </script>
+            </div>
+        </div>
+    </body>
+</html>
