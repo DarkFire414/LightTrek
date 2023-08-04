@@ -8,17 +8,17 @@ var chart = new Chart(document.getElementById("canvas"), {
         labels: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
             datasets: [{ 
                 data: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1],
-                label: "Fsph",
+                label: "Depósito esférico",
                 borderColor: "#e01010",
                 fill: 'start'
             }, { 
                 data: [10, 10, 10, 10, 10, 10, 10, 10, 10, 10],
-                label: "Fcyl",
+                label: "Depósito cilíndrico",
                 borderColor: "#1ee010",
                 fill: 'start'
             }, { 
                 data: [100, 100, 100, 100, 100, 100, 100, 100, 100, 100],
-                label: "Fcpla",
+                label: "Depósito cartesiano",
                 borderColor: "#101ae0",
                 fill: 'start'
             }
@@ -37,10 +37,10 @@ var chart = new Chart(document.getElementById("canvas"), {
             x: {
                 display: true,
                 min: 0,
-                max: 45,
+                max: 200,
                 title: {
                     display: true,
-                    text: 'wavelength Λ [nm]'
+                    text: 'Distancia a la fuente r [cm]'
                 }
             },
             y: {
@@ -48,7 +48,7 @@ var chart = new Chart(document.getElementById("canvas"), {
                 type: 'logarithmic',
                 title: {
                     display: true,
-                    text: 'Fluence rate [W/cm²]'
+                    text: 'Fluencia Relativa F/P [W/cm²]'
                 }
             }
         }
@@ -82,5 +82,27 @@ function updatePlot(x, newData) {
         count++;
     });
 
+    chart.update();
+}
+
+/**
+ * Establece el límite superior del eje horizontal
+ */
+function updateAxis() {
+    /*
+    Obtiene el valor ingresado por el usuario
+    */
+    var maxValueX = Number(document.getElementById('maxValueInput').value);
+    let xValues = chart.data.labels;
+    /*
+    Recorre el arreglo que contiene a todos los elementos del eje x y comprueba si 
+    son menores al valor máximo establecido, si lo son se ignoran.
+    */
+    xValues = xValues.filter(value => value < maxValueX); 
+    /*
+    La pripiedad max de chart indica cuántos valores como máximo deben mostrarse en el 
+    eje y no un límite superior.
+    */
+    chart.options.scales.x.max = xValues.length;
     chart.update();
 }
