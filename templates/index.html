@@ -17,6 +17,7 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.13.0/moment.min.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
         <link rel="stylesheet" href="../static/loader.css">
 
@@ -34,7 +35,7 @@
                     </div>
                     <div class="row">
                         <div class="col s12 input-field">
-                            <input id="Num_fotones" name="Num_fotones" type="text" class="validate">
+                            <input id="Num_fotones" name="Num_fotones" type="number" min="1" step="1" class="validate" required>
                             <label for="Num_fotones">Número de fotones</label>
                         </div>
                     </div>
@@ -43,39 +44,39 @@
                     </div>
                     <div class="row">
                         <div class="col s6 input-field">
-                            <input id="coef_abs" name="coef_abs" type="text" class="validate">
-                            <label for="coef_abs">Coef. de Absorción</label>
+                            <input id="coef_abs" name="coef_abs" type="number" min="0.0001" max="1000.0000" step="0.0001" class="validate" required>
+                            <label for="coef_abs">Coef. de Absorción &mu;a [cm^-1]</label>
                         </div>
                         <div class="col s6 input-field">
-                            <input id="coef_esp" name="coef_esp" type="text" class="validate">
-                            <label for="coef_esp">Coef. de Esparcimiento</label>
+                            <input id="coef_esp" name="coef_esp" type="number" min="0.0001" max="1000.0000" step="0.0001" class="validate" required>
+                            <label for="coef_esp">Coef. de Esparcimiento &mu;s [cm^-1]</label>
                         </div>
                     </div>
                     <div class="row">
                         <div class="col s6 input-field">
-                            <input id="coef_anis" name="coef_anis" type="text" class="validate">
-                            <label for="coef_anis">Coef. de Anisotropía</label>
+                            <input id="coef_anis" name="coef_anis" type="number" min="-1.0000" max="1.0000" step="0.0001" class="validate" required>
+                            <label for="coef_anis">Coef. de Anisotropía g</label>
                         </div>
                         <div class="col s6 input-field">
-                            <input id="ind_ref" name="ind_ref" type="text" class="validate">
-                            <label for="ind_ref">Índice de refracción</label>
+                            <input id="ind_ref" name="ind_ref" type="number" min="0.0001" max="1000.0000" step="0.0001" class="validate" required>
+                            <label for="ind_ref">Índice de refracción n</label>
                         </div>
                     </div>   
                     <div class="row">
                         <label>Tipo de fuente: </label>
-                        <select name="fuente" class="browser-default">
-                            <option value="" disabled selected>Elije un tipo de fuente</option>
+                        <select name="fuente" class="input-field validate" required>
+                            <option value="" disabled selected>Elija un tipo de fuente</option>
                             <option value="1">Puntual Isotrópica</option>
                             <option value="2">Colimada</option>
-                            <option value="3">Haz finito</option>
+                            <option value="3">Haz finito (radio de 5 cm)</option>
                         </select>
                     </div>    
                     <div class="center">
                         <button type="submit" class="btn teal">Iniciar
-                            <!--
-                            <div hx-get="/progress" hx-trigger="every 20s"></div>
-                            -->
                         </button>
+                        
+                        <div hx-get="/progress" hx-trigger="every 1s"></div>
+                        
                     </div>
                 </form>
                 
@@ -120,7 +121,7 @@
                 </script>
                       
                 <script type="text/javascript" src="./static/plot.js"></script>
-                
+
                 <script type="text/javascript">
                     {% if x is defined %}
                         //console.log("Simulación ejecutada");
@@ -129,6 +130,12 @@
                     {% else %}
                         //console.log("No sim");
                     {% endif %}
+                </script>
+                <script>
+                      // Inicializar los campos de entrada (input-fields)
+                    document.addEventListener('DOMContentLoaded', function() {
+                        M.AutoInit(); // Inicializa todos los elementos de Materialize CSS en la página
+                    });
                 </script>
             </div>
         </div>

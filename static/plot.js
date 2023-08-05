@@ -37,7 +37,7 @@ var chart = new Chart(document.getElementById("canvas"), {
             x: {
                 display: true,
                 min: 0,
-                max: 200,
+                max: 150,
                 title: {
                     display: true,
                     text: 'Distancia a la fuente r [cm]'

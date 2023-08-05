@@ -56,7 +56,7 @@ haya una simulación en curso
 @app.route('/progress')
 def progress_html():
 	if getOperation():
-		return '<div class="loader"></div>'
+		return '<div id="progressBar" class="progress"> <div class="indeterminate"></div> </div>'
 	else:
 		return ''
 
@@ -67,7 +67,7 @@ Función principal
 def index():
 	if (request.method == 'POST'):
 		setOperation(1)
-		sourceType = ['Puntual Isotrópica', 'Colimada', 'Haz infinito']
+		sourceType = ['Puntual Isotrópica', 'Colimada', 'Haz infinito (radio 5 cm)']
 		try:
 			Num_fotones = request.form['Num_fotones']
 			app.logger.warning('Num_fotones: ' + str(Num_fotones))
