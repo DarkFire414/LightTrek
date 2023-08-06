@@ -202,7 +202,7 @@ int initSim(double Nphotonsi, double muai, double musi, double gi, double nti, i
 //	g           = 0.90;  	/* [adimensional] */
 //	nt          = 1.33;		/* [adimensional] */
 //	Nphotons    = 20000; 	/* Colocar el número de fotones en la simulación a lanzarse */
-	radial_size = 10.0;   	/* cm, intervalo total sobre el cual el paquete se extiende */
+	radial_size = 5.0;   	/* cm, intervalo total sobre el cual el paquete se extiende */
 	NR          = 2000;	 	/* Colocar el número de paquetes */
 	dr          = radial_size/NR;  	/* cm */
 	albedo      = mus/(mus + mua);	/* albedo */
