@@ -43,17 +43,29 @@
             </div>
         </li>
         <li><a href="#" id="b1" onclick="buttonId(this.id)" sdelement="true"
-                class="waves-effect blue-text text-darken-2">Introducción</a></li>
-        <li><a href="#" id="b2" onclick="buttonId(this.id)" sdelement="true" class="waves-effect">Propiedades ópticas
-                del
-                tejido</a></li>
+                class="waves-effect blue-text text-darken-2">¿Qué es LightTrek?</a></li>
+        <li>
+        <li>
+            <div class="divider"></div>
+        </li>
+        <li><a class="subheader">Método de MonteCarlo</a></li>
+        <li><a href="#" id="b2" onclick="buttonId(this.id)" sdelement="true"
+                class="waves-effect">Fundamentos MonteCarlo</a></li>
+        <li>
+            <div class="divider"></div>
+        </li>
+        <li><a class="subheader">Interacción Luz-Tejido</a></li>
+        <li><a href="#" id="b3" onclick="buttonId(this.id)" sdelement="true" class="waves-effect">Propiedades ópticas
+                del tejido</a></li>
         <li>
             <div class="divider"></div>
         </li>
         <li><a class="subheader">Simulación</a></li>
-        <li><a href="#" id="b3" onclick="buttonId(this.id)" sdelement="true" class="waves-effect" href="#!">Sistemas de
+        <li><a href="#" id="b4" onclick="buttonId(this.id)" sdelement="true" class="waves-effect" href="#!">MonteCarlo
+                aplicado</a></li>
+        <li><a href="#" id="b5" onclick="buttonId(this.id)" sdelement="true" class="waves-effect" href="#!">Sistemas de
                 coordenadas</a></li>
-        <li><a href="#" id="b4" onclick="buttonId(this.id)" sdelement="true" class="waves-effect" href="#!">Una
+        <li><a href="#" id="b6" onclick="buttonId(this.id)" sdelement="true" class="waves-effect" href="#!">Una
                 dimensión</a></li>
     </ul>
 
@@ -74,21 +86,29 @@
         <!--Contenido-->
         <div class="content container-fluid">
             <div id="pageb1" class="page" style="display: none;">
-                <h3>Introducción</h3>
+                <h4>¿Qué es LightTrek?</h4>
 
             </div>
 
             <div id="pageb2" class="page" style="display: none;">
-                <h3>Propiedades ópticas del tejido</h3>
-                <hr>
+                <h4>Fundamentos MonteCarlo</h4>
+
             </div>
 
             <div id="pageb3" class="page" style="display: none;">
-                <h3>Sistemas de coordenadas</h3>
+                <h4>Propiedades ópticas del tejido</h4>
             </div>
 
             <div id="pageb4" class="page" style="display: none;">
-                <h4>Simulación</h4>
+                <h4>MonteCarlo aplicado</h4>
+            </div>
+
+            <div id="pageb5" class="page" style="display: none;">
+                <h4>Sistemas de coordenadas</h4>
+            </div>
+
+            <div id="pageb6" class="page" style="display: none;">
+                <h4>Simulación en una dimensión</h4>
 
                 <div class="container-fluid">
                     <div class="row" style="display: flex; justify-content: center; align-items: center;">
@@ -153,24 +173,25 @@
                             {% if msg is defined %}
                             <div class="row">
                                 <div class="col s12 m6 offset-m3">
-                                  <div class="card">
-                                    <div class="card-content">
-                                      <span class="card-title">
-                                        <div class="row">
-                                            <div class="col s3 center">
-                                                <i class="small material-icons">notifications_active</i>
-                                            </div>
-                                            <div class="col s9">
-                                                <p>Mensaje</p>
-                                            </div>
+                                    <div class="card">
+                                        <div class="card-content">
+                                            <span class="card-title">
+                                                <div class="row">
+                                                    <div class="col s3 center">
+                                                        <i class="small material-icons">notifications_active</i>
+                                                    </div>
+                                                    <div class="col s9">
+                                                        <p>Mensaje</p>
+                                                    </div>
+                                                </div>
+                                            </span>
+                                            <p>{{msg}}</p>
                                         </div>
-                                        </span>
-                                      <p>{{msg}}</p>
+                                        <div class="card-action">
+                                            <a class="btn" href="#!"
+                                                onclick="scrollToSection('section1')">Resultados</a>
+                                        </div>
                                     </div>
-                                    <div class="card-action">
-                                      <a class="btn" href="#!" onclick="scrollToSection('section1')">Resultados</a>
-                                    </div>
-                                  </div>
                                 </div>
                             </div>
                             {% endif %}
@@ -180,7 +201,7 @@
                                     alt="Conceptual depiction of general interactions between light and tissue."
                                     style="width: 30vw;" />
                                 <figcaption>Representación conceptual de las interacciones generales entre la luz y el
-                                    tejido. <a href="#section1">[1]</a></figcaption>
+                                    tejido. <a href="#ref1">[1]</a></figcaption>
                             </figure>
                         </div>
 
@@ -236,7 +257,7 @@
                     //console.log("Simulación ejecutada");
                     //removeData();
                     updatePlot({{ x| tojson}}, {{ y| tojson }});
-                    
+
                     {% else %}
                     //console.log("No sim");
                     {% endif %}
@@ -244,7 +265,7 @@
 
                 <br>
                 <hr>
-                <p class="reference" id="section1">[1] Recent Progress on Near-Infrared Photoacoustic Imaging: Imaging
+                <p class="reference" id="ref1">[1] Recent Progress on Near-Infrared Photoacoustic Imaging: Imaging
                     Modality and
                     Organic Semiconducting Agents - Scientific Figure on ResearchGate. Available from: <a
                         href="https://www.researchgate.net/figure/Conceptual-depiction-of-general-interactions-between-light-and-tissue_fig2_336609457">Link</a>
