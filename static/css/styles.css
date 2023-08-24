@@ -16,10 +16,13 @@ Desktop view > 992px
 }
 .reference {
     text-indent: -30px;
-    position: absolute;
+    position: relative;
     padding-left:  40px;
     padding-right: 40px;
-    padding-bottom: 20px;
+}
+
+.bulleted {
+    list-style-type: disc !important;
 }
 /*
 Small screen view < 992px
