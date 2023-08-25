@@ -70,17 +70,17 @@ def index():
 		sourceType = ['Puntual Isotrópica', 'Colimada', 'Haz infinito (radio 5 cm)']
 		try:
 			Num_fotones = request.form['Num_fotones']
-			app.logger.warning('Num_fotones: ' + str(Num_fotones))
+			#app.logger.warning('Num_fotones: ' + str(Num_fotones))
 			coef_abs = request.form['coef_abs']
-			app.logger.warning('coef_abs: ' + str(coef_abs))
+			#app.logger.warning('coef_abs: ' + str(coef_abs))
 			coef_esp = request.form['coef_esp']
-			app.logger.warning('coef_esp: ' + str(coef_esp))
+			#app.logger.warning('coef_esp: ' + str(coef_esp))
 			coef_anis = request.form['coef_anis']
-			app.logger.warning('coef_anis: ' + str(coef_anis))
+			#app.logger.warning('coef_anis: ' + str(coef_anis))
 			ind_ref = request.form['ind_ref']
-			app.logger.warning('ind_ref: ' + str(ind_ref))
+			#app.logger.warning('ind_ref: ' + str(ind_ref))
 			fuente = request.form['fuente']
-			app.logger.warning('fuente: ' + str(fuente))
+			#app.logger.warning('fuente: ' + str(fuente))
 		except:
 			setOperation(0)
 			return render_template("/index.html", msg = 'Error: Ha ocurrido un problema al recibir el formulario!')
