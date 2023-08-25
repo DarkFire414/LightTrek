@@ -44,7 +44,7 @@ function buttonId(id) {
             sideItem.className = "waves-effect";
         }
         else {
-            sideItem.className = "waves-effect blue-text text-darken-2";
+            sideItem.className = "waves-effect sidebar-selected";
         }
     });
     //console.log("Elements found: " + sideElements.length);
