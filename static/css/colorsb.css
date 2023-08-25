@@ -16,6 +16,9 @@ body {
 .sidenav .subheader {
     color: #BBE1FA;
 }
+.sidebar-selected {
+    color: #3282B8 !important;
+}
 /*
     Nav bar
 */
