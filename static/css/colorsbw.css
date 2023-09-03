@@ -1,0 +1,143 @@
+/* root/default variables */
+:root {
+    --font-color: black;
+    --link-color:#E08E6D;
+    --bg-color: #FFFAF4;
+    --side-bg-color: #FFFAF4;
+    --side-link-color: black;
+    --side-subheader-color: gray;
+    --side-selected-color: #D25380;
+    --nav-bg-color: #D25380;
+    --title-em-color: #E08E6D;
+    --card-bg-color: #FFFAF4;
+    --card-font-color: black;
+    --btn-bg-color: #D25380;
+    --btn-font-color: white;
+    --icon-color: black;
+    --input-font-color: black;
+    --input-bg-color: #E08E6D;
+}
+/* dark theme */
+
+[data-theme="dark"] {
+    --font-color: white;
+    --link-color:#BBE1FA;
+    --bg-color: #1B262C;
+    --side-bg-color: #0F4C75;
+    --side-link-color: white;
+    --side-subheader-color: #BBE1FA;
+    --side-selected-color: #3282B8;
+    --nav-bg-color: #0F4C75;
+    --title-em-color: #BBE1FA;
+    --card-bg-color: #3282B8;
+    --card-font-color: white;
+    --btn-bg-color: #3282B8;
+    --btn-font-color: white;
+    --icon-color: white;
+    --input-font-color: white;
+    --input-bg-color: #BBE1FA;
+}
+
+
+/*
+    Fondo principal
+*/
+body {
+    background-color: var(--bg-color);
+}
+/*
+    Sidebar
+*/
+#slide-out {
+    background-color: var(--side-bg-color);
+}
+.sidenav li>a {
+    color: var(--side-link-color);
+}
+.sidenav .subheader {
+    color: var(--side-subheader-color);
+}
+.sidebar-selected {
+    color: var(--side-selected-color) !important;
+}
+/*
+    Nav bar
+*/
+nav {
+    background-color: var(--nav-bg-color);
+}
+/*
+    Tipografía
+*/
+p {
+    color: var(--font-color);
+}
+
+h6 {
+    color: var(--title-em-color);
+}
+
+h5 {
+    color: var(--font-color);
+}
+
+h4 {
+    color: var(--font-color);
+}
+
+ul {
+    color: var(--font-color);
+}
+
+li {
+    color: var(--font-color);
+}
+
+a {
+    color: var(--link-color);
+}
+/*
+    Cards
+*/
+.card {
+    background-color: var(--card-bg-color);
+}
+
+.card-content {
+    color: var(--card-font-color);
+}
+
+.card-title {
+    color: var(--card-font-color);
+}
+
+.card .card-reveal {
+    background-color: var(--card-bg-color);
+}
+/*
+    Botones
+*/
+.btn {
+    background-color: var(--btn-bg-color);
+    color: var(--btn-font-color);
+}
+.btn-small {
+    background-color: var(--btn-bg-color);
+    color: var(--btn-font-color);
+}
+/*
+    Forms
+*/
+.input-field>label {
+    color: var(--input-bg-color);
+}
+input {
+    color: var(--input-font-color);
+}
+
+.graph {
+    background-color: white;
+}
+i {
+    color: var(--icon-color);
+}

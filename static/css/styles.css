@@ -21,6 +21,10 @@ Desktop view > 992px
     padding-right: 40px;
 }
 
+.side-button {
+    margin-right: 400px;
+}
+
 .bulleted {
     list-style-type: disc !important;
 }
