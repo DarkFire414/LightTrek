@@ -1,3 +1,7 @@
 # LightTrek
 
-Página web con un algoritmo de simulación de luz incidente en tejido biológico.
+LightTrek es una plataforma web cuyo propósito es simular el comportamiento de fotones que son lanzados desde una fuente de luz a un medio, esto mediante el método de Montecarlo que es una técnica matemática que se emplea para estimar los posibles resultados de eventos inciertos y que adquirió su nombre debido al casino de Montecarlo en Mónaco, ya que, en esencia el método consiste en la generación de números aleatorios, similar a una ruleta.
+
+Con LightTrek es posible obtener una gráfica que muestra el ritmo de fluencia relativo del medio que queremos analizar (Relative Fluence Rate F/P [cm-2]) con el que se calcula de forma directa el ritmo de fluencia (Fluence Rate F [W/cm-2]) el cuál es una propiedad óptica de los materiales que da información de cuánta energía es entregada al material por unidad de área y bajo ciertas condiciones como a una longitud de onda específica.
+
+Los tratamientos y técnicas de diagnóstico utilizando luz han adquirido cada vez más popularidad debido a que no son invasivas, son seguras y funcionales. Conocer el ritmo de fluencia (F) del tejido biológico donde se aplicará el láser es muy importante debido a que permite cuantificar la cantidad segura de potencia luminosa que puede ser aplicada sin dañar el tejido. Por otro lado, diversos estudios han demostrado que el ritmo de fluencia es un parámetro que puede servir para diferenciar tejido dañado de tejido sano, es decir que es posible utilizarlo como una herramienta de diagnóstico no invasiva para diversas enfermedades.
