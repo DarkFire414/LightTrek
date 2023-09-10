@@ -1,4 +1,5 @@
-from flask import Flask, render_template, request
+from flask import Flask, render_template, request, session, redirect
+from flask_babel import Babel, gettext 
 
 import ctypes # Librería requerida para el manejo de archivos .so
 from numpy.ctypeslib import ndpointer
@@ -6,6 +7,8 @@ from numpy.ctypeslib import ndpointer
 import time
 
 app = Flask(__name__)
+# La secret key permite utilizar variables session de forma segura
+app.secret_key = "spedapapr8siwrubls3itey8v8thob"
 
 # Se importa la librería a utilizar
 lib = ctypes.CDLL("/home/joahan/Python/RandomWalk/mc_sim/mc321_mod.so");
@@ -32,6 +35,36 @@ lib.getr.restype = ndpointer(dtype=ctypes.c_double, shape=(2001,))
 lib.getFsph.restype = ndpointer(dtype=ctypes.c_double, shape=(2001,))
 lib.getFcypl.restype = ndpointer(dtype=ctypes.c_double, shape=(2001,))
 lib.getFcpla.restype = ndpointer(dtype=ctypes.c_double, shape=(2001,))
+
+"""
+Permite a Flask Babel obtener el lenguaje elegido por el usuario,
+este se guarda en una cookie llamada lang.
+	en: inglés
+	es: español
+"""
+def get_locale():
+	if session.get('lang') == 'en':
+		return 'en'
+	else:
+		return 'es'
+	
+# Establece el idioma por defecto a español
+app.config['BABEL_DEFAULT_LOCALE'] = 'es'
+# Inicializa Babel
+babel = Babel(app)
+#	Se indica a Babel que con la función get_locale obtendrá el idioma
+babel.init_app(app, locale_selector=get_locale)
+
+# Cambiar lenguaje
+@app.route('/en')
+def change_lang_en():
+	session['lang'] = 'en'
+	return redirect('/')
+
+@app.route('/es')
+def change_lang_es():
+	session['lang'] = 'es'
+	return redirect('/')
 
 """
 Esta variable indica si se está ejecutando una simulación

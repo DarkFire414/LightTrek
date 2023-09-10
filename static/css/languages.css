@@ -1,0 +1,17 @@
+:root {
+    --lang-es-display: block;
+    --lang-en-display: none;
+}
+[lang="en"] {
+    --lang-es-display: none;
+    --lang-en-display: block;
+}
+
+.lang-es {
+    display: block;
+    margin: 0px;
+    padding: 0px;
+}
+.lang-en {
+    display: block;
+}
