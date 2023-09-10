@@ -73,8 +73,8 @@
         <div class="navbar-fixed">
             <!-- Dropdown Structure -->
             <ul id='theme' class='dropdown-content'>
-                <li><a href="#!" onclick="changeTheme(1)">Claro</a></li>
-                <li><a href="#!" onclick="changeTheme(2)">Oscuro</a></li>
+                <li><a href="#!" onclick="changeTheme(1)">{{_('Claro')}}</a></li>
+                <li><a href="#!" onclick="changeTheme(2)">{{_('Oscuro')}}</a></li>
             </ul>
             <!-- Dropdown Structure -->
             <ul id='language' class='dropdown-content'>
@@ -93,7 +93,7 @@
                             <!-- Dropdown Trigger -->
                             <a class='dropdown-trigger side-button-theme' href='#' data-target='theme'>
                                 <i class="material-icons left">brightness_medium</i> 
-                                Tema
+                                {{_('Tema')}}
                             </a>
                         </li>
                         <li>
@@ -110,14 +110,14 @@
         <!--Contenido-->
         <div class="content container-fluid">
             <div id="pageb1" class="page" style="display: none;">
-                <h4>Conoce LightTrek</h4>
+                <h4>{{_('Conoce LightTrek')}}</h4>
 
-                <h5>¿Qué es LightTrek y por qué es importante?</h5>
+                <h5>{{_('¿Qué es LightTrek y por qué es importante?')}}</h5>
                 
                 <div class="row">
                     <div class="col m7">
                         <p>
-                            <em>LightTrek</em> es una plataforma web cuyo propósito es simular el comportamiento de fotones que son lanzados desde 
+                            {{_('<em>LightTrek</em> es una plataforma web cuyo propósito es simular el comportamiento de fotones que son lanzados desde 
                             una fuente de luz a un medio, esto mediante el método de Montecarlo que es una técnica matemática que se emplea 
                             para estimar los posibles resultados de eventos inciertos y que adquirió su nombre debido al casino de Montecarlo 
                             en Mónaco, ya que, en esencia el método consiste en la generación de números aleatorios, similar a una ruleta 
@@ -127,7 +127,7 @@
                             (<em>Relative Fluence Rate F/P [cm<sup>-2</sup>]</em>) con el que se calcula de forma directa el ritmo de fluencia 
                             (<em>Fluence Rate F [W/cm<sup>-2</sup>]</em>) el cuál 
                              da información de cuánta energía es entregada al material por unidad de área y bajo 
-                            ciertas condiciones como a una longitud de onda específica. 
+                            ciertas condiciones como a una longitud de onda específica.')}}
                         </p>
                     </div>
                     <div class="col m5">
@@ -136,7 +136,7 @@
                                 <img class="materialboxed" src="../static/img/sim1.gif" />
                             </div>
                             <div class="card-content">
-                                Simulación de Montecarlo para el transporte de fotones en un espacio vóxel 3D. Imagen de  <a href="https://blogs.mathworks.com/pick/2023/06/13/mcmatlab-a-monte-carlo-simulation-for-photon-transport-in-3d-voxel-space/">Mathworks</a>.
+                                {{_('Simulación de Montecarlo para el transporte de fotones en un espacio vóxel 3D. Imagen de')}}  <a href="https://blogs.mathworks.com/pick/2023/06/13/mcmatlab-a-monte-carlo-simulation-for-photon-transport-in-3d-voxel-space/">Mathworks</a>.
                             </div>
                         </div>
                     </div>
@@ -145,12 +145,12 @@
                 <div class="row">
                     <div class="col m6">
                         <p>
-                            Los tratamientos y técnicas de diagnóstico utilizando luz han adquirido cada vez más popularidad debido a que no son invasivas, 
+                            {{_('Los tratamientos y técnicas de diagnóstico utilizando luz han adquirido cada vez más popularidad debido a que no son invasivas, 
                             son seguras y funcionales. Conocer el ritmo de fluencia (<em>F</em>) del tejido biológico donde se aplicará el láser es muy 
                             importante debido a que permite cuantificar la cantidad segura de potencia luminosa que puede ser aplicada sin dañar el tejido. 
                             Por otro lado, diversos estudios han demostrado que el ritmo de fluencia es un parámetro que puede servir para diferenciar 
                             tejido dañado de tejido sano, es decir que es posible utilizarlo como una herramienta de diagnóstico no invasiva para diversas 
-                            enfermedades <a href="#ref1_p0">[1]</a>. 
+                            enfermedades <a href="#ref1_p0">[1]</a>. ')}}
                         </p>
                     </div>
                     <div class="col m6">
@@ -160,21 +160,21 @@
                     </div>
                 </div>
 
-                <h5>¿Por qué una plataforma web?</h5>
+                <h5>{{_('¿Por qué una plataforma web?')}}</h5>
                 <p>
-                    Con LightTrek se busca aprovechar las facilidades que ofrecen diversas empresas con <em>IaaS (Infraestructure as a service)</em>
+                    {{_('Con LightTrek se busca aprovechar las facilidades que ofrecen diversas empresas con <em>IaaS (Infraestructure as a service)</em>
                     o <em>Paas (Platform as a service)</em> como Amazon con Amazon Web Services o Amazon Batch que otorgan capacidad de procesamiento,
                     CPU, GPU y RAM de forma prácticamente ilimitada, con ello es posible ejecutar simulaciones muy complejas como lo pueden ser las que 
                     utilizan el método de Montecarlo que requieren de muchas iteraciones para disminuir su error. Además, el tener una aplicación 
                     en la web la hace accesible a prácticamente cualquier persona en el mundo, investigadores y estudiantes de cualquier universidad 
-                    pueden hacer uso de ella sin necesidad de instalar algo en sus computadoras, solo es necesario tener acceso a internet.
+                    pueden hacer uso de ella sin necesidad de instalar algo en sus computadoras, solo es necesario tener acceso a internet.')}}
                 </p>
 
                 <div class="row">
                     <div class="col m7">
-                        <h5>¿Cómo usar LightTrek?</h5>
+                        <h5>{{_('¿Cómo usar LightTrek?')}}</h5>
                         <p>
-                            LightTrek como plataforma web está diseñada para ser fácil de usar, entre sus páginas se encuentra información introductoria 
+                            {{_('LightTrek como plataforma web está diseñada para ser fácil de usar, entre sus páginas se encuentra información introductoria 
                             a los distintos conceptos que se necesitan conocer para comprender el funcionamiento del algoritmo y qué significan los resultados obtenidos.
                             <br><br>
                             Para ejecutar una simulación es necesario ir a la pestaña de <a href="#" id="b5" onclick="buttonId(this.id)">Ejecutar simulación</a> donde 
@@ -184,7 +184,7 @@
                             <br><br>
                             Una vez que todos los parámetros hayan sido ingresados se debe presionar el botón de <b>INICIAR</b>, aparecerá una barra de carga 
                             y la simulación comenzará, el diagrama de flujo del algoritmo se puede consultar en <a href="#" id="b4" onclick="buttonId(this.id)">Montecarlo aplicado</a>. 
-                            Al finalizar el proceso aparecerá un mensaje que indicará que la simulación ha sido ejecutada con éxito o si ha ocurrido algún error.
+                            Al finalizar el proceso aparecerá un mensaje que indicará que la simulación ha sido ejecutada con éxito o si ha ocurrido algún error.')}}
                         </p>
                     </div>
 
@@ -194,7 +194,7 @@
                                 <img class="materialboxed" src="../static/img/forms.jpeg" />
                             </div>
                             <div class="card-content">
-                                Características de la fuente luminos y propiedades del medio requeridas para <a href="#" id="b5" onclick="buttonId(this.id)">ejecutar la simulación</a>.
+                                {{_('Características de la fuente luminosa y propiedades del medio requeridas para <a href="#" id="b5" onclick="buttonId(this.id)">ejecutar la simulación</a>.')}}
                             </div>
                         </div>
                     </div>
@@ -202,11 +202,11 @@
 
                 <div class="row">
                     <div class="col m5">
-                        <h5>Resultados</h5>
+                        <h5>{{_('Resultados')}}</h5>
                         <p>
-                            Los resultados de la simulación son presentados en forma de gráfica donde se muestran los valores de fluencia relativa para tres sistemas de coordenadas, 
+                            {{_('Los resultados de la simulación son presentados en forma de gráfica donde se muestran los valores de fluencia relativa para tres sistemas de coordenadas, 
                             cartesianas, esféricas y cilíndricas (ver <a href="#" id="b4" onclick="buttonId(this.id)">Montecarlo aplicado > Sistemas de coordenadas</a> para más 
-                            información). Se obtiene el ritmo de fluencia relativo en <em>una dimensión</em>.
+                            información). Se obtiene el ritmo de fluencia relativo en <em>una dimensión</em>.')}}
                         </p>
                     </div>
                     <div class="col m7">
@@ -215,28 +215,28 @@
                                 <img class="materialboxed" src="../static/img/resultados.jpeg" />
                             </div>
                             <div class="card-content">
-                                Resultados después de ejecutar una simulación.
+                                {{_('Resultados después de ejecutar una simulación.')}}
                             </div>
                         </div>
                     </div>
                 </div>
 
                 <p>
-                    Terminada la simulación se puede descargar un archivo .out el cual contiene los resultados, junto con los parámetros ingresados.
+                    {{_('Terminada la simulación se puede descargar un archivo .out el cual contiene los resultados, junto con los parámetros ingresados.')}}
                 </p>
                 
                 <div class="row">
                     <div class="col m6 offset-m3">
                         <pre class="language-markup">
                             <code class="language-markup">
-    Número de fotones = 100000.000000
-    Tamaño del paquete = 0.00500 [cm] 
-    ***Parámetros del tejido*** 
-    Coef. de Absorcion: 35.000000
-    Coef. de Esparcimiento: 450.000000
-    Coef. de Anisotropia: 0.800000
-    Indice de Refracción: 1.330000
-    La última fila esta desbordada. Ignorarla
+    {{_('Número de fotones')}} = 100000.000000
+    {{_('Tamaño del paquete')}} = 0.00500 [cm] 
+    {{_('***Parámetros del tejido***')}} 
+    {{_('Coef. de Absorcion:')}} 35.000000
+    {{_('Coef. de Esparcimiento:')}} 450.000000
+    {{_('Coef. de Anisotropia:')}} 0.800000
+    {{_('Indice de Refracción:')}}' 1.330000
+    {{_('La última fila esta desbordada. Ignorarla')}}
     r [cm] 	 Fsph [1/cm2] 	 Fcyl [1/cm2] 	 Fpla [1/cm2]
     0.00250 	 1.360e+04 	 9.944e+01 	 2.750e+00 
     0.00750 	 1.541e+03 	 2.747e+01 	 1.256e+00 
@@ -253,7 +253,7 @@
                 </div>
 
                 <p>
-                    El archivo puede importarse a otro software como <b>Matlab</b> para generar gráficos personalizados o hacer algún tipo de procesamiento.
+                    {{_('El archivo puede importarse a otro software como <b>Matlab</b> para generar gráficos personalizados o hacer algún tipo de procesamiento.')}}
                 </p>
 
                 <div class="row">
@@ -263,7 +263,7 @@
                                 <img class="materialboxed" src="../static/img/matlab.jpeg" />
                             </div>
                             <div class="card-content">
-                                Gráfico generado en Matlab.
+                                {{_('Gráfico generado en Matlab.')}}
                             </div>
                         </div>
                     </div>
@@ -299,7 +299,7 @@
 
                 <br>
                 <hr>
-                <h5>Referencias</h5>
+                <h5>{{_('Referencias')}}</h5>
                 <p class="reference" id="ref4_p2">[1] M. H. Niemz, Laser-Tissue interactions: Fundamentals and Applications. Springer Science & Business Media, 2007.
                 </p>
 
@@ -311,14 +311,14 @@
             </div>
 
             <div id="pageb2" class="page" style="display: none;">
-                <h4>Fundamentos Montecarlo</h4>
+                <h4>{{_('Fundamentos Montecarlo')}}</h4>
 
-                <h5>¿Qué es?</h5>
+                <h5>{{_('¿Qué es?')}}</h5>
 
                 <div class="row">
                     <div class="col s8">
                         <p>
-                            La simulación de Montecarlo, también conocida como el método de Montecarlo o simulación de
+                            {{_('La simulación de Montecarlo, también conocida como el método de Montecarlo o simulación de
                             probabilidad múltiple, es una técnica matemática que se emplea para estimar los posibles
                             resultados de eventos inciertos <a href="#ref2_p1">[2]</a>. También se aplica para evaluar 
                             expresiones matemáticas que no pueden resolverse fácilmente de forma analítica. El término
@@ -332,7 +332,7 @@
                             Estados Unidos, durante el desarrollo de la bomba atómica <a href="#ref1_p1">[1]</a>.
                             El constante avance en la capacidad computacional ha facilitado que este método tome relevancia
                             en la investigación científica. El método de Montecarlo presenta un error absoluto que disminuye
-                            según el inverso de la raíz cuadrada de N, donde N es el número de pruebas realizadas.
+                            según el inverso de la raíz cuadrada de N, donde N es el número de pruebas realizadas.')}}'
                         </p>
                     </div>
                     <div class="col s4">
@@ -341,44 +341,42 @@
                                 <img class="materialboxed" src="../static/img/ruleta.jpg" />
                             </div>
                             <div class="card-content">
-                                La ruleta de un casino es un generador simple de números aleatorios. Imagen recuperada
-                                de: <a
+                                {{_('La ruleta de un casino es un generador simple de números aleatorios. Imagen recuperada
+                                de:')}}' <a
                                     href="https://www.trecebits.com/de-montecarlo-a-tu-pantalla-la-historia-de-como-la-ruleta-ha-conquistado-el-mundo-online/">Link</a>
                             </div>
                         </div>
                     </div>
                 </div>
 
-                <h5>Aplicaciones</h5>
+                <h5>{{_('Aplicaciones')}}</h5>
 
-                <p>El método de Montecarlo tiene diversas aplicaciones en distintas áreas como:</p>
+                <p>{{_('El método de Montecarlo tiene diversas aplicaciones en distintas áreas como:')}}</p>
                 <div class="row">
                     <div class="col m11 offset-m1">
                         <ul>
                             <li class="bulleted">
-                                Finanzas
+                                {{_('Finanzas')}}
                                 <p>
-                                    Los analistas financieros usan el método de Montecarlo para simular varios escenarios posibles.
+                                    {{_('Los analistas financieros usan el método de Montecarlo para simular varios escenarios posibles.')}}
                                 </p>
                             </li>
                             <li class="bulleted">
-                                Análisis de confiabilidad
+                                {{_('Análisis de confiabilidad')}}
                                 <p>
-                                    Cuando se diseña un producto de ingeniería se requiere conocer la vida útil en años que
+                                    {{_('Cuando se diseña un producto de ingeniería se requiere conocer la vida útil en años que
                                     podrá entregar, para ello se necesita establecer una condición de trabajo específica para el 
-                                    producto, la temperatura, h7umedad y diversos factores que pueden afectar a su funcionamiento.
+                                    producto, la temperatura, humedad y diversos factores que pueden afectar a su funcionamiento.
                                     Con el método de Montecarlo es posible simular miles de condiciones del producto y verificar 
-                                    su tiempo de vida.
-
-
+                                    su tiempo de vida.')}}
                                 </p>
                             </li>
                             <li class="bulleted">
-                                Matemáticas y física estadística
+                                {{_('Matemáticas y física estadística')}}
                                 <p>
-                                    La simulación mediante el método de Montecarlo se utiliza para resolver numéricamente problemas
+                                    {{_('La simulación mediante el método de Montecarlo se utiliza para resolver numéricamente problemas
                                     muy complejos de integración y diferenciación parcial multidimensional. También se puede utilizar para 
-                                    resolver problemas de optimización.
+                                    resolver problemas de optimización.')}}
                                 </p>
                             </li>
                         </ul>
@@ -391,9 +389,9 @@
                                 <img class="materialboxed" src="../static/img/Estimacion_de_Pi_por_Montercarlo.gif" />
                             </div>
                             <div class="card-content">
-                                Visualización de una estimación de Pi por el método de Montecarlo en Python. Se lanzan puntos aleatorios (hasta 1,000,000)
+                                {{_('Visualización de una estimación de Pi por el método de Montecarlo en Python. Se lanzan puntos aleatorios (hasta 1,000,000)
                                 uniformemente distribuidos sobre el cuadrado y se identifican los puntos que caen dentro o fuera del cuadrado 
-                                (rojos o azules respectivamente). El cociente de los puntos rojos dividido por los puntos totales es igual a Pi/4. 
+                                (rojos o azules respectivamente). El cociente de los puntos rojos dividido por los puntos totales es igual a Pi/4.')}}
                                 <a href="#ref5_p1">[5]</a>
                             </div>
                         </div>
@@ -401,7 +399,7 @@
                 </div>
 
                 <p>
-                    Una ventaja distintiva de este método en comparación con enfoques tradicionales es su capacidad para abordar 
+                    {{_('Una ventaja distintiva de este método en comparación con enfoques tradicionales es su capacidad para abordar 
                     un amplio rango de entradas para un problema. Desde la peor condición hasta la ideal, el método puede simular 
                     miles de situaciones intermedias, permitiendo explorar diversas posibilidades. <br><br>
 
@@ -410,22 +408,22 @@
                     puede predecir con cierta exactitud cómo se moverán miles de fotones, hasta qué profundidad llegarán y dónde 
                     serán absorbidos en mayor medida. Estas simulaciones son útiles para inferir las propiedades ópticas de los 
                     tejidos, calcular la dosis de luz adecuada para la Terapia Fotodinámica e incluso estudiar la interacción de 
-                    la luz con células cancerosas para mejorar el diagnóstico.
+                    la luz con células cancerosas para mejorar el diagnóstico.')}}
                 </p>
 
-                <h5>Desafíos</h5>
+                <h5>{{_('Desafíos')}}</h5>
 
                 <p>
-                    Las simulaciones de Montecarlo plantean un desafío significativo: la alta potencia computacional requerida para 
+                    {{_('Las simulaciones de Montecarlo plantean un desafío significativo: la alta potencia computacional requerida para 
                     realizar los experimentos. Aunque los recursos computacionales actuales son extensos, no todos tienen acceso a 
                     supercomputadoras. No obstante, existen servicios en la nube que ofrecen recursos prácticamente ilimitados, 
                     como AWS Batch de Amazon <a href="#ref3_p1">[3]</a>. Este servicio escalable asigna recursos según la potencia computacional 
-                    necesaria para el experimento.
+                    necesaria para el experimento.')}}
                 </p>
 
                 <br>
                 <hr>
-                <h5>Referencias</h5>
+                <h5>{{_('Referencias')}}</h5>
                 <p class="reference" id="ref1_p1">[1] colaboradores de Wikipedia, “Método de Montecarlo,” Wikipedia, La
                     Enciclopedia Libre, Jan. 2023, [Online]. Available: <a
                         href="https://es.wikipedia.org/wiki/M%C3%A9todo_de_Montecarlo">Link</a></p>
