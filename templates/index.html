@@ -3,7 +3,7 @@
 
 <head>
     <title>
-        MC
+        LightTrek
     </title>
     <link rel="icon" type="image/x-icon" href="../static/img/logo.ico">
 
@@ -28,6 +28,7 @@
 
     <link rel="stylesheet" href="../static/css/styles.css">
     <link rel="stylesheet" href="../static/css/colorsbw.css">
+    <link rel="stylesheet" href="../static/css/languages.css">
 
     <link href="../static/css/prism.css" rel="stylesheet" />
 </head>
@@ -46,33 +47,40 @@
             </div>
         </li>
         <li><a href="#" id="b1" onclick="buttonId(this.id)" sdelement="true"
-                class="waves-effect sidebar-selected">Conoce LightTrek</a></li>
+                class="waves-effect sidebar-selected"> {{_('Conoce LightTrek')}} </a></li>
         <li>
         <li>
             <div class="divider"></div>
         </li>
-        <li><a class="subheader">Método de Montecarlo</a></li>
-        <li><a href="#" id="b2" onclick="buttonId(this.id)" sdelement="true" class="waves-effect">Fundamentos
-                Montecarlo</a></li>
+        <li><a class="subheader">{{_('Método de Montecarlo')}}</a></li>
+        <li><a href="#" id="b2" onclick="buttonId(this.id)" sdelement="true" class="waves-effect">{{_('Fundamentos Montecarlo')}}</a></li>
         <li>
             <div class="divider"></div>
         </li>
-        <li><a class="subheader">Interacción Luz-Materia</a></li>
-        <li><a href="#" id="b3" onclick="buttonId(this.id)" sdelement="true" class="waves-effect">Propiedades ópticas
-                de la materia</a></li>
+        <li><a class="subheader">{{_('Interacción Luz-Materia')}}</a></li>
+        <li><a href="#" id="b3" onclick="buttonId(this.id)" sdelement="true" class="waves-effect">{{_('Propiedades ópticas de la materia')}}</a></li>
         <li>
             <div class="divider"></div>
         </li>
-        <li><a class="subheader">Simulación</a></li>
-        <li><a href="#" id="b4" onclick="buttonId(this.id)" sdelement="true" class="waves-effect" href="#!">Montecarlo
-                aplicado</a></li>
-        <li><a href="#" id="b5" onclick="buttonId(this.id)" sdelement="true" class="waves-effect" href="#!">Ejecutar simulación</a></li>
+        <li><a class="subheader">{{_('Simulación')}}</a></li>
+        <li><a href="#" id="b4" onclick="buttonId(this.id)" sdelement="true" class="waves-effect" href="#!">{{_('Montecarlo aplicado')}}</a></li>
+        <li><a href="#" id="b5" onclick="buttonId(this.id)" sdelement="true" class="waves-effect" href="#!">{{_('Ejecutar simulación')}}</a></li>
     </ul>
 
     <!--Contenido principal activo (incluyendo la navbar)-->
     <div class="main">
         <!--Navbar-->
         <div class="navbar-fixed">
+            <!-- Dropdown Structure -->
+            <ul id='theme' class='dropdown-content'>
+                <li><a href="#!" onclick="changeTheme(1)">Claro</a></li>
+                <li><a href="#!" onclick="changeTheme(2)">Oscuro</a></li>
+            </ul>
+            <!-- Dropdown Structure -->
+            <ul id='language' class='dropdown-content'>
+                <li><a href="#!" onclick="changeLang('es')">Español</a></li>
+                <li><a href="#!" onclick="changeLang('en')">English</a></li>
+            </ul>
             <nav>
                 <div class="nav-wrapper">
                     <div class="menuButton">
@@ -80,16 +88,21 @@
                                 class="material-icons">menu</i></a>
                     </div>
                     <a href="#" class="brand-logo">LightTrek</a>
-                    <!-- Dropdown Trigger -->
-                    <a class='dropdown-trigger right side-button' href='#' data-target='theme'>
-                        <i class="material-icons left">brightness_medium</i> 
-                        Tema
-                    </a>
-
-                    <!-- Dropdown Structure -->
-                    <ul id='theme' class='dropdown-content'>
-                        <li><a href="#!" onclick="changeTheme(1)">Claro</a></li>
-                        <li><a href="#!" onclick="changeTheme(2)">Oscuro</a></li>
+                    <ul class="right hide-on-med-and-down">
+                        <li>
+                            <!-- Dropdown Trigger -->
+                            <a class='dropdown-trigger side-button-theme' href='#' data-target='theme'>
+                                <i class="material-icons left">brightness_medium</i> 
+                                Tema
+                            </a>
+                        </li>
+                        <li>
+                            <!-- Dropdown Trigger -->
+                            <a class='dropdown-trigger side-button-lang' href='#' data-target='language'>
+                                <i class="material-icons left">translate</i> 
+                                {{_('Idioma')}}
+                            </a>
+                        </li>
                     </ul>
                 </div>
             </nav>
@@ -1081,12 +1094,12 @@
     <script>
         //determines if the user has a set theme
         function detectColorScheme(){
-            var theme="light";    //default to light
+            var theme="dark";    //default to dark
 
             //local storage is used to override OS theme settings
             if(localStorage.getItem("theme")){
-                if(localStorage.getItem("theme") == "dark"){
-                    var theme = "dark";
+                if(localStorage.getItem("theme") == "light"){
+                    var theme = "light";
                 }
             } else if(!window.matchMedia) {
                 //matchMedia method not supported
@@ -1113,6 +1126,9 @@
                 localStorage.setItem('theme', 'dark');
                 document.documentElement.setAttribute('data-theme', 'dark');
             }
+        }
+        function changeLang(lang) {
+            window.location.href = '/' + lang;
         }
     </script>
 

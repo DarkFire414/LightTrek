@@ -1,0 +1,55 @@
+# English translations for PROJECT.
+# Copyright (C) 2023 ORGANIZATION
+# This file is distributed under the same license as the PROJECT project.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2023.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: PROJECT VERSION\n"
+"Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
+"POT-Creation-Date: 2023-09-10 00:20-0600\n"
+"PO-Revision-Date: 2023-09-09 23:39-0600\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: en\n"
+"Language-Team: en <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.12.1\n"
+
+#: templates/index.html:50
+msgid "Conoce LightTrek"
+msgstr "Get to know LightTrek"
+
+#: templates/index.html:55
+msgid "Método de Montecarlo"
+msgstr "Monte Carlo method"
+
+#: templates/index.html:56
+msgid "Fundamentos Montecarlo"
+msgstr "Monte Carlo Fundamentals"
+
+#: templates/index.html:60
+msgid "Interacción Luz-Materia"
+msgstr "Light-Matter Interaction"
+
+#: templates/index.html:61
+msgid "Propiedades ópticas de la materia"
+msgstr "Optical properties of matter"
+
+#: templates/index.html:65
+msgid "Simulación"
+msgstr "Simulation"
+
+#: templates/index.html:66
+msgid "Montecarlo aplicado"
+msgstr "Monte Carlo Applied"
+
+#: templates/index.html:67
+msgid "Ejecutar simulación"
+msgstr "Run simulation"
+
+#: templates/index.html:103
+msgid "Idioma"
+msgstr "Language"
