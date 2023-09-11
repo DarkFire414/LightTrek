@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2023-09-10 21:15-0600\n"
+"POT-Creation-Date: 2023-09-10 22:36-0600\n"
 "PO-Revision-Date: 2023-09-09 23:39-0600\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: en\n"
@@ -46,7 +46,7 @@ msgstr "Simulation"
 msgid "Montecarlo aplicado"
 msgstr "Monte Carlo Applied"
 
-#: templates/index.html:67
+#: templates/index.html:67 templates/index.html:881
 msgid "Ejecutar simulación"
 msgstr "Run simulation"
 
@@ -268,7 +268,7 @@ msgstr ""
 " to <a href=\"#\" id=\"b5\" onclick=\"buttonId(this.id)\">run "
 "simulation</a>."
 
-#: templates/index.html:205
+#: templates/index.html:205 templates/index.html:962 templates/index.html:984
 msgid "Resultados"
 msgstr "Results"
 
@@ -303,7 +303,7 @@ msgstr ""
 "After completing the simulation, you can download a .out file containing "
 "the results, along with the entered parameters."
 
-#: templates/index.html:232
+#: templates/index.html:232 templates/index.html:893 templates/index.html:1014
 msgid "Número de fotones"
 msgstr "Number of photons"
 
@@ -348,7 +348,7 @@ msgid "Gráfico generado en Matlab."
 msgstr "Graph generated in Matlab."
 
 #: templates/index.html:302 templates/index.html:426 templates/index.html:650
-#: templates/index.html:867
+#: templates/index.html:867 templates/index.html:1062
 msgid "Referencias"
 msgstr "References"
 
@@ -915,7 +915,7 @@ msgstr ""
 "Anisotropy coefficient for different types of tissue as a function of "
 "wavelength."
 
-#: templates/index.html:616
+#: templates/index.html:616 templates/index.html:1018
 msgid "Índice de refracción"
 msgstr "Refractive Index:"
 
@@ -997,27 +997,24 @@ msgid ""
 "                    luz necesaria para la Terapia fotodinámica, entre "
 "otras aplicaciones."
 msgstr ""
-"The Monte Carlo method is quite powerful in simulating the behavior"
-" of particles whose dynamics can be modeled  \n"
+"The Monte Carlo method is quite powerful in simulating the behavior of "
+"particles whose dynamics can be modeled  \n"
 "                    using random behaviors. It is very useful for "
-"simulating the transport of photons in turbid media and has found"
-" \n"
-"                    applications in medicine, where simulated diffuse reflectance"
-" can be used to deduce the optical properties"
-" \n"
-"                    of tissues, while the absorption of "
-"optical energy within a tissue can be simulated to calculate the "
-"dose of \n"
-"                    light required for photodynamic therapy, among "
-"other applications."
+"simulating the transport of photons in turbid media and has found \n"
+"                    applications in medicine, where simulated diffuse "
+"reflectance can be used to deduce the optical properties \n"
+"                    of tissues, while the absorption of optical energy "
+"within a tissue can be simulated to calculate the dose of \n"
+"                    light required for photodynamic therapy, among other "
+"applications."
 
 #: templates/index.html:693
 msgid ""
 "Simulación de Montecarlo de migración de fotones en un medio turbio, en "
 "este caso un cerebro humano. Imagen obtenida de:"
 msgstr ""
-"Monte Carlo simulation of photon migration in a turbid medium, in "
-"this case, a human brain. Image obtained from:"
+"Monte Carlo simulation of photon migration in a turbid medium, in this "
+"case, a human brain. Image obtained from:"
 
 #: templates/index.html:702
 msgid ""
@@ -1062,40 +1059,36 @@ msgid ""
 msgstr ""
 "The simulation involves launching photons from a light source into a "
 "semi-infinite medium without boundaries, meaning it is \n"
-"                            infinite on the plane of incidence but not "
-"on the axis of incidence. The medium is defined by its optical "
-"properties \n"
+"                            infinite on the plane of incidence but not on"
+" the axis of incidence. The medium is defined by its optical properties"
+" \n"
 "                            (absorption coefficient &mu;<sub>a</sub>, "
-"scattering &mu;<sub>s</sub>, n, g) which help describe "
-"how photons will behave \n"
-"                            within the material. All of this is done "
-"with the aim of obtaining the <strong>relative fluence</strong> at different "
+"scattering &mu;<sub>s</sub>, n, g) which help describe how photons will "
+"behave \n"
+"                            within the material. All of this is done with"
+" the aim of obtaining the <strong>relative fluence</strong> at different "
 "depths. This means understanding how much \n"
-"                            energy the tissue absorbs as a function of the "
-"distance from the source. This helps us observe, firstly, the "
-"depth to \n"
+"                            energy the tissue absorbs as a function of "
+"the distance from the source. This helps us observe, firstly, the depth "
+"to \n"
 "                            which the incident light penetrated before "
-"being completely absorbed and, consequently, to determine how much energy was absorbed "
-"and at what distance  \n"
-"                            per unit area. "
-"Knowing the relative fluence of a material can be very useful,"
-" such as \n"
+"being completely absorbed and, consequently, to determine how much energy"
+" was absorbed and at what distance  \n"
+"                            per unit area. Knowing the relative fluence "
+"of a material can be very useful, such as \n"
 "                            in laser therapy, where it is used to "
-"quantify the amount of luminous energy delivered to tissue "
-"during \n"
-"                             treatment. This is done to avoid "
-"exceeding the energy limit that the tissue can safely receive without damage."
-"\n"
+"quantify the amount of luminous energy delivered to tissue during \n"
+"                             treatment. This is done to avoid exceeding "
+"the energy limit that the tissue can safely receive without damage.\n"
 "                            <br><br>\n"
 "                            The program starts by launching "
-"<strong>N</strong> photons, each initially assigned a value of 1 "
-"(their weight).  Each photon undergoes some \n"
+"<strong>N</strong> photons, each initially assigned a value of 1 (their "
+"weight).  Each photon undergoes some \n"
 "                             form of interaction with the tissue, either "
-"scattering or absorption. Multiple steps are simulated, during which each photon "
-"propagates \n"
-"                            through the medium. Meanwhile, "
-"a fraction of its initial weight is deposited at a certain depth in the tissue."
-" \n"
+"scattering or absorption. Multiple steps are simulated, during which each"
+" photon propagates \n"
+"                            through the medium. Meanwhile, a fraction of "
+"its initial weight is deposited at a certain depth in the tissue. \n"
 "                            These values are stored, processed, and "
 "presented as the relative fluence of the material."
 
@@ -1126,24 +1119,24 @@ msgid ""
 msgstr ""
 "As explained earlier, each photon propagates within the medium, "
 "eundergoes scattering or absorption, and during this process, a \n"
-"                    portion of its initial weight is absorbed at a certain "
-"depth in the medium. To quantify this, the medium is divided into "
-"small \n"
-"                    bins where the absorbed energy from photons is stored. "
-" It is possible to divide the medium in "
-"different ways, \n"
-"                    such as small cubes, spherical layers, or cylindrical "
-"layers. For this simulation, results are shown "
-"for these three types \n"
-"                    of deposits, which involve a coordinate system transformation "
-"between Cartesian, spherical, and cylindrical coordinates during the "
-"simulation."
+"                    portion of its initial weight is absorbed at a "
+"certain depth in the medium. To quantify this, the medium is divided into"
+" small \n"
+"                    bins where the absorbed energy from photons is "
+"stored.  It is possible to divide the medium in different ways, \n"
+"                    such as small cubes, spherical layers, or cylindrical"
+" layers. For this simulation, results are shown for these three types \n"
+"                    of deposits, which involve a coordinate system "
+"transformation between Cartesian, spherical, and cylindrical coordinates "
+"during the simulation."
 
 #: templates/index.html:745
 msgid ""
 "Comparación de los distintos sistemas de coordenadas en 3 dimensiones. "
 "Imagen obtenida de"
-msgstr "Comparison of the different coordinate systems in 3 dimensions. Image obtained from"
+msgstr ""
+"Comparison of the different coordinate systems in 3 dimensions. Image "
+"obtained from"
 
 #: templates/index.html:752
 msgid "Lanzamiento de fotones"
@@ -1153,6 +1146,10 @@ msgstr "Photon Launch"
 msgid "Se pueden lanzar fotones de tres tipos distintos de fuentes."
 msgstr "You can launch photons from three different types of sources."
 
+#: templates/index.html:761 templates/index.html:783 templates/index.html:804
+msgid "Haz click para más información"
+msgstr "Click for more information"
+
 #: templates/index.html:764 templates/index.html:770
 msgid "Fuente colimada"
 msgstr "Collimated Source"
@@ -1161,9 +1158,7 @@ msgstr "Collimated Source"
 msgid ""
 "Distribución de los fotones al utilizar una fuente plana colimada de "
 "radio infinito."
-msgstr ""
-"Photon distribution when using an infinitely "
-"collimated flat source."
+msgstr "Photon distribution when using an infinitely collimated flat source."
 
 #: templates/index.html:772
 msgid ""
@@ -1178,12 +1173,12 @@ msgid ""
 msgstr ""
 "Launching collimated photons involves aligning the trajectory of the "
 "photons in a single direction \n"
-"                                 (which can be the z-axis) as they enter the tissue "
-"at the origin. In this case, the initial trajectory of \n"
+"                                 (which can be the z-axis) as they enter "
+"the tissue at the origin. In this case, the initial trajectory of \n"
 "                                the photons is along a single axis, so "
 "for parallel incidence along the z-axis, \n"
-"                                 the trajectory vector "
-"starts as (0, 0, 1)."
+"                                 the trajectory vector starts as (0, 0, "
+"1)."
 
 #: templates/index.html:786 templates/index.html:792
 msgid "Fuente isotrópica"
@@ -1194,8 +1189,8 @@ msgid ""
 "Distribución de los fotones al utilizar una fuente puntual isotrópica "
 "colocada en el origen."
 msgstr ""
-"Distribution of photons when using an isotropic point source "
-"located at the origin."
+"Distribution of photons when using an isotropic point source located at "
+"the origin."
 
 #: templates/index.html:794
 msgid ""
@@ -1207,13 +1202,13 @@ msgid ""
 "                                los fotones salgan de la fuente en todas "
 "direcciones con la misma probabilidad."
 msgstr ""
-"Launching photons from an isotropic point source requires placing "
-"this source at a point (x, y, z), either inside or outside \n"
+"Launching photons from an isotropic point source requires placing this "
+"source at a point (x, y, z), either inside or outside \n"
 "                                the tissue. Subsequently, it must be "
-"ensured that the distribution of photons is radially uniform,"
-" meaning that \n"
-"                                the photons emanate from the source in all "
-"directions with the same probability."
+"ensured that the distribution of photons is radially uniform, meaning "
+"that \n"
+"                                the photons emanate from the source in "
+"all directions with the same probability."
 
 #: templates/index.html:807 templates/index.html:813
 msgid "Haz de radio finito"
@@ -1224,8 +1219,8 @@ msgid ""
 "Distribución de los fotones al utilizar una fuente plana colimada de "
 "diámetro finito."
 msgstr ""
-"The distribution of photons when using a finite-diameter "
-"collimated flat source."
+"The distribution of photons when using a finite-diameter collimated flat "
+"source."
 
 #: templates/index.html:815
 msgid ""
@@ -1234,10 +1229,10 @@ msgid ""
 "                                forma aleatoria para que se logre una "
 "distribución parcial uniforme de los fotones lanzados."
 msgstr ""
-"When considering launching a collimated beam with a finite radius a, the position"
-" of photon emission must vary \n"
-"                                 randomly to achieve a "
-"partially uniform distribution of launched photons."
+"When considering launching a collimated beam with a finite radius a, the "
+"position of photon emission must vary \n"
+"                                 randomly to achieve a partially uniform "
+"distribution of launched photons."
 
 #: templates/index.html:823
 msgid "Interacción del fotón con el medio"
@@ -1250,10 +1245,10 @@ msgid ""
 "                                probabilidad exponencial para el tamaño "
 "del paso s del movimiento."
 msgstr ""
-"In each simulation step, the photon takes a leap of a determined "
-"length by sampling the exponential probability \n"
-"                                density function for the step size "
-"s of the movement."
+"In each simulation step, the photon takes a leap of a determined length "
+"by sampling the exponential probability \n"
+"                                density function for the step size s of "
+"the movement."
 
 #: templates/index.html:833
 msgid ""
@@ -1285,11 +1280,11 @@ msgid ""
 msgstr ""
 "If the photon's weight falls below a threshold value (0.01 in this case),"
 "  the photon's survival is determined by a \n"
-"                                random number. If this number is less than a"
-" certain value, the photon is discarded. If not, "
-"the photon's weight \n"
-"                                 is increased by 1/threshold "
-" (10 times in this case), and the photon continues to propagate."
+"                                random number. If this number is less "
+"than a certain value, the photon is discarded. If not, the photon's "
+"weight \n"
+"                                 is increased by 1/threshold  (10 times "
+"in this case), and the photon continues to propagate."
 
 #: templates/index.html:845
 msgid ""
@@ -1301,10 +1296,11 @@ msgid ""
 " el ritmo de fluencia y <strong>P[W]</strong> \n"
 "                                es la fuente de luz."
 msgstr ""
-"The process continues until the last photon is launched, "
-"at which point a graph and a file with the \n"
-"                                simulation results are generated. The relative "
-"fluence rate <strong>F/P [cm<sup>-2</sup>]</strong>  is calculated, where \n"
+"The process continues until the last photon is launched, at which point a"
+" graph and a file with the \n"
+"                                simulation results are generated. The "
+"relative fluence rate <strong>F/P [cm<sup>-2</sup>]</strong>  is "
+"calculated, where \n"
 "                                <strong>F [W/cm<sup>-2</sup>]</strong> is"
 "  the fluence rate, and <strong>P[W]</strong> \n"
 "                                is the light source power."
@@ -1318,6 +1314,105 @@ msgid ""
 msgstr ""
 "The photon's movement through the tissue grid, during which it loses a "
 "fraction of its weight W, which is then deposited in a \"bin\" \n"
-"                                on the grid, before changing "
-"direction."
+"                                on the grid, before changing direction."
+
+#: templates/index.html:887
+msgid "Características de la fuente luminosa"
+msgstr "Characteristics of the light source"
+
+#: templates/index.html:897 templates/index.html:1019
+msgid "Tipo de fuente:"
+msgstr "Source type:"
+
+#: templates/index.html:899
+msgid "Elija un tipo de fuente"
+msgstr "Choose a source type"
+
+#: templates/index.html:900
+msgid "Puntual Isotrópica"
+msgstr "Isotropic source"
+
+#: templates/index.html:901
+msgid "Colimada"
+msgstr "Collimated Source"
+
+#: templates/index.html:902
+msgid "Haz finito (radio de 5 cm)"
+msgstr "Finite beam (5 cm radius)"
+
+#: templates/index.html:907
+msgid "Propiedades ópticas del materia"
+msgstr "Optical properties of matter"
+
+#: templates/index.html:913 templates/index.html:1015
+msgid "Coef. de Absorción"
+msgstr "Absorption Coefficient:"
+
+#: templates/index.html:918 templates/index.html:1016
+msgid "Coef. de Esparcimiento"
+msgstr "Scattering Coefficient:"
+
+#: templates/index.html:925
+msgid "Coef. de Anisotropía g"
+msgstr "Anisotropy Coefficient:"
+
+#: templates/index.html:930
+msgid "Índice de refracción n"
+msgstr "Refractive Index:"
+
+#: templates/index.html:934
+msgid "Iniciar"
+msgstr "Start"
+
+#: templates/index.html:954
+msgid "Mensaje"
+msgstr "Message"
+
+#: templates/index.html:975
+msgid ""
+"Representación conceptual de las interacciones generales entre la luz y "
+"el tejido,\n"
+"                                        reflección (reflection), "
+"absorción (absorption), esparcimiento (scattering) entre \n"
+"                                        otras."
+msgstr ""
+"Conceptual representation of the general interactions between light and "
+"tissue, including \n"
+"                                        reflection, "
+"absorption, scattering ,among \n"
+"                                        others."
+
+#: templates/index.html:995
+msgid "Valor máximo a mostrar (cm)"
+msgstr "Maximum value to display (cm)"
+
+#: templates/index.html:999
+msgid ""
+"Modifica el límite superior en el eje horizontal para visualizar mejor "
+"los datos, <br> una vez que haya establecido un nuevo valor presione el "
+"botón ACTUALIZAR"
+msgstr ""
+"Modify the upper limit on the horizontal axis to better "
+"visualize the data. <br> Once you've set a new value, press the "
+"UPDATE button."
+
+#: templates/index.html:1005
+msgid "Actualizar"
+msgstr "UPDATE"
+
+#: templates/index.html:1012
+msgid "Parámetros"
+msgstr "Parameters"
+
+#: templates/index.html:1017
+msgid "Coef. de Anisotropía"
+msgstr "Anisotropy Coefficient:"
+
+#: templates/index.html:1029
+msgid ""
+"Descarga los resultados de la simulación en un archivo .out, <br> este "
+"incluye además los paŕametros ingresados."
+msgstr ""
+"Download the simulation results in a .out file. <br> This file "
+"also includes the entered parameters."
 

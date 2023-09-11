@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2023-09-10 21:15-0600\n"
+"POT-Creation-Date: 2023-09-10 22:36-0600\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -45,7 +45,7 @@ msgstr ""
 msgid "Montecarlo aplicado"
 msgstr ""
 
-#: templates/index.html:67
+#: templates/index.html:67 templates/index.html:881
 msgid "Ejecutar simulación"
 msgstr ""
 
@@ -189,7 +189,7 @@ msgid ""
 "simulación</a>."
 msgstr ""
 
-#: templates/index.html:205
+#: templates/index.html:205 templates/index.html:962 templates/index.html:984
 msgid "Resultados"
 msgstr ""
 
@@ -215,7 +215,7 @@ msgid ""
 "contiene los resultados, junto con los parámetros ingresados."
 msgstr ""
 
-#: templates/index.html:232
+#: templates/index.html:232 templates/index.html:893 templates/index.html:1014
 msgid "Número de fotones"
 msgstr ""
 
@@ -258,7 +258,7 @@ msgid "Gráfico generado en Matlab."
 msgstr ""
 
 #: templates/index.html:302 templates/index.html:426 templates/index.html:650
-#: templates/index.html:867
+#: templates/index.html:867 templates/index.html:1062
 msgid "Referencias"
 msgstr ""
 
@@ -632,7 +632,7 @@ msgid ""
 "la longitud de onda."
 msgstr ""
 
-#: templates/index.html:616
+#: templates/index.html:616 templates/index.html:1018
 msgid "Índice de refracción"
 msgstr ""
 
@@ -776,6 +776,10 @@ msgstr ""
 msgid "Se pueden lanzar fotones de tres tipos distintos de fuentes."
 msgstr ""
 
+#: templates/index.html:761 templates/index.html:783 templates/index.html:804
+msgid "Haz click para más información"
+msgstr ""
+
 #: templates/index.html:764 templates/index.html:770
 msgid "Fuente colimada"
 msgstr ""
@@ -890,5 +894,95 @@ msgid ""
 "fracción de su peso W el cual se deposita en un \"bin\" \n"
 "                                de la malla, para posteriormente cambiar "
 "de dirección."
+msgstr ""
+
+#: templates/index.html:887
+msgid "Características de la fuente luminosa"
+msgstr ""
+
+#: templates/index.html:897 templates/index.html:1019
+msgid "Tipo de fuente:"
+msgstr ""
+
+#: templates/index.html:899
+msgid "Elija un tipo de fuente"
+msgstr ""
+
+#: templates/index.html:900
+msgid "Puntual Isotrópica"
+msgstr ""
+
+#: templates/index.html:901
+msgid "Colimada"
+msgstr ""
+
+#: templates/index.html:902
+msgid "Haz finito (radio de 5 cm)"
+msgstr ""
+
+#: templates/index.html:907
+msgid "Propiedades ópticas del materia"
+msgstr ""
+
+#: templates/index.html:913 templates/index.html:1015
+msgid "Coef. de Absorción"
+msgstr ""
+
+#: templates/index.html:918 templates/index.html:1016
+msgid "Coef. de Esparcimiento"
+msgstr ""
+
+#: templates/index.html:925
+msgid "Coef. de Anisotropía g"
+msgstr ""
+
+#: templates/index.html:930
+msgid "Índice de refracción n"
+msgstr ""
+
+#: templates/index.html:934
+msgid "Iniciar"
+msgstr ""
+
+#: templates/index.html:954
+msgid "Mensaje"
+msgstr ""
+
+#: templates/index.html:975
+msgid ""
+"Representación conceptual de las interacciones generales entre la luz y "
+"el tejido,\n"
+"                                        reflección (reflection), "
+"absorción (absorption), esparcimiento (scattering) entre \n"
+"                                        otras."
+msgstr ""
+
+#: templates/index.html:995
+msgid "Valor máximo a mostrar (cm)"
+msgstr ""
+
+#: templates/index.html:999
+msgid ""
+"Modifica el límite superior en el eje horizontal para visualizar mejor "
+"los datos, <br> una vez que haya establecido un nuevo valor presione el "
+"botón ACTUALIZAR"
+msgstr ""
+
+#: templates/index.html:1005
+msgid "Actualizar"
+msgstr ""
+
+#: templates/index.html:1012
+msgid "Parámetros"
+msgstr ""
+
+#: templates/index.html:1017
+msgid "Coef. de Anisotropía"
+msgstr ""
+
+#: templates/index.html:1029
+msgid ""
+"Descarga los resultados de la simulación en un archivo .out, <br> este "
+"incluye además los paŕametros ingresados."
 msgstr ""
 
