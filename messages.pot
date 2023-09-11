@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2023-09-10 17:51-0600\n"
+"POT-Creation-Date: 2023-09-10 21:15-0600\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -41,7 +41,7 @@ msgstr ""
 msgid "Simulación"
 msgstr ""
 
-#: templates/index.html:66
+#: templates/index.html:66 templates/index.html:676
 msgid "Montecarlo aplicado"
 msgstr ""
 
@@ -258,6 +258,7 @@ msgid "Gráfico generado en Matlab."
 msgstr ""
 
 #: templates/index.html:302 templates/index.html:426 templates/index.html:650
+#: templates/index.html:867
 msgid "Referencias"
 msgstr ""
 
@@ -668,5 +669,226 @@ msgid ""
 "medio (v2 < v1), el ángulo de refracción θ2 es menor que el ángulo de \n"
 "                                incidencia θ1; esto es, el rayo en el "
 "medio de índice mayor es cercano al vector normal."
+msgstr ""
+
+#: templates/index.html:679
+msgid ""
+"El método de Montecarlo es bastante poderoso al simular el comportamiento"
+" de partículas cuya dinámica puede modelarse mediante  \n"
+"                    comportamientos aleatorios, es bastante útil para la "
+"simulación de transporte de fotones en medios turbios y ha encontrado un"
+" \n"
+"                    campo de aplicación en medicina donde la reflectancia"
+" difusa simulada puede ser utilizada para deducir las propiedades ópticas"
+" \n"
+"                    de los tejidos mientras que la absorción de la "
+"energía óptica dentro de un tejido puede ser simulada para calcular la "
+"dosis de \n"
+"                    luz necesaria para la Terapia fotodinámica, entre "
+"otras aplicaciones."
+msgstr ""
+
+#: templates/index.html:693
+msgid ""
+"Simulación de Montecarlo de migración de fotones en un medio turbio, en "
+"este caso un cerebro humano. Imagen obtenida de:"
+msgstr ""
+
+#: templates/index.html:702
+msgid ""
+"La simulación consiste en lanzar fotones desde una fuente de luz a un "
+"medio semi infinito sin fronteras, es decir que es \n"
+"                            infinito sobre el plano de incidencia y no "
+"sobre el eje de incidencia. El medio se define por sus propiedades "
+"ópticas \n"
+"                            (coeficiente de absorción &mu;<sub>a</sub>, "
+"esparcimiento &mu;<sub>s</sub>, n, g) las cuales ayudarán a describir "
+"cómo se comportarán los fotones \n"
+"                            dentro del material. Todo esto con el "
+"objetivo de obtener la <strong>fluencia relativa</strong> a distintas "
+"profundidades, esto es qué tanta \n"
+"                            energía absorbe el tejido en función de la "
+"distancia de la fuente, esto nos ayudará a observar primeramente la "
+"profundidad \n"
+"                            a la que penetró la luz incidente antes de "
+"ser absorbida por completo y en consecuencia conocer a cuanta y a qué "
+"distancia \n"
+"                            se absorbió más energía por unidad de área. "
+"Conocer la fluencia relativa de un material puede ser realmente útil como"
+" con \n"
+"                            la terapia con laser donde se utiliza para "
+"cuantificar la cantidad de energía luminosa que se entrega a un tejido "
+"durante \n"
+"                            el tratamiento, esto con la finalidad de no "
+"sobrepasar el límite de energía que el tejido pueda recibir y ser dañado."
+"\n"
+"                            <br><br>\n"
+"                            El programa inicia lanzando "
+"<strong>N</strong> fotones a los que se les asigna un valor inicial de 1 "
+"(su peso), cada fotón hará algún \n"
+"                            tipo de interacción con el tejido, será "
+"esparcido o absorbido. Se simulan varios pasos donde cada fotón se "
+"propaga a \n"
+"                            través del medio y mientras esto ocurre una "
+"fracción de su peso inicial se deposita a cierta profundidad del tejido,"
+" \n"
+"                            estos valores se almacenan, son procesados y "
+"presentados como la fluencia relativa del material."
+msgstr ""
+
+#: templates/index.html:724
+msgid "Diagrama de flujo del algoritmo general del método de Montecarlo."
+msgstr ""
+
+#: templates/index.html:730
+msgid "Sistemas de coordenadas"
+msgstr ""
+
+#: templates/index.html:732
+msgid ""
+"Como se explicó anteriormente cada fotón se propaga dentro del medio, es "
+"esparcido o absorbido y durante este proceso una \n"
+"                    parte de su peso inicial es absorbido a cierta "
+"profundidad del medio, para cuantificar esto el medio es dividido en "
+"pequeños \n"
+"                    depósitos o <em>bins</em> donde se va almacenando la "
+"energía absorbida de los fotones. Es posible dividir al medio de "
+"distintas formas, \n"
+"                    por pequeños cubos, capas esféricas o capas "
+"cilíndricas y para esta simulación se muestran los resultados para estos "
+"tres tipos \n"
+"                    de depósitos, ello implica hacer un cambio de "
+"coordenadas durante la simulación entre cartesianas, esféricas y "
+"cilíndricas."
+msgstr ""
+
+#: templates/index.html:745
+msgid ""
+"Comparación de los distintos sistemas de coordenadas en 3 dimensiones. "
+"Imagen obtenida de"
+msgstr ""
+
+#: templates/index.html:752
+msgid "Lanzamiento de fotones"
+msgstr ""
+
+#: templates/index.html:754
+msgid "Se pueden lanzar fotones de tres tipos distintos de fuentes."
+msgstr ""
+
+#: templates/index.html:764 templates/index.html:770
+msgid "Fuente colimada"
+msgstr ""
+
+#: templates/index.html:766
+msgid ""
+"Distribución de los fotones al utilizar una fuente plana colimada de "
+"radio infinito."
+msgstr ""
+
+#: templates/index.html:772
+msgid ""
+"El lanzar fotones colimados involucra el colocar la trayectoria de los "
+"fotones en una sola dirección \n"
+"                                (puede ser el eje z) entrando al tejido "
+"en el origen. Para este caso, se tiene la trayectoria inicial de \n"
+"                                los fotones en una sola dirección, esto "
+"es, en un solo eje, por lo que, para el caso de incidencia paralela \n"
+"                                al eje z, el vector de trayectoria se "
+"inicia como (0,0,1)."
+msgstr ""
+
+#: templates/index.html:786 templates/index.html:792
+msgid "Fuente isotrópica"
+msgstr ""
+
+#: templates/index.html:788
+msgid ""
+"Distribución de los fotones al utilizar una fuente puntual isotrópica "
+"colocada en el origen."
+msgstr ""
+
+#: templates/index.html:794
+msgid ""
+"El lanzar fotones de una fuente puntual isotrópica requiere de colocar "
+"esta fuente en un punto (x,y,z) ya sea dentro o fuera \n"
+"                                del tejido. Posteriormente se debe de "
+"asegurar que la distribución de los fotones sea uniforme de forma radial,"
+" esto es que \n"
+"                                los fotones salgan de la fuente en todas "
+"direcciones con la misma probabilidad."
+msgstr ""
+
+#: templates/index.html:807 templates/index.html:813
+msgid "Haz de radio finito"
+msgstr ""
+
+#: templates/index.html:809
+msgid ""
+"Distribución de los fotones al utilizar una fuente plana colimada de "
+"diámetro finito."
+msgstr ""
+
+#: templates/index.html:815
+msgid ""
+"Cuando se considera lanzar un haz colimado de radio finito a, la posición"
+" del lanzamiento de los fotones debe variar de una \n"
+"                                forma aleatoria para que se logre una "
+"distribución parcial uniforme de los fotones lanzados."
+msgstr ""
+
+#: templates/index.html:823
+msgid "Interacción del fotón con el medio"
+msgstr ""
+
+#: templates/index.html:829
+msgid ""
+"En cada paso de la simulación el fotón da un salto de una longitud "
+"determinada al muestrear la función de densidad de \n"
+"                                probabilidad exponencial para el tamaño "
+"del paso s del movimiento."
+msgstr ""
+
+#: templates/index.html:833
+msgid ""
+"El fotón pierde una fracción de su peso inicial debido a la absorción el "
+"cual se acumula en contenedores \n"
+"                                (cartesianos, cilíndricos y esféricos)."
+msgstr ""
+
+#: templates/index.html:837
+msgid ""
+"El peso restante del fotón se esparce en una nueva trayectoria la cuál "
+"depende en gran medida de la anisotropía g del material."
+msgstr ""
+
+#: templates/index.html:840
+msgid ""
+"Si el peso del fotón toma un valor menor a un umbral (0.01 en este caso),"
+" la supervivencia del fotón se decide mediante un \n"
+"                                número aleatorio, si este es menor que un"
+" valor determinado entonces el fotón es desechado, si esto no ocurre "
+"entonces el peso \n"
+"                                de fotón es incrementado en 1/umbral (10 "
+"veces para este caso) y el fotón continúa propagándose."
+msgstr ""
+
+#: templates/index.html:845
+msgid ""
+"El proceso continúa hasta que el último fotón sea lanzado y por entonces "
+"se genera una gráfica y un archivo con los \n"
+"                                resultados de la simulación, el ritmo de "
+"fluencia relativo <strong>F/P [cm<sup>-2</sup>]</strong> donde \n"
+"                                <strong>F [W/cm<sup>-2</sup>]</strong> es"
+" el ritmo de fluencia y <strong>P[W]</strong> \n"
+"                                es la fuente de luz."
+msgstr ""
+
+#: templates/index.html:858
+msgid ""
+"Movimiento del fotón por la malla del tejido, en donde pierde una "
+"fracción de su peso W el cual se deposita en un \"bin\" \n"
+"                                de la malla, para posteriormente cambiar "
+"de dirección."
 msgstr ""
 
