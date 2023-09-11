@@ -1,11 +1,3 @@
-function scrollToSection(sectionId) {
-    const section = document.getElementById(sectionId);
-    console.log("here");
-    if (section) {
-        section.scrollIntoView({ behavior: 'smooth' });
-        console.log("here2");
-    }
-}
 /**
  * Muestra u oculta elementos con la class page
  * Por convención los botones deben tener como id="b1", "b2", ... "b#"

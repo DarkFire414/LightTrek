@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2023-09-10 00:20-0600\n"
+"POT-Creation-Date: 2023-09-10 22:36-0600\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.12.1\n"
 
-#: templates/index.html:50
+#: templates/index.html:50 templates/index.html:113
 msgid "Conoce LightTrek"
 msgstr ""
 
@@ -25,7 +25,7 @@ msgstr ""
 msgid "Método de Montecarlo"
 msgstr ""
 
-#: templates/index.html:56
+#: templates/index.html:56 templates/index.html:314
 msgid "Fundamentos Montecarlo"
 msgstr ""
 
@@ -33,7 +33,7 @@ msgstr ""
 msgid "Interacción Luz-Materia"
 msgstr ""
 
-#: templates/index.html:61
+#: templates/index.html:61 templates/index.html:444
 msgid "Propiedades ópticas de la materia"
 msgstr ""
 
@@ -41,15 +41,948 @@ msgstr ""
 msgid "Simulación"
 msgstr ""
 
-#: templates/index.html:66
+#: templates/index.html:66 templates/index.html:676
 msgid "Montecarlo aplicado"
 msgstr ""
 
-#: templates/index.html:67
+#: templates/index.html:67 templates/index.html:881
 msgid "Ejecutar simulación"
+msgstr ""
+
+#: templates/index.html:76
+msgid "Claro"
+msgstr ""
+
+#: templates/index.html:77
+msgid "Oscuro"
+msgstr ""
+
+#: templates/index.html:96
+msgid "Tema"
 msgstr ""
 
 #: templates/index.html:103
 msgid "Idioma"
+msgstr ""
+
+#: templates/index.html:115
+msgid "¿Qué es LightTrek y por qué es importante?"
+msgstr ""
+
+#: templates/index.html:120
+msgid ""
+"<em>LightTrek</em> es una plataforma web cuyo propósito es simular el "
+"comportamiento de fotones que son lanzados desde \n"
+"                            una fuente de luz a un medio, esto mediante "
+"el método de Montecarlo que es una técnica matemática que se emplea \n"
+"                            para estimar los posibles resultados de "
+"eventos inciertos y que adquirió su nombre debido al casino de Montecarlo"
+" \n"
+"                            en Mónaco, ya que, en esencia el método "
+"consiste en la generación de números aleatorios, similar a una ruleta \n"
+"                            (consultar <a href=\"#\" id=\"b2\" "
+"onclick=\"buttonId(this.id)\">Fundamentos Montecarlo</a> para una "
+"descripción detallada del método).\n"
+"                            <br><br>\n"
+"                            Con <em>LightTrek</em> es posible obtener una"
+" gráfica que muestra el ritmo de fluencia relativo del medio que queremos"
+" analizar \n"
+"                            (<em>Relative Fluence Rate F/P "
+"[cm<sup>-2</sup>]</em>) con el que se calcula de forma directa el ritmo "
+"de fluencia \n"
+"                            (<em>Fluence Rate F [W/cm<sup>-2</sup>]</em>)"
+" el cuál \n"
+"                             da información de cuánta energía es "
+"entregada al material por unidad de área y bajo \n"
+"                            ciertas condiciones como a una longitud de "
+"onda específica."
+msgstr ""
+
+#: templates/index.html:139
+msgid ""
+"Simulación de Montecarlo para el transporte de fotones en un espacio "
+"vóxel 3D. Imagen de"
+msgstr ""
+
+#: templates/index.html:148
+msgid ""
+"Los tratamientos y técnicas de diagnóstico utilizando luz han adquirido "
+"cada vez más popularidad debido a que no son invasivas, \n"
+"                            son seguras y funcionales. Conocer el ritmo "
+"de fluencia (<em>F</em>) del tejido biológico donde se aplicará el láser "
+"es muy \n"
+"                            importante debido a que permite cuantificar "
+"la cantidad segura de potencia luminosa que puede ser aplicada sin dañar "
+"el tejido. \n"
+"                            Por otro lado, diversos estudios han "
+"demostrado que el ritmo de fluencia es un parámetro que puede servir para"
+" diferenciar \n"
+"                            tejido dañado de tejido sano, es decir que es"
+" posible utilizarlo como una herramienta de diagnóstico no invasiva para "
+"diversas \n"
+"                            enfermedades <a href=\"#ref1_p0\">[1]</a>. "
+msgstr ""
+
+#: templates/index.html:163
+msgid "¿Por qué una plataforma web?"
+msgstr ""
+
+#: templates/index.html:165
+msgid ""
+"Con LightTrek se busca aprovechar las facilidades que ofrecen diversas "
+"empresas con <em>IaaS (Infraestructure as a service)</em>\n"
+"                    o <em>Paas (Platform as a service)</em> como Amazon "
+"con Amazon Web Services o Amazon Batch que otorgan capacidad de "
+"procesamiento,\n"
+"                    CPU, GPU y RAM de forma prácticamente ilimitada, con "
+"ello es posible ejecutar simulaciones muy complejas como lo pueden ser "
+"las que \n"
+"                    utilizan el método de Montecarlo que requieren de "
+"muchas iteraciones para disminuir su error. Además, el tener una "
+"aplicación \n"
+"                    en la web la hace accesible a prácticamente cualquier"
+" persona en el mundo, investigadores y estudiantes de cualquier "
+"universidad \n"
+"                    pueden hacer uso de ella sin necesidad de instalar "
+"algo en sus computadoras, solo es necesario tener acceso a internet."
+msgstr ""
+
+#: templates/index.html:175
+msgid "¿Cómo usar LightTrek?"
+msgstr ""
+
+#: templates/index.html:177
+msgid ""
+"LightTrek como plataforma web está diseñada para ser fácil de usar, entre"
+" sus páginas se encuentra información introductoria \n"
+"                            a los distintos conceptos que se necesitan "
+"conocer para comprender el funcionamiento del algoritmo y qué significan "
+"los resultados obtenidos.\n"
+"                            <br><br>\n"
+"                            Para ejecutar una simulación es necesario ir "
+"a la pestaña de <a href=\"#\" id=\"b5\" "
+"onclick=\"buttonId(this.id)\">Ejecutar simulación</a> donde \n"
+"                            podremos ingresar las características de la "
+"fuente luminosa como los son el número de fotones a lanzar, el tipo de "
+"fuente y las propiedades \n"
+"                            ópticas del medio a utilizar, se puede leer "
+"más acerca de los tipos de fuentes, las propiedades ópticas consideradas "
+"y donde obtener los \n"
+"                            valores en <a href=\"#\" id=\"b3\" "
+"onclick=\"buttonId(this.id)\">Propiedades ópticas de la materia</a>.\n"
+"                            <br><br>\n"
+"                            Una vez que todos los parámetros hayan sido "
+"ingresados se debe presionar el botón de <b>INICIAR</b>, aparecerá una "
+"barra de carga \n"
+"                            y la simulación comenzará, el diagrama de "
+"flujo del algoritmo se puede consultar en <a href=\"#\" id=\"b4\" "
+"onclick=\"buttonId(this.id)\">Montecarlo aplicado</a>. \n"
+"                            Al finalizar el proceso aparecerá un mensaje "
+"que indicará que la simulación ha sido ejecutada con éxito o si ha "
+"ocurrido algún error."
+msgstr ""
+
+#: templates/index.html:197
+msgid ""
+"Características de la fuente luminosa y propiedades del medio requeridas "
+"para <a href=\"#\" id=\"b5\" onclick=\"buttonId(this.id)\">ejecutar la "
+"simulación</a>."
+msgstr ""
+
+#: templates/index.html:205 templates/index.html:962 templates/index.html:984
+msgid "Resultados"
+msgstr ""
+
+#: templates/index.html:207
+msgid ""
+"Los resultados de la simulación son presentados en forma de gráfica donde"
+" se muestran los valores de fluencia relativa para tres sistemas de "
+"coordenadas, \n"
+"                            cartesianas, esféricas y cilíndricas (ver <a "
+"href=\"#\" id=\"b4\" onclick=\"buttonId(this.id)\">Montecarlo aplicado > "
+"Sistemas de coordenadas</a> para más \n"
+"                            información). Se obtiene el ritmo de fluencia"
+" relativo en <em>una dimensión</em>."
+msgstr ""
+
+#: templates/index.html:218
+msgid "Resultados después de ejecutar una simulación."
+msgstr ""
+
+#: templates/index.html:225
+msgid ""
+"Terminada la simulación se puede descargar un archivo .out el cual "
+"contiene los resultados, junto con los parámetros ingresados."
+msgstr ""
+
+#: templates/index.html:232 templates/index.html:893 templates/index.html:1014
+msgid "Número de fotones"
+msgstr ""
+
+#: templates/index.html:233
+msgid "Tamaño del paquete"
+msgstr ""
+
+#: templates/index.html:234
+msgid "***Parámetros del tejido***"
+msgstr ""
+
+#: templates/index.html:235
+msgid "Coef. de Absorcion:"
+msgstr ""
+
+#: templates/index.html:236
+msgid "Coef. de Esparcimiento:"
+msgstr ""
+
+#: templates/index.html:237
+msgid "Coef. de Anisotropia:"
+msgstr ""
+
+#: templates/index.html:238
+msgid "Indice de Refracción:"
+msgstr ""
+
+#: templates/index.html:239
+msgid "La última fila esta desbordada. Ignorarla"
+msgstr ""
+
+#: templates/index.html:256
+msgid ""
+"El archivo puede importarse a otro software como <b>Matlab</b> para "
+"generar gráficos personalizados o hacer algún tipo de procesamiento."
+msgstr ""
+
+#: templates/index.html:266
+msgid "Gráfico generado en Matlab."
+msgstr ""
+
+#: templates/index.html:302 templates/index.html:426 templates/index.html:650
+#: templates/index.html:867 templates/index.html:1062
+msgid "Referencias"
+msgstr ""
+
+#: templates/index.html:316
+msgid "¿Qué es?"
+msgstr ""
+
+#: templates/index.html:321
+msgid ""
+"La simulación de Montecarlo, también conocida como el método de "
+"Montecarlo o simulación de\n"
+"                            probabilidad múltiple, es una técnica "
+"matemática que se emplea para estimar los posibles\n"
+"                            resultados de eventos inciertos <a "
+"href=\"#ref2_p1\">[2]</a>. También se aplica para evaluar \n"
+"                            expresiones matemáticas que no pueden "
+"resolverse fácilmente de forma analítica. El término\n"
+"                            proviene del Casino de Montecarlo en Mónaco, "
+"conocido como \"la capital del juego de azar\"\n"
+"                            <a href=\"#ref1_p1\">[1]</a>, ya que la "
+"esencia principal de este método radica en la generación\n"
+"                            de números aleatorios, similar a una ruleta, "
+"para simular diversos fenómenos. <br><br>\n"
+"                            \n"
+"                            John von Neumann y Stanislaw Ulam inventaron "
+"este método durante la Segunda Guerra Mundial\n"
+"                            en la década de 1940. Originalmente, fue "
+"utilizado como una herramienta de investigación para\n"
+"                            simular la difusión de neutrones en el "
+"material de fisión en el Laboratorio Nacional de Los Álamos, en\n"
+"                            Estados Unidos, durante el desarrollo de la "
+"bomba atómica <a href=\"#ref1_p1\">[1]</a>.\n"
+"                            El constante avance en la capacidad "
+"computacional ha facilitado que este método tome relevancia\n"
+"                            en la investigación científica. El método de "
+"Montecarlo presenta un error absoluto que disminuye\n"
+"                            según el inverso de la raíz cuadrada de N, "
+"donde N es el número de pruebas realizadas."
+msgstr ""
+
+#: templates/index.html:344
+msgid ""
+"La ruleta de un casino es un generador simple de números aleatorios. "
+"Imagen recuperada\n"
+"                                de:"
+msgstr ""
+
+#: templates/index.html:352
+msgid "Aplicaciones"
+msgstr ""
+
+#: templates/index.html:354
+msgid ""
+"El método de Montecarlo tiene diversas aplicaciones en distintas áreas "
+"como:"
+msgstr ""
+
+#: templates/index.html:359
+msgid "Finanzas"
+msgstr ""
+
+#: templates/index.html:361
+msgid ""
+"Los analistas financieros usan el método de Montecarlo para simular "
+"varios escenarios posibles."
+msgstr ""
+
+#: templates/index.html:365
+msgid "Análisis de confiabilidad"
+msgstr ""
+
+#: templates/index.html:367
+msgid ""
+"Cuando se diseña un producto de ingeniería se requiere conocer la vida "
+"útil en años que\n"
+"                                    podrá entregar, para ello se necesita"
+" establecer una condición de trabajo específica para el \n"
+"                                    producto, la temperatura, humedad y "
+"diversos factores que pueden afectar a su funcionamiento.\n"
+"                                    Con el método de Montecarlo es "
+"posible simular miles de condiciones del producto y verificar \n"
+"                                    su tiempo de vida."
+msgstr ""
+
+#: templates/index.html:375
+msgid "Matemáticas y física estadística"
+msgstr ""
+
+#: templates/index.html:377
+msgid ""
+"La simulación mediante el método de Montecarlo se utiliza para resolver "
+"numéricamente problemas\n"
+"                                    muy complejos de integración y "
+"diferenciación parcial multidimensional. También se puede utilizar para"
+" \n"
+"                                    resolver problemas de optimización."
+msgstr ""
+
+#: templates/index.html:392
+msgid ""
+"Visualización de una estimación de Pi por el método de Montecarlo en "
+"Python. Se lanzan puntos aleatorios (hasta 1,000,000)\n"
+"                                uniformemente distribuidos sobre el "
+"cuadrado y se identifican los puntos que caen dentro o fuera del cuadrado"
+" \n"
+"                                (rojos o azules respectivamente). El "
+"cociente de los puntos rojos dividido por los puntos totales es igual a "
+"Pi/4."
+msgstr ""
+
+#: templates/index.html:402
+msgid ""
+"Una ventaja distintiva de este método en comparación con enfoques "
+"tradicionales es su capacidad para abordar \n"
+"                    un amplio rango de entradas para un problema. Desde "
+"la peor condición hasta la ideal, el método puede simular \n"
+"                    miles de situaciones intermedias, permitiendo "
+"explorar diversas posibilidades. <br><br>\n"
+"\n"
+"                    Otra aplicación del método de Montecarlo es simular "
+"la trayectoria de elementos altamente influenciados por \n"
+"                    eventos aleatorios, como fotones en movimiento dentro"
+" de un medio tal como un tejido biológico. El método \n"
+"                    puede predecir con cierta exactitud cómo se moverán "
+"miles de fotones, hasta qué profundidad llegarán y dónde \n"
+"                    serán absorbidos en mayor medida. Estas simulaciones "
+"son útiles para inferir las propiedades ópticas de los \n"
+"                    tejidos, calcular la dosis de luz adecuada para la "
+"Terapia Fotodinámica e incluso estudiar la interacción de \n"
+"                    la luz con células cancerosas para mejorar el "
+"diagnóstico."
+msgstr ""
+
+#: templates/index.html:414
+msgid "Desafíos"
+msgstr ""
+
+#: templates/index.html:417
+msgid ""
+"Las simulaciones de Montecarlo plantean un desafío significativo: la alta"
+" potencia computacional requerida para \n"
+"                    realizar los experimentos. Aunque los recursos "
+"computacionales actuales son extensos, no todos tienen acceso a \n"
+"                    supercomputadoras. No obstante, existen servicios en "
+"la nube que ofrecen recursos prácticamente ilimitados, \n"
+"                    como AWS Batch de Amazon <a "
+"href=\"#ref3_p1\">[3]</a>. Este servicio escalable asigna recursos según "
+"la potencia computacional \n"
+"                    necesaria para el experimento."
+msgstr ""
+
+#: templates/index.html:446
+msgid "Interacción luz-materia"
+msgstr ""
+
+#: templates/index.html:449
+msgid ""
+"Cuando la luz interactúa con algún medio suceden 4 fenómenos principales,"
+" reflexión, transmisión, dispersión y absorción. \n"
+"                    El medio puede ser cualquier objeto o material que "
+"tengamos a nuestro alrededor, un cristal, un líquido, una pared o quizás"
+" \n"
+"                    la propia piel. La importancia de conocer cómo se "
+"comporta la luz en presencia de algún tipo de medio radica en que hoy en "
+"día \n"
+"                    se ocupa la luz para realizar diagnósticos médicos "
+"como sucede con los rayos x, también en terapias para tratar y "
+"diagnosticar \n"
+"                    el cáncer, además de que conocer el comportamiento de"
+" la luz nos ha permitido crear animaciones hiperrealistas en películas y"
+" \n"
+"                    videojuegos."
+msgstr ""
+
+#: templates/index.html:459
+msgid "Reflexión"
+msgstr ""
+
+#: templates/index.html:461
+msgid ""
+"La primer interacción que puede tener la luz al interactuar con algún "
+"medio es ser reflejada, esto es que los fotones son enviados \n"
+"                            fuera del medio una vez hacen contacto con "
+"este, siendo disparados con un cierto ángulo que está en función al "
+"ángulo e incidencia \n"
+"                            de la fuente de luz."
+msgstr ""
+
+#: templates/index.html:465
+msgid "Transmisión"
+msgstr ""
+
+#: templates/index.html:467
+msgid ""
+"En conjunto con la reflexión, la transmisión ocasiona que la luz que "
+"presenta estos fenómenos no tenga efecto sobre el medio o tejido, \n"
+"                            la transmisión implica que una cierta "
+"cantidad de luz atraviesa por completo el medio, tal y como ocurre con un"
+" cristal."
+msgstr ""
+
+#: templates/index.html:470
+msgid "Esparcimiento"
+msgstr ""
+
+#: templates/index.html:472
+msgid ""
+"La dispersión es el cambio de dirección de los fotones dentro del medio, "
+"en un tejido como la piel la luz puede ser dispersada por las \n"
+"                            fibras de colágeno, vasos sanguíneos y otras "
+"estructuras y moléculas."
+msgstr ""
+
+#: templates/index.html:475
+msgid "Absorción"
+msgstr ""
+
+#: templates/index.html:477
+msgid ""
+"Los fotones dejan parte de su energía en algún obstáculo que se hayan "
+"encontrado para ser transformada en calor, una vez que el fotón \n"
+"                            ha perdido por completo su energía deja de "
+"existir."
+msgstr ""
+
+#: templates/index.html:487
+msgid ""
+"Imagen donde se muestra las distintas formas en las que la luz interactúa"
+" con un medio, se refleja (Reflection), \n"
+"                                es absorbida (Absorption), se esparce "
+"(Scattering), o es transmitida a través de todo el medio (transmitted "
+"light).\n"
+"                                Imagen obtenida de"
+msgstr ""
+
+#: templates/index.html:496
+msgid "Propiedades ópticas"
+msgstr ""
+
+#: templates/index.html:498
+msgid ""
+"El comportamiento que tendrá la luz al incidir en un medio depende de las"
+" propiedades ópticas del mismo, estas pueden ser cuantificadas \n"
+"                    y son únicas para cada tipo de material, en el cuerpo"
+" humano por ejemplo cada capa de la piel, venas, arterias o incluso las "
+"partes de \n"
+"                    la célula tienen propiedades ópticas distintas que "
+"hacen que la luz interactúe de distinta manera.\n"
+"                    <br><br>\n"
+"                    Hoy en día una gran cantidad de materiales han sido "
+"estudiados y se conocen sus propiedades ópticas a distintas longitudes de"
+" onda, \n"
+"                    esta información está disponible en tablas y "
+"gráficas. A continuación, se presenta un resumen de las principales "
+"propiedades ópticas \n"
+"                    de la materia las cuáles son útiles para realizar "
+"simulaciones de luz incidente."
+msgstr ""
+
+#: templates/index.html:514
+msgid "Espectro electromagnético visible (visible spectrum). Imagen obtenida de"
+msgstr ""
+
+#: templates/index.html:523
+msgid "Coeficiente de absorción"
+msgstr ""
+
+#: templates/index.html:525
+msgid ""
+"El coeficiente de absorción &mu;a es una medida que describe cuánta luz o"
+" radiación electromagnética es absorbida por un material \n"
+"                            por unidad de distancia a medida que lo "
+"atraviesa, depende de la longitud de onda de la luz o radiación que se "
+"esté utilizando \n"
+"                            en la fuente y de las características físicas"
+" y químicas del material. Cuanto mayor sea el valor de &mu;<sub>a</sub> "
+"para un material y una \n"
+"                            longitud de onda específicos, mayor seá la "
+"cantidad de luz absorbida, un material con un coeficiente de absorción "
+"muy cercano a \n"
+"                            0 se comporta como un material transparente a"
+" dicha longitud de onda.\n"
+"                            Se expresa comúnmente en unidades de inverso "
+"de longitud por ejemplo [cm<sup>-1</sup>]  o [in<sup>-1</sup>]."
+msgstr ""
+
+#: templates/index.html:540
+msgid ""
+"Coeficiente de absorción &mu;<sub>a</sub>, en una variedad de materiales "
+"semiconductores a 300K como función de la longitud \n"
+"                                de onda de la luz en el vacío. Imagen "
+"obtenida de"
+msgstr ""
+
+#: templates/index.html:550
+msgid "Coeficiente de esparcimiento"
+msgstr ""
+
+#: templates/index.html:552
+msgid ""
+"El coeficiente de esparcimiento &mu;<sub>s</sub> es una propiedad que "
+"describe cómo las partículas de un medio dispersan la luz o \n"
+"                            radiación electromagnética que incide sobe "
+"ellas, es decir que la luz no sigue una línea recta al interactuar con el"
+" \n"
+"                            medio, sino que se dispersa en múltiples "
+"direcciones. El coeficiente &mu;<sub>s</sub> puede ser afectado por las "
+"propiedades físicas \n"
+"                            del objeto, así como la longitud de onda de "
+"la luz incidente. Un material con un &mu;<sub>s</sub> alto dispersará en "
+"mayor medida la \n"
+"                            luz que incide sobre él, dándole una "
+"apariencia difusa o turbia como el caso de la neblina.\n"
+"                            <br><br>\n"
+"                            Se expresa en unidades de inverso de longitud"
+" [cm<sup>-1</sup>]."
+msgstr ""
+
+#: templates/index.html:567
+msgid "Coeficiente de esparcimiento de la piel en función de la longitud de onda."
+msgstr ""
+
+#: templates/index.html:576
+msgid "Coeficiente de anisotropía g"
+msgstr ""
+
+#: templates/index.html:578
+msgid ""
+"Se dice que un material tiene una propiedad isotrópica cuando al medirla "
+"sus valores son iguales en cualquier dirección, \n"
+"                            por el contrario, la anisotropía de un "
+"material implica que una propiedad tomará un valor distinto dependiendo "
+"de la \n"
+"                            dirección en la que se mida u observe.\n"
+"                            <br><br>\n"
+"                            En óptica se utiliza para describir cómo un "
+"material dispersa de manera no uniforme la luz dentro del mismo, los "
+"tejidos \n"
+"                            biológicos por ejemplo son medios "
+"anisotrópicos debido a su naturaleza compuesta de varios elementos como "
+"vasos sanguíneos, \n"
+"                            células, sangre etc.\n"
+"                            <br><br>\n"
+"                            Se representa con la letra g y puede tomar "
+"valores de -1 a 1 y es adimensional."
+msgstr ""
+
+#: templates/index.html:589
+msgid ""
+"Si g es igual a 0 indica que el material tiene una dispersión "
+"completamente isotrópica por lo que la luz se dispersa \n"
+"                                    de manera uniforme en todas las "
+"direcciones."
+msgstr ""
+
+#: templates/index.html:593
+msgid ""
+"Si g es positivo entonces la dispersión de la luz tiende a seguir una "
+"dirección similar a la original (hacia adelante)."
+msgstr ""
+
+#: templates/index.html:596
+msgid ""
+"Si g es negativo la dispersión tiene a estar en la dirección opuesta a la"
+" luz incidente (hacia atrás)."
+msgstr ""
+
+#: templates/index.html:607
+msgid ""
+"Coeficiente de anisotropía para distintos tipos de tejido en función de "
+"la longitud de onda."
+msgstr ""
+
+#: templates/index.html:616 templates/index.html:1018
+msgid "Índice de refracción"
+msgstr ""
+
+#: templates/index.html:618
+msgid ""
+"El índice de refracción comúnmente representado como n, es una propiedad "
+"óptica de los materiales que describe \n"
+"                            como cambia la velocidad de la luz al incidir"
+" en un material con respecto a su velocidad en el vacío. Este cambio \n"
+"                            de velocidad implica que la luz es desviada o"
+" refractada al atravesar el material.\n"
+"                            <br><br>\n"
+"                            El índice de refracción es característico de "
+"cada material y puede variar respecto a la longitud de onda de la luz \n"
+"                            y es adimensional.\n"
+"                            <br><br> \n"
+"                            Cuanto mayor sea el índice de refracción de "
+"un material para cierta longitud de onda, más lenta será la velocidad \n"
+"                            de la luz en ese material, y más se desviará "
+"la luz cuando pase de un medio a otro.\n"
+"                            <br><br><br>\n"
+"                            En el siguiente video se muestra una "
+"animación de terapia laser en la piel, una de las tantas aplicaciones que"
+" tiene\n"
+"                            el estudiar las propiedades ópticas de los "
+"materiales."
+msgstr ""
+
+#: templates/index.html:639
+msgid ""
+"Refracción de la luz en la interfaz entre dos medios con diferentes "
+"índices de refracción (n2 > n1). Como la \n"
+"                                velocidad de fase es menor en el segundo "
+"medio (v2 < v1), el ángulo de refracción θ2 es menor que el ángulo de \n"
+"                                incidencia θ1; esto es, el rayo en el "
+"medio de índice mayor es cercano al vector normal."
+msgstr ""
+
+#: templates/index.html:679
+msgid ""
+"El método de Montecarlo es bastante poderoso al simular el comportamiento"
+" de partículas cuya dinámica puede modelarse mediante  \n"
+"                    comportamientos aleatorios, es bastante útil para la "
+"simulación de transporte de fotones en medios turbios y ha encontrado un"
+" \n"
+"                    campo de aplicación en medicina donde la reflectancia"
+" difusa simulada puede ser utilizada para deducir las propiedades ópticas"
+" \n"
+"                    de los tejidos mientras que la absorción de la "
+"energía óptica dentro de un tejido puede ser simulada para calcular la "
+"dosis de \n"
+"                    luz necesaria para la Terapia fotodinámica, entre "
+"otras aplicaciones."
+msgstr ""
+
+#: templates/index.html:693
+msgid ""
+"Simulación de Montecarlo de migración de fotones en un medio turbio, en "
+"este caso un cerebro humano. Imagen obtenida de:"
+msgstr ""
+
+#: templates/index.html:702
+msgid ""
+"La simulación consiste en lanzar fotones desde una fuente de luz a un "
+"medio semi infinito sin fronteras, es decir que es \n"
+"                            infinito sobre el plano de incidencia y no "
+"sobre el eje de incidencia. El medio se define por sus propiedades "
+"ópticas \n"
+"                            (coeficiente de absorción &mu;<sub>a</sub>, "
+"esparcimiento &mu;<sub>s</sub>, n, g) las cuales ayudarán a describir "
+"cómo se comportarán los fotones \n"
+"                            dentro del material. Todo esto con el "
+"objetivo de obtener la <strong>fluencia relativa</strong> a distintas "
+"profundidades, esto es qué tanta \n"
+"                            energía absorbe el tejido en función de la "
+"distancia de la fuente, esto nos ayudará a observar primeramente la "
+"profundidad \n"
+"                            a la que penetró la luz incidente antes de "
+"ser absorbida por completo y en consecuencia conocer a cuanta y a qué "
+"distancia \n"
+"                            se absorbió más energía por unidad de área. "
+"Conocer la fluencia relativa de un material puede ser realmente útil como"
+" con \n"
+"                            la terapia con laser donde se utiliza para "
+"cuantificar la cantidad de energía luminosa que se entrega a un tejido "
+"durante \n"
+"                            el tratamiento, esto con la finalidad de no "
+"sobrepasar el límite de energía que el tejido pueda recibir y ser dañado."
+"\n"
+"                            <br><br>\n"
+"                            El programa inicia lanzando "
+"<strong>N</strong> fotones a los que se les asigna un valor inicial de 1 "
+"(su peso), cada fotón hará algún \n"
+"                            tipo de interacción con el tejido, será "
+"esparcido o absorbido. Se simulan varios pasos donde cada fotón se "
+"propaga a \n"
+"                            través del medio y mientras esto ocurre una "
+"fracción de su peso inicial se deposita a cierta profundidad del tejido,"
+" \n"
+"                            estos valores se almacenan, son procesados y "
+"presentados como la fluencia relativa del material."
+msgstr ""
+
+#: templates/index.html:724
+msgid "Diagrama de flujo del algoritmo general del método de Montecarlo."
+msgstr ""
+
+#: templates/index.html:730
+msgid "Sistemas de coordenadas"
+msgstr ""
+
+#: templates/index.html:732
+msgid ""
+"Como se explicó anteriormente cada fotón se propaga dentro del medio, es "
+"esparcido o absorbido y durante este proceso una \n"
+"                    parte de su peso inicial es absorbido a cierta "
+"profundidad del medio, para cuantificar esto el medio es dividido en "
+"pequeños \n"
+"                    depósitos o <em>bins</em> donde se va almacenando la "
+"energía absorbida de los fotones. Es posible dividir al medio de "
+"distintas formas, \n"
+"                    por pequeños cubos, capas esféricas o capas "
+"cilíndricas y para esta simulación se muestran los resultados para estos "
+"tres tipos \n"
+"                    de depósitos, ello implica hacer un cambio de "
+"coordenadas durante la simulación entre cartesianas, esféricas y "
+"cilíndricas."
+msgstr ""
+
+#: templates/index.html:745
+msgid ""
+"Comparación de los distintos sistemas de coordenadas en 3 dimensiones. "
+"Imagen obtenida de"
+msgstr ""
+
+#: templates/index.html:752
+msgid "Lanzamiento de fotones"
+msgstr ""
+
+#: templates/index.html:754
+msgid "Se pueden lanzar fotones de tres tipos distintos de fuentes."
+msgstr ""
+
+#: templates/index.html:761 templates/index.html:783 templates/index.html:804
+msgid "Haz click para más información"
+msgstr ""
+
+#: templates/index.html:764 templates/index.html:770
+msgid "Fuente colimada"
+msgstr ""
+
+#: templates/index.html:766
+msgid ""
+"Distribución de los fotones al utilizar una fuente plana colimada de "
+"radio infinito."
+msgstr ""
+
+#: templates/index.html:772
+msgid ""
+"El lanzar fotones colimados involucra el colocar la trayectoria de los "
+"fotones en una sola dirección \n"
+"                                (puede ser el eje z) entrando al tejido "
+"en el origen. Para este caso, se tiene la trayectoria inicial de \n"
+"                                los fotones en una sola dirección, esto "
+"es, en un solo eje, por lo que, para el caso de incidencia paralela \n"
+"                                al eje z, el vector de trayectoria se "
+"inicia como (0,0,1)."
+msgstr ""
+
+#: templates/index.html:786 templates/index.html:792
+msgid "Fuente isotrópica"
+msgstr ""
+
+#: templates/index.html:788
+msgid ""
+"Distribución de los fotones al utilizar una fuente puntual isotrópica "
+"colocada en el origen."
+msgstr ""
+
+#: templates/index.html:794
+msgid ""
+"El lanzar fotones de una fuente puntual isotrópica requiere de colocar "
+"esta fuente en un punto (x,y,z) ya sea dentro o fuera \n"
+"                                del tejido. Posteriormente se debe de "
+"asegurar que la distribución de los fotones sea uniforme de forma radial,"
+" esto es que \n"
+"                                los fotones salgan de la fuente en todas "
+"direcciones con la misma probabilidad."
+msgstr ""
+
+#: templates/index.html:807 templates/index.html:813
+msgid "Haz de radio finito"
+msgstr ""
+
+#: templates/index.html:809
+msgid ""
+"Distribución de los fotones al utilizar una fuente plana colimada de "
+"diámetro finito."
+msgstr ""
+
+#: templates/index.html:815
+msgid ""
+"Cuando se considera lanzar un haz colimado de radio finito a, la posición"
+" del lanzamiento de los fotones debe variar de una \n"
+"                                forma aleatoria para que se logre una "
+"distribución parcial uniforme de los fotones lanzados."
+msgstr ""
+
+#: templates/index.html:823
+msgid "Interacción del fotón con el medio"
+msgstr ""
+
+#: templates/index.html:829
+msgid ""
+"En cada paso de la simulación el fotón da un salto de una longitud "
+"determinada al muestrear la función de densidad de \n"
+"                                probabilidad exponencial para el tamaño "
+"del paso s del movimiento."
+msgstr ""
+
+#: templates/index.html:833
+msgid ""
+"El fotón pierde una fracción de su peso inicial debido a la absorción el "
+"cual se acumula en contenedores \n"
+"                                (cartesianos, cilíndricos y esféricos)."
+msgstr ""
+
+#: templates/index.html:837
+msgid ""
+"El peso restante del fotón se esparce en una nueva trayectoria la cuál "
+"depende en gran medida de la anisotropía g del material."
+msgstr ""
+
+#: templates/index.html:840
+msgid ""
+"Si el peso del fotón toma un valor menor a un umbral (0.01 en este caso),"
+" la supervivencia del fotón se decide mediante un \n"
+"                                número aleatorio, si este es menor que un"
+" valor determinado entonces el fotón es desechado, si esto no ocurre "
+"entonces el peso \n"
+"                                de fotón es incrementado en 1/umbral (10 "
+"veces para este caso) y el fotón continúa propagándose."
+msgstr ""
+
+#: templates/index.html:845
+msgid ""
+"El proceso continúa hasta que el último fotón sea lanzado y por entonces "
+"se genera una gráfica y un archivo con los \n"
+"                                resultados de la simulación, el ritmo de "
+"fluencia relativo <strong>F/P [cm<sup>-2</sup>]</strong> donde \n"
+"                                <strong>F [W/cm<sup>-2</sup>]</strong> es"
+" el ritmo de fluencia y <strong>P[W]</strong> \n"
+"                                es la fuente de luz."
+msgstr ""
+
+#: templates/index.html:858
+msgid ""
+"Movimiento del fotón por la malla del tejido, en donde pierde una "
+"fracción de su peso W el cual se deposita en un \"bin\" \n"
+"                                de la malla, para posteriormente cambiar "
+"de dirección."
+msgstr ""
+
+#: templates/index.html:887
+msgid "Características de la fuente luminosa"
+msgstr ""
+
+#: templates/index.html:897 templates/index.html:1019
+msgid "Tipo de fuente:"
+msgstr ""
+
+#: templates/index.html:899
+msgid "Elija un tipo de fuente"
+msgstr ""
+
+#: templates/index.html:900
+msgid "Puntual Isotrópica"
+msgstr ""
+
+#: templates/index.html:901
+msgid "Colimada"
+msgstr ""
+
+#: templates/index.html:902
+msgid "Haz finito (radio de 5 cm)"
+msgstr ""
+
+#: templates/index.html:907
+msgid "Propiedades ópticas del materia"
+msgstr ""
+
+#: templates/index.html:913 templates/index.html:1015
+msgid "Coef. de Absorción"
+msgstr ""
+
+#: templates/index.html:918 templates/index.html:1016
+msgid "Coef. de Esparcimiento"
+msgstr ""
+
+#: templates/index.html:925
+msgid "Coef. de Anisotropía g"
+msgstr ""
+
+#: templates/index.html:930
+msgid "Índice de refracción n"
+msgstr ""
+
+#: templates/index.html:934
+msgid "Iniciar"
+msgstr ""
+
+#: templates/index.html:954
+msgid "Mensaje"
+msgstr ""
+
+#: templates/index.html:975
+msgid ""
+"Representación conceptual de las interacciones generales entre la luz y "
+"el tejido,\n"
+"                                        reflección (reflection), "
+"absorción (absorption), esparcimiento (scattering) entre \n"
+"                                        otras."
+msgstr ""
+
+#: templates/index.html:995
+msgid "Valor máximo a mostrar (cm)"
+msgstr ""
+
+#: templates/index.html:999
+msgid ""
+"Modifica el límite superior en el eje horizontal para visualizar mejor "
+"los datos, <br> una vez que haya establecido un nuevo valor presione el "
+"botón ACTUALIZAR"
+msgstr ""
+
+#: templates/index.html:1005
+msgid "Actualizar"
+msgstr ""
+
+#: templates/index.html:1012
+msgid "Parámetros"
+msgstr ""
+
+#: templates/index.html:1017
+msgid "Coef. de Anisotropía"
+msgstr ""
+
+#: templates/index.html:1029
+msgid ""
+"Descarga los resultados de la simulación en un archivo .out, <br> este "
+"incluye además los paŕametros ingresados."
 msgstr ""
 

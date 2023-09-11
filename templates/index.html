@@ -39,7 +39,7 @@
         <li>
             <div class="user-view">
                 <div class="background">
-                    <img src="https://picsum.photos/300/200" />
+                    <img src="../static/img/bg_sidebar2.jpeg" style="width: 100%;"/>
                 </div>
                 <a href="#"><img class="circle" src="../static/img/logo.png" /></a>
                 <a href="#"><span class="white-text name">LightTrek</span></a>
@@ -73,8 +73,8 @@
         <div class="navbar-fixed">
             <!-- Dropdown Structure -->
             <ul id='theme' class='dropdown-content'>
-                <li><a href="#!" onclick="changeTheme(1)">Claro</a></li>
-                <li><a href="#!" onclick="changeTheme(2)">Oscuro</a></li>
+                <li><a href="#!" onclick="changeTheme(1)">{{_('Claro')}}</a></li>
+                <li><a href="#!" onclick="changeTheme(2)">{{_('Oscuro')}}</a></li>
             </ul>
             <!-- Dropdown Structure -->
             <ul id='language' class='dropdown-content'>
@@ -92,14 +92,14 @@
                         <li>
                             <!-- Dropdown Trigger -->
                             <a class='dropdown-trigger side-button-theme' href='#' data-target='theme'>
-                                <i class="material-icons left">brightness_medium</i> 
-                                Tema
+                                <i class="material-icons left navbar-icon">brightness_medium</i> 
+                                {{_('Tema')}}
                             </a>
                         </li>
                         <li>
                             <!-- Dropdown Trigger -->
                             <a class='dropdown-trigger side-button-lang' href='#' data-target='language'>
-                                <i class="material-icons left">translate</i> 
+                                <i class="material-icons left navbar-icon">translate</i> 
                                 {{_('Idioma')}}
                             </a>
                         </li>
@@ -110,14 +110,14 @@
         <!--Contenido-->
         <div class="content container-fluid">
             <div id="pageb1" class="page" style="display: none;">
-                <h4>Conoce LightTrek</h4>
+                <h4>{{_('Conoce LightTrek')}}</h4>
 
-                <h5>¿Qué es LightTrek y por qué es importante?</h5>
+                <h5>{{_('¿Qué es LightTrek y por qué es importante?')}}</h5>
                 
                 <div class="row">
                     <div class="col m7">
                         <p>
-                            <em>LightTrek</em> es una plataforma web cuyo propósito es simular el comportamiento de fotones que son lanzados desde 
+                            {{_('<em>LightTrek</em> es una plataforma web cuyo propósito es simular el comportamiento de fotones que son lanzados desde 
                             una fuente de luz a un medio, esto mediante el método de Montecarlo que es una técnica matemática que se emplea 
                             para estimar los posibles resultados de eventos inciertos y que adquirió su nombre debido al casino de Montecarlo 
                             en Mónaco, ya que, en esencia el método consiste en la generación de números aleatorios, similar a una ruleta 
@@ -127,7 +127,7 @@
                             (<em>Relative Fluence Rate F/P [cm<sup>-2</sup>]</em>) con el que se calcula de forma directa el ritmo de fluencia 
                             (<em>Fluence Rate F [W/cm<sup>-2</sup>]</em>) el cuál 
                              da información de cuánta energía es entregada al material por unidad de área y bajo 
-                            ciertas condiciones como a una longitud de onda específica. 
+                            ciertas condiciones como a una longitud de onda específica.')}}
                         </p>
                     </div>
                     <div class="col m5">
@@ -136,7 +136,7 @@
                                 <img class="materialboxed" src="../static/img/sim1.gif" />
                             </div>
                             <div class="card-content">
-                                Simulación de Montecarlo para el transporte de fotones en un espacio vóxel 3D. Imagen de  <a href="https://blogs.mathworks.com/pick/2023/06/13/mcmatlab-a-monte-carlo-simulation-for-photon-transport-in-3d-voxel-space/">Mathworks</a>.
+                                {{_('Simulación de Montecarlo para el transporte de fotones en un espacio vóxel 3D. Imagen de')}}  <a href="https://blogs.mathworks.com/pick/2023/06/13/mcmatlab-a-monte-carlo-simulation-for-photon-transport-in-3d-voxel-space/">Mathworks</a>.
                             </div>
                         </div>
                     </div>
@@ -145,12 +145,12 @@
                 <div class="row">
                     <div class="col m6">
                         <p>
-                            Los tratamientos y técnicas de diagnóstico utilizando luz han adquirido cada vez más popularidad debido a que no son invasivas, 
+                            {{_('Los tratamientos y técnicas de diagnóstico utilizando luz han adquirido cada vez más popularidad debido a que no son invasivas, 
                             son seguras y funcionales. Conocer el ritmo de fluencia (<em>F</em>) del tejido biológico donde se aplicará el láser es muy 
                             importante debido a que permite cuantificar la cantidad segura de potencia luminosa que puede ser aplicada sin dañar el tejido. 
                             Por otro lado, diversos estudios han demostrado que el ritmo de fluencia es un parámetro que puede servir para diferenciar 
                             tejido dañado de tejido sano, es decir que es posible utilizarlo como una herramienta de diagnóstico no invasiva para diversas 
-                            enfermedades <a href="#ref1_p0">[1]</a>. 
+                            enfermedades <a href="#ref1_p0">[1]</a>. ')}}
                         </p>
                     </div>
                     <div class="col m6">
@@ -160,21 +160,21 @@
                     </div>
                 </div>
 
-                <h5>¿Por qué una plataforma web?</h5>
+                <h5>{{_('¿Por qué una plataforma web?')}}</h5>
                 <p>
-                    Con LightTrek se busca aprovechar las facilidades que ofrecen diversas empresas con <em>IaaS (Infraestructure as a service)</em>
+                    {{_('Con LightTrek se busca aprovechar las facilidades que ofrecen diversas empresas con <em>IaaS (Infraestructure as a service)</em>
                     o <em>Paas (Platform as a service)</em> como Amazon con Amazon Web Services o Amazon Batch que otorgan capacidad de procesamiento,
                     CPU, GPU y RAM de forma prácticamente ilimitada, con ello es posible ejecutar simulaciones muy complejas como lo pueden ser las que 
                     utilizan el método de Montecarlo que requieren de muchas iteraciones para disminuir su error. Además, el tener una aplicación 
                     en la web la hace accesible a prácticamente cualquier persona en el mundo, investigadores y estudiantes de cualquier universidad 
-                    pueden hacer uso de ella sin necesidad de instalar algo en sus computadoras, solo es necesario tener acceso a internet.
+                    pueden hacer uso de ella sin necesidad de instalar algo en sus computadoras, solo es necesario tener acceso a internet.')}}
                 </p>
 
                 <div class="row">
                     <div class="col m7">
-                        <h5>¿Cómo usar LightTrek?</h5>
+                        <h5>{{_('¿Cómo usar LightTrek?')}}</h5>
                         <p>
-                            LightTrek como plataforma web está diseñada para ser fácil de usar, entre sus páginas se encuentra información introductoria 
+                            {{_('LightTrek como plataforma web está diseñada para ser fácil de usar, entre sus páginas se encuentra información introductoria 
                             a los distintos conceptos que se necesitan conocer para comprender el funcionamiento del algoritmo y qué significan los resultados obtenidos.
                             <br><br>
                             Para ejecutar una simulación es necesario ir a la pestaña de <a href="#" id="b5" onclick="buttonId(this.id)">Ejecutar simulación</a> donde 
@@ -184,7 +184,7 @@
                             <br><br>
                             Una vez que todos los parámetros hayan sido ingresados se debe presionar el botón de <b>INICIAR</b>, aparecerá una barra de carga 
                             y la simulación comenzará, el diagrama de flujo del algoritmo se puede consultar en <a href="#" id="b4" onclick="buttonId(this.id)">Montecarlo aplicado</a>. 
-                            Al finalizar el proceso aparecerá un mensaje que indicará que la simulación ha sido ejecutada con éxito o si ha ocurrido algún error.
+                            Al finalizar el proceso aparecerá un mensaje que indicará que la simulación ha sido ejecutada con éxito o si ha ocurrido algún error.')}}
                         </p>
                     </div>
 
@@ -194,7 +194,7 @@
                                 <img class="materialboxed" src="../static/img/forms.jpeg" />
                             </div>
                             <div class="card-content">
-                                Características de la fuente luminos y propiedades del medio requeridas para <a href="#" id="b5" onclick="buttonId(this.id)">ejecutar la simulación</a>.
+                                {{_('Características de la fuente luminosa y propiedades del medio requeridas para <a href="#" id="b5" onclick="buttonId(this.id)">ejecutar la simulación</a>.')}}
                             </div>
                         </div>
                     </div>
@@ -202,11 +202,11 @@
 
                 <div class="row">
                     <div class="col m5">
-                        <h5>Resultados</h5>
+                        <h5>{{_('Resultados')}}</h5>
                         <p>
-                            Los resultados de la simulación son presentados en forma de gráfica donde se muestran los valores de fluencia relativa para tres sistemas de coordenadas, 
+                            {{_('Los resultados de la simulación son presentados en forma de gráfica donde se muestran los valores de fluencia relativa para tres sistemas de coordenadas, 
                             cartesianas, esféricas y cilíndricas (ver <a href="#" id="b4" onclick="buttonId(this.id)">Montecarlo aplicado > Sistemas de coordenadas</a> para más 
-                            información). Se obtiene el ritmo de fluencia relativo en <em>una dimensión</em>.
+                            información). Se obtiene el ritmo de fluencia relativo en <em>una dimensión</em>.')}}
                         </p>
                     </div>
                     <div class="col m7">
@@ -215,28 +215,28 @@
                                 <img class="materialboxed" src="../static/img/resultados.jpeg" />
                             </div>
                             <div class="card-content">
-                                Resultados después de ejecutar una simulación.
+                                {{_('Resultados después de ejecutar una simulación.')}}
                             </div>
                         </div>
                     </div>
                 </div>
 
                 <p>
-                    Terminada la simulación se puede descargar un archivo .out el cual contiene los resultados, junto con los parámetros ingresados.
+                    {{_('Terminada la simulación se puede descargar un archivo .out el cual contiene los resultados, junto con los parámetros ingresados.')}}
                 </p>
                 
                 <div class="row">
                     <div class="col m6 offset-m3">
                         <pre class="language-markup">
                             <code class="language-markup">
-    Número de fotones = 100000.000000
-    Tamaño del paquete = 0.00500 [cm] 
-    ***Parámetros del tejido*** 
-    Coef. de Absorcion: 35.000000
-    Coef. de Esparcimiento: 450.000000
-    Coef. de Anisotropia: 0.800000
-    Indice de Refracción: 1.330000
-    La última fila esta desbordada. Ignorarla
+    {{_('Número de fotones')}} = 100000.000000
+    {{_('Tamaño del paquete')}} = 0.00500 [cm] 
+    {{_('***Parámetros del tejido***')}} 
+    {{_('Coef. de Absorcion:')}} 35.000000
+    {{_('Coef. de Esparcimiento:')}} 450.000000
+    {{_('Coef. de Anisotropia:')}} 0.800000
+    {{_('Indice de Refracción:')}}' 1.330000
+    {{_('La última fila esta desbordada. Ignorarla')}}
     r [cm] 	 Fsph [1/cm2] 	 Fcyl [1/cm2] 	 Fpla [1/cm2]
     0.00250 	 1.360e+04 	 9.944e+01 	 2.750e+00 
     0.00750 	 1.541e+03 	 2.747e+01 	 1.256e+00 
@@ -253,7 +253,7 @@
                 </div>
 
                 <p>
-                    El archivo puede importarse a otro software como <b>Matlab</b> para generar gráficos personalizados o hacer algún tipo de procesamiento.
+                    {{_('El archivo puede importarse a otro software como <b>Matlab</b> para generar gráficos personalizados o hacer algún tipo de procesamiento.')}}
                 </p>
 
                 <div class="row">
@@ -263,7 +263,7 @@
                                 <img class="materialboxed" src="../static/img/matlab.jpeg" />
                             </div>
                             <div class="card-content">
-                                Gráfico generado en Matlab.
+                                {{_('Gráfico generado en Matlab.')}}
                             </div>
                         </div>
                     </div>
@@ -299,7 +299,7 @@
 
                 <br>
                 <hr>
-                <h5>Referencias</h5>
+                <h5>{{_('Referencias')}}</h5>
                 <p class="reference" id="ref4_p2">[1] M. H. Niemz, Laser-Tissue interactions: Fundamentals and Applications. Springer Science & Business Media, 2007.
                 </p>
 
@@ -311,14 +311,14 @@
             </div>
 
             <div id="pageb2" class="page" style="display: none;">
-                <h4>Fundamentos Montecarlo</h4>
+                <h4>{{_('Fundamentos Montecarlo')}}</h4>
 
-                <h5>¿Qué es?</h5>
+                <h5>{{_('¿Qué es?')}}</h5>
 
                 <div class="row">
                     <div class="col s8">
                         <p>
-                            La simulación de Montecarlo, también conocida como el método de Montecarlo o simulación de
+                            {{_('La simulación de Montecarlo, también conocida como el método de Montecarlo o simulación de
                             probabilidad múltiple, es una técnica matemática que se emplea para estimar los posibles
                             resultados de eventos inciertos <a href="#ref2_p1">[2]</a>. También se aplica para evaluar 
                             expresiones matemáticas que no pueden resolverse fácilmente de forma analítica. El término
@@ -332,7 +332,7 @@
                             Estados Unidos, durante el desarrollo de la bomba atómica <a href="#ref1_p1">[1]</a>.
                             El constante avance en la capacidad computacional ha facilitado que este método tome relevancia
                             en la investigación científica. El método de Montecarlo presenta un error absoluto que disminuye
-                            según el inverso de la raíz cuadrada de N, donde N es el número de pruebas realizadas.
+                            según el inverso de la raíz cuadrada de N, donde N es el número de pruebas realizadas.')}}'
                         </p>
                     </div>
                     <div class="col s4">
@@ -341,44 +341,42 @@
                                 <img class="materialboxed" src="../static/img/ruleta.jpg" />
                             </div>
                             <div class="card-content">
-                                La ruleta de un casino es un generador simple de números aleatorios. Imagen recuperada
-                                de: <a
+                                {{_('La ruleta de un casino es un generador simple de números aleatorios. Imagen recuperada
+                                de:')}}' <a
                                     href="https://www.trecebits.com/de-montecarlo-a-tu-pantalla-la-historia-de-como-la-ruleta-ha-conquistado-el-mundo-online/">Link</a>
                             </div>
                         </div>
                     </div>
                 </div>
 
-                <h5>Aplicaciones</h5>
+                <h5>{{_('Aplicaciones')}}</h5>
 
-                <p>El método de Montecarlo tiene diversas aplicaciones en distintas áreas como:</p>
+                <p>{{_('El método de Montecarlo tiene diversas aplicaciones en distintas áreas como:')}}</p>
                 <div class="row">
                     <div class="col m11 offset-m1">
                         <ul>
                             <li class="bulleted">
-                                Finanzas
+                                {{_('Finanzas')}}
                                 <p>
-                                    Los analistas financieros usan el método de Montecarlo para simular varios escenarios posibles.
+                                    {{_('Los analistas financieros usan el método de Montecarlo para simular varios escenarios posibles.')}}
                                 </p>
                             </li>
                             <li class="bulleted">
-                                Análisis de confiabilidad
+                                {{_('Análisis de confiabilidad')}}
                                 <p>
-                                    Cuando se diseña un producto de ingeniería se requiere conocer la vida útil en años que
+                                    {{_('Cuando se diseña un producto de ingeniería se requiere conocer la vida útil en años que
                                     podrá entregar, para ello se necesita establecer una condición de trabajo específica para el 
-                                    producto, la temperatura, h7umedad y diversos factores que pueden afectar a su funcionamiento.
+                                    producto, la temperatura, humedad y diversos factores que pueden afectar a su funcionamiento.
                                     Con el método de Montecarlo es posible simular miles de condiciones del producto y verificar 
-                                    su tiempo de vida.
-
-
+                                    su tiempo de vida.')}}
                                 </p>
                             </li>
                             <li class="bulleted">
-                                Matemáticas y física estadística
+                                {{_('Matemáticas y física estadística')}}
                                 <p>
-                                    La simulación mediante el método de Montecarlo se utiliza para resolver numéricamente problemas
+                                    {{_('La simulación mediante el método de Montecarlo se utiliza para resolver numéricamente problemas
                                     muy complejos de integración y diferenciación parcial multidimensional. También se puede utilizar para 
-                                    resolver problemas de optimización.
+                                    resolver problemas de optimización.')}}
                                 </p>
                             </li>
                         </ul>
@@ -391,9 +389,9 @@
                                 <img class="materialboxed" src="../static/img/Estimacion_de_Pi_por_Montercarlo.gif" />
                             </div>
                             <div class="card-content">
-                                Visualización de una estimación de Pi por el método de Montecarlo en Python. Se lanzan puntos aleatorios (hasta 1,000,000)
+                                {{_('Visualización de una estimación de Pi por el método de Montecarlo en Python. Se lanzan puntos aleatorios (hasta 1,000,000)
                                 uniformemente distribuidos sobre el cuadrado y se identifican los puntos que caen dentro o fuera del cuadrado 
-                                (rojos o azules respectivamente). El cociente de los puntos rojos dividido por los puntos totales es igual a Pi/4. 
+                                (rojos o azules respectivamente). El cociente de los puntos rojos dividido por los puntos totales es igual a Pi/4.')}}
                                 <a href="#ref5_p1">[5]</a>
                             </div>
                         </div>
@@ -401,7 +399,7 @@
                 </div>
 
                 <p>
-                    Una ventaja distintiva de este método en comparación con enfoques tradicionales es su capacidad para abordar 
+                    {{_('Una ventaja distintiva de este método en comparación con enfoques tradicionales es su capacidad para abordar 
                     un amplio rango de entradas para un problema. Desde la peor condición hasta la ideal, el método puede simular 
                     miles de situaciones intermedias, permitiendo explorar diversas posibilidades. <br><br>
 
@@ -410,22 +408,22 @@
                     puede predecir con cierta exactitud cómo se moverán miles de fotones, hasta qué profundidad llegarán y dónde 
                     serán absorbidos en mayor medida. Estas simulaciones son útiles para inferir las propiedades ópticas de los 
                     tejidos, calcular la dosis de luz adecuada para la Terapia Fotodinámica e incluso estudiar la interacción de 
-                    la luz con células cancerosas para mejorar el diagnóstico.
+                    la luz con células cancerosas para mejorar el diagnóstico.')}}
                 </p>
 
-                <h5>Desafíos</h5>
+                <h5>{{_('Desafíos')}}</h5>
 
                 <p>
-                    Las simulaciones de Montecarlo plantean un desafío significativo: la alta potencia computacional requerida para 
+                    {{_('Las simulaciones de Montecarlo plantean un desafío significativo: la alta potencia computacional requerida para 
                     realizar los experimentos. Aunque los recursos computacionales actuales son extensos, no todos tienen acceso a 
                     supercomputadoras. No obstante, existen servicios en la nube que ofrecen recursos prácticamente ilimitados, 
                     como AWS Batch de Amazon <a href="#ref3_p1">[3]</a>. Este servicio escalable asigna recursos según la potencia computacional 
-                    necesaria para el experimento.
+                    necesaria para el experimento.')}}
                 </p>
 
                 <br>
                 <hr>
-                <h5>Referencias</h5>
+                <h5>{{_('Referencias')}}</h5>
                 <p class="reference" id="ref1_p1">[1] colaboradores de Wikipedia, “Método de Montecarlo,” Wikipedia, La
                     Enciclopedia Libre, Jan. 2023, [Online]. Available: <a
                         href="https://es.wikipedia.org/wiki/M%C3%A9todo_de_Montecarlo">Link</a></p>
@@ -443,41 +441,41 @@
             </div>
 
             <div id="pageb3" class="page" style="display: none;">
-                <h4>Propiedades ópticas de la materia</h4>
+                <h4>{{_('Propiedades ópticas de la materia')}}</h4>
 
-                <h5>Interacción luz-materia</h5>
+                <h5>{{_('Interacción luz-materia')}}</h5>
               
                 <p>
-                    Cuando la luz interactúa con algún medio suceden 4 fenómenos principales, reflexión, transmisión, dispersión y absorción. 
+                    {{_('Cuando la luz interactúa con algún medio suceden 4 fenómenos principales, reflexión, transmisión, dispersión y absorción. 
                     El medio puede ser cualquier objeto o material que tengamos a nuestro alrededor, un cristal, un líquido, una pared o quizás 
                     la propia piel. La importancia de conocer cómo se comporta la luz en presencia de algún tipo de medio radica en que hoy en día 
                     se ocupa la luz para realizar diagnósticos médicos como sucede con los rayos x, también en terapias para tratar y diagnosticar 
                     el cáncer, además de que conocer el comportamiento de la luz nos ha permitido crear animaciones hiperrealistas en películas y 
-                    videojuegos.
+                    videojuegos.')}}'
                 </p>
                    
                 <div class="row">
                     <div class="col m7">
-                        <h6>Reflexión</h6>
+                        <h6>{{_('Reflexión')}}</h6>
                         <p>
-                            La primer interacción que puede tener la luz al interactuar con algún medio es ser reflejada, esto es que los fotones son enviados 
+                            {{_('La primer interacción que puede tener la luz al interactuar con algún medio es ser reflejada, esto es que los fotones son enviados 
                             fuera del medio una vez hacen contacto con este, siendo disparados con un cierto ángulo que está en función al ángulo e incidencia 
-                            de la fuente de luz.
+                            de la fuente de luz.')}}
                         </p>
-                        <h6>Transmisión</h6>
+                        <h6>{{_('Transmisión')}}</h6>
                         <p>
-                            En conjunto con la reflexión, la transmisión ocasiona que la luz que presenta estos fenómenos no tenga efecto sobre el medio o tejido, 
-                            la transmisión implica que una cierta cantidad de luz atraviesa por completo el medio, tal y como ocurre con un cristal.
+                            {{_('En conjunto con la reflexión, la transmisión ocasiona que la luz que presenta estos fenómenos no tenga efecto sobre el medio o tejido, 
+                            la transmisión implica que una cierta cantidad de luz atraviesa por completo el medio, tal y como ocurre con un cristal.')}}
                         </p>
-                        <h6>Esparcimiento</h6>
+                        <h6>{{_('Esparcimiento')}}</h6>
                         <p>
-                            La dispersión es el cambio de dirección de los fotones dentro del medio, en un tejido como la piel la luz puede ser dispersada por las 
-                            fibras de colágeno, vasos sanguíneos y otras estructuras y moléculas.
+                            {{_('La dispersión es el cambio de dirección de los fotones dentro del medio, en un tejido como la piel la luz puede ser dispersada por las 
+                            fibras de colágeno, vasos sanguíneos y otras estructuras y moléculas.')}}'
                         </p>
-                        <h6>Absorción</h6>
+                        <h6>{{_('Absorción')}}</h6>
                         <p>
-                            Los fotones dejan parte de su energía en algún obstáculo que se hayan encontrado para ser transformada en calor, una vez que el fotón 
-                            ha perdido por completo su energía deja de existir.
+                            {{_('Los fotones dejan parte de su energía en algún obstáculo que se hayan encontrado para ser transformada en calor, una vez que el fotón 
+                            ha perdido por completo su energía deja de existir.')}}
                         </p>
                     </div>
                     <div class="col m5">
@@ -486,24 +484,24 @@
                                 <img class="materialboxed" src="../static/img/foton_interactions.jpeg" />
                             </div>
                             <div class="card-content">
-                                Imagen donde se muestra las distintas formas en las que la luz interactúa con un medio, se refleja (Reflection), 
+                                {{_('Imagen donde se muestra las distintas formas en las que la luz interactúa con un medio, se refleja (Reflection), 
                                 es absorbida (Absorption), se esparce (Scattering), o es transmitida a través de todo el medio (transmitted light).
-                                Imagen obtenida de 
+                                Imagen obtenida de')}}
                                 <a href="https://miro.medium.com/v2/resize:fit:720/format:webp/1*6awo6wRJ3Pt3NTFm-CYKEQ.jpeg">Link</a>
                             </div>
                         </div>
                     </div>
                 </div>
 
-                <h5>Propiedaes ópticas</h5>
+                <h5>{{_('Propiedades ópticas')}}</h5>
                 <p>
-                    El comportamiento que tendrá la luz al incidir en un medio depende de las propiedades ópticas del mismo, estas pueden ser cuantificadas 
+                    {{_('El comportamiento que tendrá la luz al incidir en un medio depende de las propiedades ópticas del mismo, estas pueden ser cuantificadas 
                     y son únicas para cada tipo de material, en el cuerpo humano por ejemplo cada capa de la piel, venas, arterias o incluso las partes de 
                     la célula tienen propiedades ópticas distintas que hacen que la luz interactúe de distinta manera.
                     <br><br>
                     Hoy en día una gran cantidad de materiales han sido estudiados y se conocen sus propiedades ópticas a distintas longitudes de onda, 
                     esta información está disponible en tablas y gráficas. A continuación, se presenta un resumen de las principales propiedades ópticas 
-                    de la materia las cuáles son útiles para realizar simulaciones de luz incidente.
+                    de la materia las cuáles son útiles para realizar simulaciones de luz incidente.')}}
                 </p>
 
                 <div class="row">
@@ -513,7 +511,7 @@
                                 <img class="materialboxed" src="../static/img/electromagnetic-spectrum.jpg" />
                             </div>
                             <div class="card-content">
-                                Espectro electromagnético visible (visible spectrum). Imagen obtenida de 
+                                {{_('Espectro electromagnético visible (visible spectrum). Imagen obtenida de')}}
                                 <a href="https://gamma-sci.com/2021/07/02/electromagnetic-spectrum-101-radio-microwave-and-infrared/">Gamma Scientific</a>
                             </div>
                         </div>
@@ -522,14 +520,14 @@
 
                 <div class="row">
                     <div class="col m6">
-                        <h6>Coeficiente de absorción &mu;<sub>a</sub></h6>
+                        <h6>{{_('Coeficiente de absorción')}} &mu;<sub>a</sub></h6>
                         <p>
-                            El coeficiente de absorción &mu;a es una medida que describe cuánta luz o radiación electromagnética es absorbida por un material 
+                            {{_('El coeficiente de absorción &mu;a es una medida que describe cuánta luz o radiación electromagnética es absorbida por un material 
                             por unidad de distancia a medida que lo atraviesa, depende de la longitud de onda de la luz o radiación que se esté utilizando 
                             en la fuente y de las características físicas y químicas del material. Cuanto mayor sea el valor de &mu;<sub>a</sub> para un material y una 
                             longitud de onda específicos, mayor seá la cantidad de luz absorbida, un material con un coeficiente de absorción muy cercano a 
                             0 se comporta como un material transparente a dicha longitud de onda.
-                            Se expresa comúnmente en unidades de inverso de longitud por ejemplo [cm<sup>-1</sup>]  o [in<sup>-1</sup>].
+                            Se expresa comúnmente en unidades de inverso de longitud por ejemplo [cm<sup>-1</sup>]  o [in<sup>-1</sup>].')}}
 
                         </p>
                     </div>
@@ -539,8 +537,8 @@
                                 <img class="materialboxed" src="../static/img/graph_absorb_coef.png" />
                             </div>
                             <div class="card-content">
-                                Coeficiente de absorción &mu;<sub>a</sub>, en una variedad de materiales semiconductores a 300K como función de la longitud 
-                                de onda de la luz en el vacío. Imagen obtenida de 
+                                {{_('Coeficiente de absorción &mu;<sub>a</sub>, en una variedad de materiales semiconductores a 300K como función de la longitud 
+                                de onda de la luz en el vacío. Imagen obtenida de')}} 
                                 <a href="https://www.pveducation.org/es/fotovoltaica/dispositivos-semiconductores/coeficiente-de-absorci%C3%B3n">pveducation</a>
                             </div>
                         </div>
@@ -549,15 +547,15 @@
 
                 <div class="row">
                     <div class="col m6">
-                        <h6>Coeficiente de esparcimiento &mu;<sub>s</sub></h6>
+                        <h6>{{_('Coeficiente de esparcimiento')}} &mu;<sub>s</sub></h6>
                         <p>
-                            El coeficiente de esparcimiento &mu;<sub>s</sub> es una propiedad que describe cómo las partículas de un medio dispersan la luz o 
+                            {{_('El coeficiente de esparcimiento &mu;<sub>s</sub> es una propiedad que describe cómo las partículas de un medio dispersan la luz o 
                             radiación electromagnética que incide sobe ellas, es decir que la luz no sigue una línea recta al interactuar con el 
                             medio, sino que se dispersa en múltiples direcciones. El coeficiente &mu;<sub>s</sub> puede ser afectado por las propiedades físicas 
                             del objeto, así como la longitud de onda de la luz incidente. Un material con un &mu;<sub>s</sub> alto dispersará en mayor medida la 
                             luz que incide sobre él, dándole una apariencia difusa o turbia como el caso de la neblina.
                             <br><br>
-                            Se expresa en unidades de inverso de longitud [cm<sup>-1</sup>].
+                            Se expresa en unidades de inverso de longitud [cm<sup>-1</sup>].')}}
                         </p>
                     </div>
                     <div class="col m6">
@@ -566,7 +564,7 @@
                                 <img class="materialboxed" src="../static/img/graph_esparcimiento.jpeg" />
                             </div>
                             <div class="card-content">
-                                Coeficiente de esparcimiento de la piel en función de la longitud de onda. 
+                                {{_('Coeficiente de esparcimiento de la piel en función de la longitud de onda.')}}
                                 <a href="#ref1_p2">[1]</a>
                             </div>
                         </div>
@@ -575,9 +573,9 @@
                 
                 <div class="row">
                     <div class="col m6">
-                        <h6>Coeficiente de anisotropía g</h6>
+                        <h6>{{_('Coeficiente de anisotropía g')}}</h6>
                         <p>
-                            Se dice que un material tiene una propiedad isotrópica cuando al medirla sus valores son iguales en cualquier dirección, 
+                            {{_('Se dice que un material tiene una propiedad isotrópica cuando al medirla sus valores son iguales en cualquier dirección, 
                             por el contrario, la anisotropía de un material implica que una propiedad tomará un valor distinto dependiendo de la 
                             dirección en la que se mida u observe.
                             <br><br>
@@ -585,17 +583,17 @@
                             biológicos por ejemplo son medios anisotrópicos debido a su naturaleza compuesta de varios elementos como vasos sanguíneos, 
                             células, sangre etc.
                             <br><br>
-                            Se representa con la letra g y puede tomar valores de -1 a 1 y es adimensional. 
+                            Se representa con la letra g y puede tomar valores de -1 a 1 y es adimensional.')}}
                             <ul>
                                 <li class="bulleted">
-                                    Si g es igual a 0 indica que el material tiene una dispersión completamente isotrópica por lo que la luz se dispersa 
-                                    de manera uniforme en todas las direcciones.
+                                    {{_('Si g es igual a 0 indica que el material tiene una dispersión completamente isotrópica por lo que la luz se dispersa 
+                                    de manera uniforme en todas las direcciones.')}}
                                 </li>
                                 <li class="bulleted">
-                                    Si g es positivo entonces la dispersión de la luz tiende a seguir una dirección similar a la original (hacia adelante).
+                                    {{_('Si g es positivo entonces la dispersión de la luz tiende a seguir una dirección similar a la original (hacia adelante).')}}
                                 </li>
                                 <li class="bulleted">
-                                    Si g es negativo la dispersión tiene a estar en la dirección opuesta a la luz incidente (hacia atrás).
+                                    {{_('Si g es negativo la dispersión tiene a estar en la dirección opuesta a la luz incidente (hacia atrás).')}}
                                 </li>
                             </ul>
                         </p>
@@ -606,7 +604,7 @@
                                 <img class="materialboxed" src="../static/img/anis.jpeg" />
                             </div>
                             <div class="card-content">
-                                Coeficiente de anisotropía para distintos tipos de tejido en función de la longitud de onda. 
+                                {{_('Coeficiente de anisotropía para distintos tipos de tejido en función de la longitud de onda.')}}
                                 <a href="#ref2_p2">[2]</a>
                             </div>
                         </div>
@@ -615,9 +613,9 @@
 
                 <div class="row">
                     <div class="col m8">
-                        <h6>Índice de refracción</h6>
+                        <h6>{{_('Índice de refracción')}}</h6>
                         <p>
-                            El índice de refracción comúnmente representado como n, es una propiedad óptica de los materiales que describe 
+                            {{_('El índice de refracción comúnmente representado como n, es una propiedad óptica de los materiales que describe 
                             como cambia la velocidad de la luz al incidir en un material con respecto a su velocidad en el vacío. Este cambio 
                             de velocidad implica que la luz es desviada o refractada al atravesar el material.
                             <br><br>
@@ -628,7 +626,7 @@
                             de la luz en ese material, y más se desviará la luz cuando pase de un medio a otro.
                             <br><br><br>
                             En el siguiente video se muestra una animación de terapia laser en la piel, una de las tantas aplicaciones que tiene
-                            el estudiar las propiedades ópticas de los materiales.
+                            el estudiar las propiedades ópticas de los materiales.')}}
                         </p>
                         
                     </div>
@@ -638,9 +636,9 @@
                                 <img class="materialboxed" src="../static/img/refraction.svg" />
                             </div>
                             <div class="card-content">
-                                Refracción de la luz en la interfaz entre dos medios con diferentes índices de refracción (n2 > n1). Como la 
+                                {{_('Refracción de la luz en la interfaz entre dos medios con diferentes índices de refracción (n2 > n1). Como la 
                                 velocidad de fase es menor en el segundo medio (v2 < v1), el ángulo de refracción θ2 es menor que el ángulo de 
-                                incidencia θ1; esto es, el rayo en el medio de índice mayor es cercano al vector normal.
+                                incidencia θ1; esto es, el rayo en el medio de índice mayor es cercano al vector normal.')}}
                                 <a href="#ref3_p2">[3]</a>
                             </div>
                         </div>
@@ -649,7 +647,7 @@
 
                 <br>
                 <hr>
-                <h5>Referencias</h5>
+                <h5>{{_('Referencias')}}</h5>
                 <p class="reference" id="ref1_p2">[1] June21SkinOptics Paper Sensors UpdatesHighlighted - Scientific Figure on ResearchGate. Available from: 
                     <a href="https://www.researchgate.net/figure/Graph-showing-the-variation-of-scattering-coefficient-with-wavelength_fig3_325961281">Link</a>
                     [accessed 21 Aug, 2023] 
@@ -675,14 +673,14 @@
             </div>
 
             <div id="pageb4" class="page" style="display: none;">
-                <h4>Montecarlo aplicado</h4>
+                <h4>{{_('Montecarlo aplicado')}}</h4>
 
                 <p>
-                    El método de Montecarlo es bastante poderoso al simular el comportamiento de partículas cuya dinámica puede modelarse mediante  
+                    {{_('El método de Montecarlo es bastante poderoso al simular el comportamiento de partículas cuya dinámica puede modelarse mediante  
                     comportamientos aleatorios, es bastante útil para la simulación de transporte de fotones en medios turbios y ha encontrado un 
                     campo de aplicación en medicina donde la reflectancia difusa simulada puede ser utilizada para deducir las propiedades ópticas 
                     de los tejidos mientras que la absorción de la energía óptica dentro de un tejido puede ser simulada para calcular la dosis de 
-                    luz necesaria para la Terapia fotodinámica, entre otras aplicaciones.
+                    luz necesaria para la Terapia fotodinámica, entre otras aplicaciones.')}}
                 </p>        
 
                 <div class="row">
@@ -692,7 +690,7 @@
                                 <img class="materialboxed" src="../static/img/sim2.gif" />
                             </div>
                             <div class="card-content">
-                                Simulación de Montecarlo de migración de fotones en un medio turbio, en este caso un cerebro humano. Imagen obtenida de: <a href="http://mcx.space/wiki/index.cgi?MMC">MCX</a>
+                                {{_('Simulación de Montecarlo de migración de fotones en un medio turbio, en este caso un cerebro humano. Imagen obtenida de:')}} <a href="http://mcx.space/wiki/index.cgi?MMC">MCX</a>
                             </div>
                         </div>
                     </div>
@@ -701,7 +699,7 @@
                 <div class="row">
                     <div class="col m7">
                         <p>
-                            La simulación consiste en lanzar fotones desde una fuente de luz a un medio semi infinito sin fronteras, es decir que es 
+                            {{_('La simulación consiste en lanzar fotones desde una fuente de luz a un medio semi infinito sin fronteras, es decir que es 
                             infinito sobre el plano de incidencia y no sobre el eje de incidencia. El medio se define por sus propiedades ópticas 
                             (coeficiente de absorción &mu;<sub>a</sub>, esparcimiento &mu;<sub>s</sub>, n, g) las cuales ayudarán a describir cómo se comportarán los fotones 
                             dentro del material. Todo esto con el objetivo de obtener la <strong>fluencia relativa</strong> a distintas profundidades, esto es qué tanta 
@@ -714,7 +712,7 @@
                             El programa inicia lanzando <strong>N</strong> fotones a los que se les asigna un valor inicial de 1 (su peso), cada fotón hará algún 
                             tipo de interacción con el tejido, será esparcido o absorbido. Se simulan varios pasos donde cada fotón se propaga a 
                             través del medio y mientras esto ocurre una fracción de su peso inicial se deposita a cierta profundidad del tejido, 
-                            estos valores se almacenan, son procesados y presentados como la fluencia relativa del material.
+                            estos valores se almacenan, son procesados y presentados como la fluencia relativa del material.')}}
                         </p>
                     </div>
                     <div class="col m5">
@@ -723,19 +721,19 @@
                                 <img class="materialboxed" src="../static/img/FlowChart.jpeg" />
                             </div>
                             <div class="card-content">
-                                Diagrama de flujo del algoritmo general del método de Montecarlo.
+                                {{_('Diagrama de flujo del algoritmo general del método de Montecarlo.')}}
                             </div>
                         </div>
                     </div>
                 </div>
 
-                <h5>Sistemas de coordenadas</h5>
+                <h5>{{_('Sistemas de coordenadas')}}</h5>
                 <p>
-                    Como se explicó anteriormente cada fotón se propaga dentro del medio, es esparcido o absorbido y durante este proceso una 
+                    {{_('Como se explicó anteriormente cada fotón se propaga dentro del medio, es esparcido o absorbido y durante este proceso una 
                     parte de su peso inicial es absorbido a cierta profundidad del medio, para cuantificar esto el medio es dividido en pequeños 
                     depósitos o <em>bins</em> donde se va almacenando la energía absorbida de los fotones. Es posible dividir al medio de distintas formas, 
                     por pequeños cubos, capas esféricas o capas cilíndricas y para esta simulación se muestran los resultados para estos tres tipos 
-                    de depósitos, ello implica hacer un cambio de coordenadas durante la simulación entre cartesianas, esféricas y cilíndricas.
+                    de depósitos, ello implica hacer un cambio de coordenadas durante la simulación entre cartesianas, esféricas y cilíndricas.')}}
                 </p>
                 <div class="row">
                     <div class="col m6 offset-m3">
@@ -744,37 +742,37 @@
                                 <img class="materialboxed" src="../static/img/coords.jpeg" />
                             </div>
                             <div class="card-content">
-                                Comparación de los distintos sistemas de coordenadas en 3 dimensiones. Imagen obtenida de 
+                                {{_('Comparación de los distintos sistemas de coordenadas en 3 dimensiones. Imagen obtenida de')}}
                                 <a href="https://www.contemporarycalculus.com/dh/Calculus_all/CC12_4.pdf">Link</a>
                             </div>
                         </div>
                     </div>
                 </div>
 
-                <h5>Lanzamiento de fotones</h5>
+                <h5>{{_('Lanzamiento de fotones')}}</h5>
                 <p>
-                    Se pueden lanzar fotones de tres tipos distintos de fuentes.
+                    {{_('Se pueden lanzar fotones de tres tipos distintos de fuentes.')}}
                 </p>
 
                 <div class="row">
                     <div class="col m4">
                         <div class="card">
                             <div class="card-image waves-effect waves-block waves-light">
-                              <img class="activator tooltipped" data-position="top" data-tooltip="Haz click para más información" src="../static/img/colimada.jpeg">
+                              <img class="activator tooltipped" data-position="top" data-tooltip="{{_('Haz click para más información')}}" src="../static/img/colimada.jpeg">
                             </div>
                             <div class="card-content">
-                              <span class="card-title activator">Fuente colimada<i class="material-icons right">more_vert</i></span>
+                              <span class="card-title activator">{{_('Fuente colimada')}}<i class="material-icons right">more_vert</i></span>
                               <p>
-                                Distribución de los fotones al utilizar una fuente plana colimada de radio infinito.
+                                {{_('Distribución de los fotones al utilizar una fuente plana colimada de radio infinito.')}}
                               </p>
                             </div>
                             <div class="card-reveal">
-                              <span class="card-title">Fuente colimada<i class="material-icons right">close</i></span>
+                              <span class="card-title">{{_('Fuente colimada')}}<i class="material-icons right">close</i></span>
                               <p>
-                                El lanzar fotones colimados involucra el colocar la trayectoria de los fotones en una sola dirección 
+                                {{_('El lanzar fotones colimados involucra el colocar la trayectoria de los fotones en una sola dirección 
                                 (puede ser el eje z) entrando al tejido en el origen. Para este caso, se tiene la trayectoria inicial de 
                                 los fotones en una sola dirección, esto es, en un solo eje, por lo que, para el caso de incidencia paralela 
-                                al eje z, el vector de trayectoria se inicia como (0,0,1).
+                                al eje z, el vector de trayectoria se inicia como (0,0,1).')}}
                               </p>
                             </div>
                         </div>
@@ -782,20 +780,20 @@
                     <div class="col m4">
                         <div class="card">
                             <div class="card-image waves-effect waves-block waves-light">
-                              <img class="activator tooltipped" data-position="top" data-tooltip="Haz click para más información" src="../static/img/isotropic.jpeg">
+                              <img class="activator tooltipped" data-position="top" data-tooltip="{{_('Haz click para más información')}}" src="../static/img/isotropic.jpeg">
                             </div>
                             <div class="card-content">
-                              <span class="card-title activator">Fuente isotrópica<i class="material-icons right">more_vert</i></span>
+                              <span class="card-title activator">{{_('Fuente isotrópica')}}<i class="material-icons right">more_vert</i></span>
                               <p>
-                                Distribución de los fotones al utilizar una fuente puntual isotrópica colocada en el origen.
+                                {{_('Distribución de los fotones al utilizar una fuente puntual isotrópica colocada en el origen.')}}
                               </p>
                             </div>
                             <div class="card-reveal">
-                              <span class="card-title">Fuente isotrópica<i class="material-icons right">close</i></span>
+                              <span class="card-title">{{_('Fuente isotrópica')}}<i class="material-icons right">close</i></span>
                               <p>
-                                El lanzar fotones de una fuente puntual isotrópica requiere de colocar esta fuente en un punto (x,y,z) ya sea dentro o fuera 
+                                {{_('El lanzar fotones de una fuente puntual isotrópica requiere de colocar esta fuente en un punto (x,y,z) ya sea dentro o fuera 
                                 del tejido. Posteriormente se debe de asegurar que la distribución de los fotones sea uniforme de forma radial, esto es que 
-                                los fotones salgan de la fuente en todas direcciones con la misma probabilidad. 
+                                los fotones salgan de la fuente en todas direcciones con la misma probabilidad.')}}
                               </p>
                             </div>
                         </div>
@@ -803,51 +801,51 @@
                     <div class="col m4">
                         <div class="card">
                             <div class="card-image waves-effect waves-block waves-light">
-                              <img class="activator tooltipped" data-position="top" data-tooltip="Haz click para más información" src="../static/img/radioFinito.jpeg">
+                              <img class="activator tooltipped" data-position="top" data-tooltip="{{_('Haz click para más información')}}" src="../static/img/radioFinito.jpeg">
                             </div>
                             <div class="card-content">
-                              <span class="card-title activator">Haz de radio finito<i class="material-icons right">more_vert</i></span>
+                              <span class="card-title activator">{{_('Haz de radio finito')}}<i class="material-icons right">more_vert</i></span>
                               <p>
-                                Distribución de los fotones al utilizar una fuente plana colimada de diámetro finito.
+                                {{_('Distribución de los fotones al utilizar una fuente plana colimada de diámetro finito.')}}
                               </p>
                             </div>
                             <div class="card-reveal">
-                              <span class="card-title">Haz de radio finito<i class="material-icons right">close</i></span>
+                              <span class="card-title">{{_('Haz de radio finito')}}<i class="material-icons right">close</i></span>
                               <p>
-                                Cuando se considera lanzar un haz colimado de radio finito a, la posición del lanzamiento de los fotones debe variar de una 
-                                forma aleatoria para que se logre una distribución parcial uniforme de los fotones lanzados.
+                                {{_('Cuando se considera lanzar un haz colimado de radio finito a, la posición del lanzamiento de los fotones debe variar de una 
+                                forma aleatoria para que se logre una distribución parcial uniforme de los fotones lanzados.')}}
                               </p>
                             </div>
                         </div>
                     </div>
                 </div>
 
-                <h5>Interacción del fotón con el medio</h5>
+                <h5>{{_('Interacción del fotón con el medio')}}</h5>
 
                 <div class="row">
                     <div class="col m6">
                         <ul>
                             <li class="bulleted">
-                                En cada paso de la simulación el fotón da un salto de una longitud determinada al muestrear la función de densidad de 
-                                probabilidad exponencial para el tamaño del paso s del movimiento.
+                                {{_('En cada paso de la simulación el fotón da un salto de una longitud determinada al muestrear la función de densidad de 
+                                probabilidad exponencial para el tamaño del paso s del movimiento.')}}
                             </li>
                             <li class="bulleted">
-                                El fotón pierde una fracción de su peso inicial debido a la absorción el cual se acumula en contenedores 
-                                (cartesianos, cilíndricos y esféricos).
+                                {{_('El fotón pierde una fracción de su peso inicial debido a la absorción el cual se acumula en contenedores 
+                                (cartesianos, cilíndricos y esféricos).')}}
                             </li>
                             <li class="bulleted">
-                                El peso restante del fotón se esparce en una nueva trayectoria la cuál depende en gran medida de la anisotropía g del material.
+                                {{_('El peso restante del fotón se esparce en una nueva trayectoria la cuál depende en gran medida de la anisotropía g del material.')}}
                             </li>
                             <li class="bulleted">
-                                Si el peso del fotón toma un valor menor a un umbral (0.01 en este caso), la supervivencia del fotón se decide mediante un 
+                                {{_('Si el peso del fotón toma un valor menor a un umbral (0.01 en este caso), la supervivencia del fotón se decide mediante un 
                                 número aleatorio, si este es menor que un valor determinado entonces el fotón es desechado, si esto no ocurre entonces el peso 
-                                de fotón es incrementado en 1/umbral (10 veces para este caso) y el fotón continúa propagándose.
+                                de fotón es incrementado en 1/umbral (10 veces para este caso) y el fotón continúa propagándose.')}}
                             </li>
                             <li class="bulleted">
-                                El proceso continúa hasta que el último fotón sea lanzado y por entonces se genera una gráfica y un archivo con los 
+                                {{_('El proceso continúa hasta que el último fotón sea lanzado y por entonces se genera una gráfica y un archivo con los 
                                 resultados de la simulación, el ritmo de fluencia relativo <strong>F/P [cm<sup>-2</sup>]</strong> donde 
                                 <strong>F [W/cm<sup>-2</sup>]</strong> es el ritmo de fluencia y <strong>P[W]</strong> 
-                                es la fuente de luz.
+                                es la fuente de luz.')}}
                             </li>
                         </ul>
                     </div>
@@ -857,8 +855,8 @@
                                 <img class="materialboxed" src="../static/img/foton.jpeg" />
                             </div>
                             <div class="card-content">
-                                Movimiento del fotón por la malla del tejido, en donde pierde una fracción de su peso W el cual se deposita en un "bin" 
-                                de la malla, para posteriormente cambiar de dirección. 
+                                {{_('Movimiento del fotón por la malla del tejido, en donde pierde una fracción de su peso W el cual se deposita en un "bin" 
+                                de la malla, para posteriormente cambiar de dirección.')}}
                             </div>
                         </div>
                     </div>
@@ -866,7 +864,7 @@
 
                 <br>
                 <hr>
-                <h5>Referencias</h5>
+                <h5>{{_('Referencias')}}</h5>
                 <p class="reference" id="ref4_p2">[1] M. H. Niemz, Laser-Tissue interactions: Fundamentals and Applications. Springer Science & Business Media, 2007.
                 </p>
 
@@ -880,60 +878,60 @@
             </div>
 
             <div id="pageb5" class="page" style="display: none;">
-                <h4>Ejecutar simulación</h4>
+                <h4>{{_('Ejecutar simulación')}}</h4>
 
                 <div class="container-fluid">
                     <div class="row" style="display: flex; justify-content: center; align-items: center;">
                         <form action="" method="post" class="col m7">
                             <div class="row">
-                                <h6>Características de la fuente luminosa</h6>
+                                <h6>{{_('Características de la fuente luminosa')}}</h6>
                             </div>
                             <div class="row">
                                 <div class="input-field">
                                     <input id="Num_fotones" name="Num_fotones" type="number" min="1" step="1"
                                         class="validate" required>
-                                    <label for="Num_fotones">Número de fotones</label>
+                                    <label for="Num_fotones">{{_('Número de fotones')}}</label>
                                 </div>
                             </div>
                             <div class="row">
-                                <label>Tipo de fuente: </label>
+                                <label>{{_('Tipo de fuente:')}} </label>
                                 <select name="fuente" class="input-field validate" required>
-                                    <option value="" disabled selected>Elija un tipo de fuente</option>
-                                    <option value="1">Puntual Isotrópica</option>
-                                    <option value="2">Colimada</option>
-                                    <option value="3">Haz finito (radio de 5 cm)</option>
+                                    <option value="" disabled selected>{{_('Elija un tipo de fuente')}}</option>
+                                    <option value="1">{{_('Puntual Isotrópica')}}</option>
+                                    <option value="2">{{_('Colimada')}}</option>
+                                    <option value="3">{{_('Haz finito (radio de 5 cm)')}}</option>
                                 </select>
                             </div>
                             <br>
                             <div class="row">
-                                <h6>Propiedades ópticas del materia</h6>
+                                <h6>{{_('Propiedades ópticas del materia')}}</h6>
                             </div>
                             <div class="row">
                                 <div class="col s6 input-field">
                                     <input id="coef_abs" name="coef_abs" type="number" min="0.0001" max="1000.0000"
                                         step="0.0001" class="validate" required>
-                                    <label for="coef_abs">Coef. de Absorción &mu;<sub>a</sub> [cm<sup>-1</sup>]</label>
+                                    <label for="coef_abs">{{_('Coef. de Absorción')}} &mu;<sub>a</sub> [cm<sup>-1</sup>]</label>
                                 </div>
                                 <div class="col s6 input-field">
                                     <input id="coef_esp" name="coef_esp" type="number" min="0.0001" max="1000.0000"
                                         step="0.0001" class="validate" required>
-                                    <label for="coef_esp">Coef. de Esparcimiento &mu;<sub>s</sub> [cm<sup>-1</sup>]</label>
+                                    <label for="coef_esp">{{_('Coef. de Esparcimiento')}} &mu;<sub>s</sub> [cm<sup>-1</sup>]</label>
                                 </div>
                             </div>
                             <div class="row">
                                 <div class="col s6 input-field">
                                     <input id="coef_anis" name="coef_anis" type="number" min="-1.0000" max="1.0000"
                                         step="0.0001" class="validate" required>
-                                    <label for="coef_anis">Coef. de Anisotropía g</label>
+                                    <label for="coef_anis">{{_('Coef. de Anisotropía g')}}</label>
                                 </div>
                                 <div class="col s6 input-field">
                                     <input id="ind_ref" name="ind_ref" type="number" min="0.0001" max="1000.0000"
                                         step="0.0001" class="validate" required>
-                                    <label for="ind_ref">Índice de refracción n</label>
+                                    <label for="ind_ref">{{_('Índice de refracción n')}}</label>
                                 </div>
                             </div>
                             <div class="center">
-                                <button type="submit" class="btn">Iniciar
+                                <button type="submit" class="btn">{{_('Iniciar')}}
                                 </button>
 
                                 <div hx-get="/progress" hx-trigger="every 1s"></div>
@@ -953,7 +951,7 @@
                                                         <i class="small material-icons">notifications_active</i>
                                                     </div>
                                                     <div class="col s9">
-                                                        <p>Mensaje</p>
+                                                        <p>{{_('Mensaje')}}</p>
                                                     </div>
                                                 </div>
                                             </span>
@@ -961,7 +959,7 @@
                                         </div>
                                         <div class="card-action">
                                             <a class="btn" href="#!"
-                                                onclick="scrollToSection('section1')">Resultados</a>
+                                                onclick="scrollToSection('section1')">{{_('Resultados')}}</a>
                                         </div>
                                     </div>
                                 </div>
@@ -974,16 +972,16 @@
                                 </div>
                                 <div class="card-content">
                                     <p>
-                                        Representación conceptual de las interacciones generales entre la luz y el tejido,
+                                        {{_('Representación conceptual de las interacciones generales entre la luz y el tejido,
                                         reflección (reflection), absorción (absorption), esparcimiento (scattering) entre 
-                                        otras.<a href="#ref1">[1]</a>
+                                        otras.')}}<a href="#ref1">[1]</a>
                                     </p>
                                 </div>
                             </div>
                         </div>
 
                     </div>
-                    <h5 id="section1">Resultados</h5>
+                    <h5 id="section1">{{_('Resultados')}}</h5>
                     <div class="row" style="display: flex; justify-content: center; align-items: center;">
                         <div class="col m8">
                             <div class="card graph">
@@ -994,31 +992,31 @@
                                 <div class="input-field col m6">
                                     <input value="0.8" id="maxValueInput" type="number" min="0" step="0.1">
                                     <label class="active" for="maxValueInput">
-                                        Valor máximo a mostrar (cm)
+                                        {{_('Valor máximo a mostrar (cm)')}}
                                         <i class="small material-icons tooltipped" 
                                             data-position="top" 
                                             data-html="true"
-                                            data-tooltip="Modifica el límite superior en el eje horizontal para visualizar mejor los datos, <br> una vez que haya establecido un nuevo valor presione el botón ACTUALIZAR">
+                                            data-tooltip="{{_('Modifica el límite superior en el eje horizontal para visualizar mejor los datos, <br> una vez que haya establecido un nuevo valor presione el botón ACTUALIZAR')}}">
                                             help_outline
                                         </i>
                                     </label>
                                 </div>
                                 <div class="col m6">
-                                    <button class="btn" onclick="updateAxis()">Actualizar</button>
+                                    <button class="btn" onclick="updateAxis()">{{_('Actualizar')}}</button>
                                 </div>
                             </div>
                         </div>
                         
                         <div class="col m4">
                             {% if fileName is defined %}
-                            <h6>Parámetros</h6>
+                            <h6>{{_('Parámetros')}}</h6>
                             <ul>
-                                <li> Número de fotones <strong>N</strong>: {{Num_fotones}}</li>
-                                <li> Coef. de Absorción <strong>&mu;<sub>a</sub></strong>: {{coef_abs}}</li>
-                                <li> Coef. de Esparcimiento <strong>&mu;<sub>s</sub></strong>: {{coef_esp}}</li>
-                                <li> Coef. de Anisotropía <strong>g</strong>: {{coef_anis}}</li>
-                                <li> Índice de refracción <strong>n</strong>: {{ind_ref}}</li>
-                                <li> Tipo de fuente: {{fuente}}</li>
+                                <li> {{_('Número de fotones')}} <strong>N</strong>: {{Num_fotones}}</li>
+                                <li> {{_('Coef. de Absorción')}} <strong>&mu;<sub>a</sub></strong>: {{coef_abs}}</li>
+                                <li> {{_('Coef. de Esparcimiento')}} <strong>&mu;<sub>s</sub></strong>: {{coef_esp}}</li>
+                                <li> {{_('Coef. de Anisotropía')}} <strong>g</strong>: {{coef_anis}}</li>
+                                <li> {{_('Índice de refracción')}} <strong>n</strong>: {{ind_ref}}</li>
+                                <li> {{_('Tipo de fuente:')}} {{fuente}}</li>
                             </ul>
                             <div class="center">
                                 <a href="../{{fileName}}" download>
@@ -1028,7 +1026,7 @@
                                 <i class="small material-icons tooltipped" 
                                     data-position="top"
                                     data-html="true" 
-                                    data-tooltip="Descarga los resultados de la simulación en un archivo .out, <br> este incluye además los paŕametros ingresados.">
+                                    data-tooltip="{{_('Descarga los resultados de la simulación en un archivo .out, <br> este incluye además los paŕametros ingresados.')}}">
                                     help_outline
                                 </i>
                             </div>
@@ -1061,15 +1059,13 @@
 
                 <br>
                 <hr>
-                <h5>Referencias</h5>
+                <h5>{{_('Referencias')}}</h5>
                 <p class="reference" id="ref1">[1] Recent Progress on Near-Infrared Photoacoustic Imaging: Imaging
                     Modality and
                     Organic Semiconducting Agents - Scientific Figure on ResearchGate. Available from: <a
                         href="https://www.researchgate.net/figure/Conceptual-depiction-of-general-interactions-between-light-and-tissue_fig2_336609457">Link</a>
                     [accessed 7 Aug, 2023]</p>
             </div>
-
-
         </div>
     </div>
 
@@ -1083,55 +1079,17 @@
                 buttonId("b1");
             }
         });
-    </script>
-
-    <script>
         document.addEventListener('DOMContentLoaded', function () {
             M.AutoInit(); // Inicializa todos los elementos de Materialize CSS en la página
         });
     </script>
 
+    <script src="../static/js/utils.js"></script>
+
     <script>
-        //determines if the user has a set theme
-        function detectColorScheme(){
-            var theme="dark";    //default to dark
-
-            //local storage is used to override OS theme settings
-            if(localStorage.getItem("theme")){
-                if(localStorage.getItem("theme") == "light"){
-                    var theme = "light";
-                }
-            } else if(!window.matchMedia) {
-                //matchMedia method not supported
-                return false;
-            } else if(window.matchMedia("(prefers-color-scheme: dark)").matches) {
-                //OS theme setting detected as dark
-                var theme = "dark";
-            }
-
-            //dark theme preferred, set document with a `data-theme` attribute
-            if (theme=="dark") {
-                document.documentElement.setAttribute("data-theme", "dark");
-            }
-        }
         detectColorScheme();
-        function changeTheme(option) {
-            if (option == 1) {
-                // Light theme is selected
-                localStorage.setItem('theme', 'light');
-                document.documentElement.setAttribute('data-theme', 'light');
-            }
-            else if (option == 2) {
-                // Dark theme is selected
-                localStorage.setItem('theme', 'dark');
-                document.documentElement.setAttribute('data-theme', 'dark');
-            }
-        }
-        function changeLang(lang) {
-            window.location.href = '/' + lang;
-        }
     </script>
-
+    
     <script src="../static/js/prism.js"></script>
 </body>
 
