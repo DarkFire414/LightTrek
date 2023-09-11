@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2023-09-10 14:38-0600\n"
+"POT-Creation-Date: 2023-09-10 17:51-0600\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -33,7 +33,7 @@ msgstr ""
 msgid "Interacción Luz-Materia"
 msgstr ""
 
-#: templates/index.html:61
+#: templates/index.html:61 templates/index.html:444
 msgid "Propiedades ópticas de la materia"
 msgstr ""
 
@@ -257,7 +257,7 @@ msgstr ""
 msgid "Gráfico generado en Matlab."
 msgstr ""
 
-#: templates/index.html:302 templates/index.html:426
+#: templates/index.html:302 templates/index.html:426 templates/index.html:650
 msgid "Referencias"
 msgstr ""
 
@@ -335,7 +335,7 @@ msgid ""
 "útil en años que\n"
 "                                    podrá entregar, para ello se necesita"
 " establecer una condición de trabajo específica para el \n"
-"                                    producto, la temperatura, h7umedad y "
+"                                    producto, la temperatura, humedad y "
 "diversos factores que pueden afectar a su funcionamiento.\n"
 "                                    Con el método de Montecarlo es "
 "posible simular miles de condiciones del producto y verificar \n"
@@ -407,5 +407,266 @@ msgid ""
 "href=\"#ref3_p1\">[3]</a>. Este servicio escalable asigna recursos según "
 "la potencia computacional \n"
 "                    necesaria para el experimento."
+msgstr ""
+
+#: templates/index.html:446
+msgid "Interacción luz-materia"
+msgstr ""
+
+#: templates/index.html:449
+msgid ""
+"Cuando la luz interactúa con algún medio suceden 4 fenómenos principales,"
+" reflexión, transmisión, dispersión y absorción. \n"
+"                    El medio puede ser cualquier objeto o material que "
+"tengamos a nuestro alrededor, un cristal, un líquido, una pared o quizás"
+" \n"
+"                    la propia piel. La importancia de conocer cómo se "
+"comporta la luz en presencia de algún tipo de medio radica en que hoy en "
+"día \n"
+"                    se ocupa la luz para realizar diagnósticos médicos "
+"como sucede con los rayos x, también en terapias para tratar y "
+"diagnosticar \n"
+"                    el cáncer, además de que conocer el comportamiento de"
+" la luz nos ha permitido crear animaciones hiperrealistas en películas y"
+" \n"
+"                    videojuegos."
+msgstr ""
+
+#: templates/index.html:459
+msgid "Reflexión"
+msgstr ""
+
+#: templates/index.html:461
+msgid ""
+"La primer interacción que puede tener la luz al interactuar con algún "
+"medio es ser reflejada, esto es que los fotones son enviados \n"
+"                            fuera del medio una vez hacen contacto con "
+"este, siendo disparados con un cierto ángulo que está en función al "
+"ángulo e incidencia \n"
+"                            de la fuente de luz."
+msgstr ""
+
+#: templates/index.html:465
+msgid "Transmisión"
+msgstr ""
+
+#: templates/index.html:467
+msgid ""
+"En conjunto con la reflexión, la transmisión ocasiona que la luz que "
+"presenta estos fenómenos no tenga efecto sobre el medio o tejido, \n"
+"                            la transmisión implica que una cierta "
+"cantidad de luz atraviesa por completo el medio, tal y como ocurre con un"
+" cristal."
+msgstr ""
+
+#: templates/index.html:470
+msgid "Esparcimiento"
+msgstr ""
+
+#: templates/index.html:472
+msgid ""
+"La dispersión es el cambio de dirección de los fotones dentro del medio, "
+"en un tejido como la piel la luz puede ser dispersada por las \n"
+"                            fibras de colágeno, vasos sanguíneos y otras "
+"estructuras y moléculas."
+msgstr ""
+
+#: templates/index.html:475
+msgid "Absorción"
+msgstr ""
+
+#: templates/index.html:477
+msgid ""
+"Los fotones dejan parte de su energía en algún obstáculo que se hayan "
+"encontrado para ser transformada en calor, una vez que el fotón \n"
+"                            ha perdido por completo su energía deja de "
+"existir."
+msgstr ""
+
+#: templates/index.html:487
+msgid ""
+"Imagen donde se muestra las distintas formas en las que la luz interactúa"
+" con un medio, se refleja (Reflection), \n"
+"                                es absorbida (Absorption), se esparce "
+"(Scattering), o es transmitida a través de todo el medio (transmitted "
+"light).\n"
+"                                Imagen obtenida de"
+msgstr ""
+
+#: templates/index.html:496
+msgid "Propiedades ópticas"
+msgstr ""
+
+#: templates/index.html:498
+msgid ""
+"El comportamiento que tendrá la luz al incidir en un medio depende de las"
+" propiedades ópticas del mismo, estas pueden ser cuantificadas \n"
+"                    y son únicas para cada tipo de material, en el cuerpo"
+" humano por ejemplo cada capa de la piel, venas, arterias o incluso las "
+"partes de \n"
+"                    la célula tienen propiedades ópticas distintas que "
+"hacen que la luz interactúe de distinta manera.\n"
+"                    <br><br>\n"
+"                    Hoy en día una gran cantidad de materiales han sido "
+"estudiados y se conocen sus propiedades ópticas a distintas longitudes de"
+" onda, \n"
+"                    esta información está disponible en tablas y "
+"gráficas. A continuación, se presenta un resumen de las principales "
+"propiedades ópticas \n"
+"                    de la materia las cuáles son útiles para realizar "
+"simulaciones de luz incidente."
+msgstr ""
+
+#: templates/index.html:514
+msgid "Espectro electromagnético visible (visible spectrum). Imagen obtenida de"
+msgstr ""
+
+#: templates/index.html:523
+msgid "Coeficiente de absorción"
+msgstr ""
+
+#: templates/index.html:525
+msgid ""
+"El coeficiente de absorción &mu;a es una medida que describe cuánta luz o"
+" radiación electromagnética es absorbida por un material \n"
+"                            por unidad de distancia a medida que lo "
+"atraviesa, depende de la longitud de onda de la luz o radiación que se "
+"esté utilizando \n"
+"                            en la fuente y de las características físicas"
+" y químicas del material. Cuanto mayor sea el valor de &mu;<sub>a</sub> "
+"para un material y una \n"
+"                            longitud de onda específicos, mayor seá la "
+"cantidad de luz absorbida, un material con un coeficiente de absorción "
+"muy cercano a \n"
+"                            0 se comporta como un material transparente a"
+" dicha longitud de onda.\n"
+"                            Se expresa comúnmente en unidades de inverso "
+"de longitud por ejemplo [cm<sup>-1</sup>]  o [in<sup>-1</sup>]."
+msgstr ""
+
+#: templates/index.html:540
+msgid ""
+"Coeficiente de absorción &mu;<sub>a</sub>, en una variedad de materiales "
+"semiconductores a 300K como función de la longitud \n"
+"                                de onda de la luz en el vacío. Imagen "
+"obtenida de"
+msgstr ""
+
+#: templates/index.html:550
+msgid "Coeficiente de esparcimiento"
+msgstr ""
+
+#: templates/index.html:552
+msgid ""
+"El coeficiente de esparcimiento &mu;<sub>s</sub> es una propiedad que "
+"describe cómo las partículas de un medio dispersan la luz o \n"
+"                            radiación electromagnética que incide sobe "
+"ellas, es decir que la luz no sigue una línea recta al interactuar con el"
+" \n"
+"                            medio, sino que se dispersa en múltiples "
+"direcciones. El coeficiente &mu;<sub>s</sub> puede ser afectado por las "
+"propiedades físicas \n"
+"                            del objeto, así como la longitud de onda de "
+"la luz incidente. Un material con un &mu;<sub>s</sub> alto dispersará en "
+"mayor medida la \n"
+"                            luz que incide sobre él, dándole una "
+"apariencia difusa o turbia como el caso de la neblina.\n"
+"                            <br><br>\n"
+"                            Se expresa en unidades de inverso de longitud"
+" [cm<sup>-1</sup>]."
+msgstr ""
+
+#: templates/index.html:567
+msgid "Coeficiente de esparcimiento de la piel en función de la longitud de onda."
+msgstr ""
+
+#: templates/index.html:576
+msgid "Coeficiente de anisotropía g"
+msgstr ""
+
+#: templates/index.html:578
+msgid ""
+"Se dice que un material tiene una propiedad isotrópica cuando al medirla "
+"sus valores son iguales en cualquier dirección, \n"
+"                            por el contrario, la anisotropía de un "
+"material implica que una propiedad tomará un valor distinto dependiendo "
+"de la \n"
+"                            dirección en la que se mida u observe.\n"
+"                            <br><br>\n"
+"                            En óptica se utiliza para describir cómo un "
+"material dispersa de manera no uniforme la luz dentro del mismo, los "
+"tejidos \n"
+"                            biológicos por ejemplo son medios "
+"anisotrópicos debido a su naturaleza compuesta de varios elementos como "
+"vasos sanguíneos, \n"
+"                            células, sangre etc.\n"
+"                            <br><br>\n"
+"                            Se representa con la letra g y puede tomar "
+"valores de -1 a 1 y es adimensional."
+msgstr ""
+
+#: templates/index.html:589
+msgid ""
+"Si g es igual a 0 indica que el material tiene una dispersión "
+"completamente isotrópica por lo que la luz se dispersa \n"
+"                                    de manera uniforme en todas las "
+"direcciones."
+msgstr ""
+
+#: templates/index.html:593
+msgid ""
+"Si g es positivo entonces la dispersión de la luz tiende a seguir una "
+"dirección similar a la original (hacia adelante)."
+msgstr ""
+
+#: templates/index.html:596
+msgid ""
+"Si g es negativo la dispersión tiene a estar en la dirección opuesta a la"
+" luz incidente (hacia atrás)."
+msgstr ""
+
+#: templates/index.html:607
+msgid ""
+"Coeficiente de anisotropía para distintos tipos de tejido en función de "
+"la longitud de onda."
+msgstr ""
+
+#: templates/index.html:616
+msgid "Índice de refracción"
+msgstr ""
+
+#: templates/index.html:618
+msgid ""
+"El índice de refracción comúnmente representado como n, es una propiedad "
+"óptica de los materiales que describe \n"
+"                            como cambia la velocidad de la luz al incidir"
+" en un material con respecto a su velocidad en el vacío. Este cambio \n"
+"                            de velocidad implica que la luz es desviada o"
+" refractada al atravesar el material.\n"
+"                            <br><br>\n"
+"                            El índice de refracción es característico de "
+"cada material y puede variar respecto a la longitud de onda de la luz \n"
+"                            y es adimensional.\n"
+"                            <br><br> \n"
+"                            Cuanto mayor sea el índice de refracción de "
+"un material para cierta longitud de onda, más lenta será la velocidad \n"
+"                            de la luz en ese material, y más se desviará "
+"la luz cuando pase de un medio a otro.\n"
+"                            <br><br><br>\n"
+"                            En el siguiente video se muestra una "
+"animación de terapia laser en la piel, una de las tantas aplicaciones que"
+" tiene\n"
+"                            el estudiar las propiedades ópticas de los "
+"materiales."
+msgstr ""
+
+#: templates/index.html:639
+msgid ""
+"Refracción de la luz en la interfaz entre dos medios con diferentes "
+"índices de refracción (n2 > n1). Como la \n"
+"                                velocidad de fase es menor en el segundo "
+"medio (v2 < v1), el ángulo de refracción θ2 es menor que el ángulo de \n"
+"                                incidencia θ1; esto es, el rayo en el "
+"medio de índice mayor es cercano al vector normal."
 msgstr ""
 

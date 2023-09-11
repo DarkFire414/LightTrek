@@ -39,7 +39,7 @@
         <li>
             <div class="user-view">
                 <div class="background">
-                    <img src="https://picsum.photos/300/200" />
+                    <img src="../static/img/bg_sidebar2.jpeg" style="width: 100%;"/>
                 </div>
                 <a href="#"><img class="circle" src="../static/img/logo.png" /></a>
                 <a href="#"><span class="white-text name">LightTrek</span></a>
@@ -92,14 +92,14 @@
                         <li>
                             <!-- Dropdown Trigger -->
                             <a class='dropdown-trigger side-button-theme' href='#' data-target='theme'>
-                                <i class="material-icons left">brightness_medium</i> 
+                                <i class="material-icons left navbar-icon">brightness_medium</i> 
                                 {{_('Tema')}}
                             </a>
                         </li>
                         <li>
                             <!-- Dropdown Trigger -->
                             <a class='dropdown-trigger side-button-lang' href='#' data-target='language'>
-                                <i class="material-icons left">translate</i> 
+                                <i class="material-icons left navbar-icon">translate</i> 
                                 {{_('Idioma')}}
                             </a>
                         </li>
@@ -441,41 +441,41 @@
             </div>
 
             <div id="pageb3" class="page" style="display: none;">
-                <h4>Propiedades ópticas de la materia</h4>
+                <h4>{{_('Propiedades ópticas de la materia')}}</h4>
 
-                <h5>Interacción luz-materia</h5>
+                <h5>{{_('Interacción luz-materia')}}</h5>
               
                 <p>
-                    Cuando la luz interactúa con algún medio suceden 4 fenómenos principales, reflexión, transmisión, dispersión y absorción. 
+                    {{_('Cuando la luz interactúa con algún medio suceden 4 fenómenos principales, reflexión, transmisión, dispersión y absorción. 
                     El medio puede ser cualquier objeto o material que tengamos a nuestro alrededor, un cristal, un líquido, una pared o quizás 
                     la propia piel. La importancia de conocer cómo se comporta la luz en presencia de algún tipo de medio radica en que hoy en día 
                     se ocupa la luz para realizar diagnósticos médicos como sucede con los rayos x, también en terapias para tratar y diagnosticar 
                     el cáncer, además de que conocer el comportamiento de la luz nos ha permitido crear animaciones hiperrealistas en películas y 
-                    videojuegos.
+                    videojuegos.')}}'
                 </p>
                    
                 <div class="row">
                     <div class="col m7">
-                        <h6>Reflexión</h6>
+                        <h6>{{_('Reflexión')}}</h6>
                         <p>
-                            La primer interacción que puede tener la luz al interactuar con algún medio es ser reflejada, esto es que los fotones son enviados 
+                            {{_('La primer interacción que puede tener la luz al interactuar con algún medio es ser reflejada, esto es que los fotones son enviados 
                             fuera del medio una vez hacen contacto con este, siendo disparados con un cierto ángulo que está en función al ángulo e incidencia 
-                            de la fuente de luz.
+                            de la fuente de luz.')}}
                         </p>
-                        <h6>Transmisión</h6>
+                        <h6>{{_('Transmisión')}}</h6>
                         <p>
-                            En conjunto con la reflexión, la transmisión ocasiona que la luz que presenta estos fenómenos no tenga efecto sobre el medio o tejido, 
-                            la transmisión implica que una cierta cantidad de luz atraviesa por completo el medio, tal y como ocurre con un cristal.
+                            {{_('En conjunto con la reflexión, la transmisión ocasiona que la luz que presenta estos fenómenos no tenga efecto sobre el medio o tejido, 
+                            la transmisión implica que una cierta cantidad de luz atraviesa por completo el medio, tal y como ocurre con un cristal.')}}
                         </p>
-                        <h6>Esparcimiento</h6>
+                        <h6>{{_('Esparcimiento')}}</h6>
                         <p>
-                            La dispersión es el cambio de dirección de los fotones dentro del medio, en un tejido como la piel la luz puede ser dispersada por las 
-                            fibras de colágeno, vasos sanguíneos y otras estructuras y moléculas.
+                            {{_('La dispersión es el cambio de dirección de los fotones dentro del medio, en un tejido como la piel la luz puede ser dispersada por las 
+                            fibras de colágeno, vasos sanguíneos y otras estructuras y moléculas.')}}'
                         </p>
-                        <h6>Absorción</h6>
+                        <h6>{{_('Absorción')}}</h6>
                         <p>
-                            Los fotones dejan parte de su energía en algún obstáculo que se hayan encontrado para ser transformada en calor, una vez que el fotón 
-                            ha perdido por completo su energía deja de existir.
+                            {{_('Los fotones dejan parte de su energía en algún obstáculo que se hayan encontrado para ser transformada en calor, una vez que el fotón 
+                            ha perdido por completo su energía deja de existir.')}}
                         </p>
                     </div>
                     <div class="col m5">
@@ -484,24 +484,24 @@
                                 <img class="materialboxed" src="../static/img/foton_interactions.jpeg" />
                             </div>
                             <div class="card-content">
-                                Imagen donde se muestra las distintas formas en las que la luz interactúa con un medio, se refleja (Reflection), 
+                                {{_('Imagen donde se muestra las distintas formas en las que la luz interactúa con un medio, se refleja (Reflection), 
                                 es absorbida (Absorption), se esparce (Scattering), o es transmitida a través de todo el medio (transmitted light).
-                                Imagen obtenida de 
+                                Imagen obtenida de')}}
                                 <a href="https://miro.medium.com/v2/resize:fit:720/format:webp/1*6awo6wRJ3Pt3NTFm-CYKEQ.jpeg">Link</a>
                             </div>
                         </div>
                     </div>
                 </div>
 
-                <h5>Propiedaes ópticas</h5>
+                <h5>{{_('Propiedades ópticas')}}</h5>
                 <p>
-                    El comportamiento que tendrá la luz al incidir en un medio depende de las propiedades ópticas del mismo, estas pueden ser cuantificadas 
+                    {{_('El comportamiento que tendrá la luz al incidir en un medio depende de las propiedades ópticas del mismo, estas pueden ser cuantificadas 
                     y son únicas para cada tipo de material, en el cuerpo humano por ejemplo cada capa de la piel, venas, arterias o incluso las partes de 
                     la célula tienen propiedades ópticas distintas que hacen que la luz interactúe de distinta manera.
                     <br><br>
                     Hoy en día una gran cantidad de materiales han sido estudiados y se conocen sus propiedades ópticas a distintas longitudes de onda, 
                     esta información está disponible en tablas y gráficas. A continuación, se presenta un resumen de las principales propiedades ópticas 
-                    de la materia las cuáles son útiles para realizar simulaciones de luz incidente.
+                    de la materia las cuáles son útiles para realizar simulaciones de luz incidente.')}}
                 </p>
 
                 <div class="row">
@@ -511,7 +511,7 @@
                                 <img class="materialboxed" src="../static/img/electromagnetic-spectrum.jpg" />
                             </div>
                             <div class="card-content">
-                                Espectro electromagnético visible (visible spectrum). Imagen obtenida de 
+                                {{_('Espectro electromagnético visible (visible spectrum). Imagen obtenida de')}}
                                 <a href="https://gamma-sci.com/2021/07/02/electromagnetic-spectrum-101-radio-microwave-and-infrared/">Gamma Scientific</a>
                             </div>
                         </div>
@@ -520,14 +520,14 @@
 
                 <div class="row">
                     <div class="col m6">
-                        <h6>Coeficiente de absorción &mu;<sub>a</sub></h6>
+                        <h6>{{_('Coeficiente de absorción')}} &mu;<sub>a</sub></h6>
                         <p>
-                            El coeficiente de absorción &mu;a es una medida que describe cuánta luz o radiación electromagnética es absorbida por un material 
+                            {{_('El coeficiente de absorción &mu;a es una medida que describe cuánta luz o radiación electromagnética es absorbida por un material 
                             por unidad de distancia a medida que lo atraviesa, depende de la longitud de onda de la luz o radiación que se esté utilizando 
                             en la fuente y de las características físicas y químicas del material. Cuanto mayor sea el valor de &mu;<sub>a</sub> para un material y una 
                             longitud de onda específicos, mayor seá la cantidad de luz absorbida, un material con un coeficiente de absorción muy cercano a 
                             0 se comporta como un material transparente a dicha longitud de onda.
-                            Se expresa comúnmente en unidades de inverso de longitud por ejemplo [cm<sup>-1</sup>]  o [in<sup>-1</sup>].
+                            Se expresa comúnmente en unidades de inverso de longitud por ejemplo [cm<sup>-1</sup>]  o [in<sup>-1</sup>].')}}
 
                         </p>
                     </div>
@@ -537,8 +537,8 @@
                                 <img class="materialboxed" src="../static/img/graph_absorb_coef.png" />
                             </div>
                             <div class="card-content">
-                                Coeficiente de absorción &mu;<sub>a</sub>, en una variedad de materiales semiconductores a 300K como función de la longitud 
-                                de onda de la luz en el vacío. Imagen obtenida de 
+                                {{_('Coeficiente de absorción &mu;<sub>a</sub>, en una variedad de materiales semiconductores a 300K como función de la longitud 
+                                de onda de la luz en el vacío. Imagen obtenida de')}} 
                                 <a href="https://www.pveducation.org/es/fotovoltaica/dispositivos-semiconductores/coeficiente-de-absorci%C3%B3n">pveducation</a>
                             </div>
                         </div>
@@ -547,15 +547,15 @@
 
                 <div class="row">
                     <div class="col m6">
-                        <h6>Coeficiente de esparcimiento &mu;<sub>s</sub></h6>
+                        <h6>{{_('Coeficiente de esparcimiento')}} &mu;<sub>s</sub></h6>
                         <p>
-                            El coeficiente de esparcimiento &mu;<sub>s</sub> es una propiedad que describe cómo las partículas de un medio dispersan la luz o 
+                            {{_('El coeficiente de esparcimiento &mu;<sub>s</sub> es una propiedad que describe cómo las partículas de un medio dispersan la luz o 
                             radiación electromagnética que incide sobe ellas, es decir que la luz no sigue una línea recta al interactuar con el 
                             medio, sino que se dispersa en múltiples direcciones. El coeficiente &mu;<sub>s</sub> puede ser afectado por las propiedades físicas 
                             del objeto, así como la longitud de onda de la luz incidente. Un material con un &mu;<sub>s</sub> alto dispersará en mayor medida la 
                             luz que incide sobre él, dándole una apariencia difusa o turbia como el caso de la neblina.
                             <br><br>
-                            Se expresa en unidades de inverso de longitud [cm<sup>-1</sup>].
+                            Se expresa en unidades de inverso de longitud [cm<sup>-1</sup>].')}}
                         </p>
                     </div>
                     <div class="col m6">
@@ -564,7 +564,7 @@
                                 <img class="materialboxed" src="../static/img/graph_esparcimiento.jpeg" />
                             </div>
                             <div class="card-content">
-                                Coeficiente de esparcimiento de la piel en función de la longitud de onda. 
+                                {{_('Coeficiente de esparcimiento de la piel en función de la longitud de onda.')}}
                                 <a href="#ref1_p2">[1]</a>
                             </div>
                         </div>
@@ -573,9 +573,9 @@
                 
                 <div class="row">
                     <div class="col m6">
-                        <h6>Coeficiente de anisotropía g</h6>
+                        <h6>{{_('Coeficiente de anisotropía g')}}</h6>
                         <p>
-                            Se dice que un material tiene una propiedad isotrópica cuando al medirla sus valores son iguales en cualquier dirección, 
+                            {{_('Se dice que un material tiene una propiedad isotrópica cuando al medirla sus valores son iguales en cualquier dirección, 
                             por el contrario, la anisotropía de un material implica que una propiedad tomará un valor distinto dependiendo de la 
                             dirección en la que se mida u observe.
                             <br><br>
@@ -583,17 +583,17 @@
                             biológicos por ejemplo son medios anisotrópicos debido a su naturaleza compuesta de varios elementos como vasos sanguíneos, 
                             células, sangre etc.
                             <br><br>
-                            Se representa con la letra g y puede tomar valores de -1 a 1 y es adimensional. 
+                            Se representa con la letra g y puede tomar valores de -1 a 1 y es adimensional.')}}
                             <ul>
                                 <li class="bulleted">
-                                    Si g es igual a 0 indica que el material tiene una dispersión completamente isotrópica por lo que la luz se dispersa 
-                                    de manera uniforme en todas las direcciones.
+                                    {{_('Si g es igual a 0 indica que el material tiene una dispersión completamente isotrópica por lo que la luz se dispersa 
+                                    de manera uniforme en todas las direcciones.')}}
                                 </li>
                                 <li class="bulleted">
-                                    Si g es positivo entonces la dispersión de la luz tiende a seguir una dirección similar a la original (hacia adelante).
+                                    {{_('Si g es positivo entonces la dispersión de la luz tiende a seguir una dirección similar a la original (hacia adelante).')}}
                                 </li>
                                 <li class="bulleted">
-                                    Si g es negativo la dispersión tiene a estar en la dirección opuesta a la luz incidente (hacia atrás).
+                                    {{_('Si g es negativo la dispersión tiene a estar en la dirección opuesta a la luz incidente (hacia atrás).')}}
                                 </li>
                             </ul>
                         </p>
@@ -604,7 +604,7 @@
                                 <img class="materialboxed" src="../static/img/anis.jpeg" />
                             </div>
                             <div class="card-content">
-                                Coeficiente de anisotropía para distintos tipos de tejido en función de la longitud de onda. 
+                                {{_('Coeficiente de anisotropía para distintos tipos de tejido en función de la longitud de onda.')}}
                                 <a href="#ref2_p2">[2]</a>
                             </div>
                         </div>
@@ -613,9 +613,9 @@
 
                 <div class="row">
                     <div class="col m8">
-                        <h6>Índice de refracción</h6>
+                        <h6>{{_('Índice de refracción')}}</h6>
                         <p>
-                            El índice de refracción comúnmente representado como n, es una propiedad óptica de los materiales que describe 
+                            {{_('El índice de refracción comúnmente representado como n, es una propiedad óptica de los materiales que describe 
                             como cambia la velocidad de la luz al incidir en un material con respecto a su velocidad en el vacío. Este cambio 
                             de velocidad implica que la luz es desviada o refractada al atravesar el material.
                             <br><br>
@@ -626,7 +626,7 @@
                             de la luz en ese material, y más se desviará la luz cuando pase de un medio a otro.
                             <br><br><br>
                             En el siguiente video se muestra una animación de terapia laser en la piel, una de las tantas aplicaciones que tiene
-                            el estudiar las propiedades ópticas de los materiales.
+                            el estudiar las propiedades ópticas de los materiales.')}}
                         </p>
                         
                     </div>
@@ -636,9 +636,9 @@
                                 <img class="materialboxed" src="../static/img/refraction.svg" />
                             </div>
                             <div class="card-content">
-                                Refracción de la luz en la interfaz entre dos medios con diferentes índices de refracción (n2 > n1). Como la 
+                                {{_('Refracción de la luz en la interfaz entre dos medios con diferentes índices de refracción (n2 > n1). Como la 
                                 velocidad de fase es menor en el segundo medio (v2 < v1), el ángulo de refracción θ2 es menor que el ángulo de 
-                                incidencia θ1; esto es, el rayo en el medio de índice mayor es cercano al vector normal.
+                                incidencia θ1; esto es, el rayo en el medio de índice mayor es cercano al vector normal.')}}
                                 <a href="#ref3_p2">[3]</a>
                             </div>
                         </div>
@@ -647,7 +647,7 @@
 
                 <br>
                 <hr>
-                <h5>Referencias</h5>
+                <h5>{{_('Referencias')}}</h5>
                 <p class="reference" id="ref1_p2">[1] June21SkinOptics Paper Sensors UpdatesHighlighted - Scientific Figure on ResearchGate. Available from: 
                     <a href="https://www.researchgate.net/figure/Graph-showing-the-variation-of-scattering-coefficient-with-wavelength_fig3_325961281">Link</a>
                     [accessed 21 Aug, 2023] 
@@ -673,14 +673,14 @@
             </div>
 
             <div id="pageb4" class="page" style="display: none;">
-                <h4>Montecarlo aplicado</h4>
+                <h4>{{_('Montecarlo aplicado')}}</h4>
 
                 <p>
-                    El método de Montecarlo es bastante poderoso al simular el comportamiento de partículas cuya dinámica puede modelarse mediante  
+                    {{_('El método de Montecarlo es bastante poderoso al simular el comportamiento de partículas cuya dinámica puede modelarse mediante  
                     comportamientos aleatorios, es bastante útil para la simulación de transporte de fotones en medios turbios y ha encontrado un 
                     campo de aplicación en medicina donde la reflectancia difusa simulada puede ser utilizada para deducir las propiedades ópticas 
                     de los tejidos mientras que la absorción de la energía óptica dentro de un tejido puede ser simulada para calcular la dosis de 
-                    luz necesaria para la Terapia fotodinámica, entre otras aplicaciones.
+                    luz necesaria para la Terapia fotodinámica, entre otras aplicaciones.')}}
                 </p>        
 
                 <div class="row">
@@ -690,7 +690,7 @@
                                 <img class="materialboxed" src="../static/img/sim2.gif" />
                             </div>
                             <div class="card-content">
-                                Simulación de Montecarlo de migración de fotones en un medio turbio, en este caso un cerebro humano. Imagen obtenida de: <a href="http://mcx.space/wiki/index.cgi?MMC">MCX</a>
+                                {{_('Simulación de Montecarlo de migración de fotones en un medio turbio, en este caso un cerebro humano. Imagen obtenida de:')}} <a href="http://mcx.space/wiki/index.cgi?MMC">MCX</a>
                             </div>
                         </div>
                     </div>
@@ -699,7 +699,7 @@
                 <div class="row">
                     <div class="col m7">
                         <p>
-                            La simulación consiste en lanzar fotones desde una fuente de luz a un medio semi infinito sin fronteras, es decir que es 
+                            {{_('La simulación consiste en lanzar fotones desde una fuente de luz a un medio semi infinito sin fronteras, es decir que es 
                             infinito sobre el plano de incidencia y no sobre el eje de incidencia. El medio se define por sus propiedades ópticas 
                             (coeficiente de absorción &mu;<sub>a</sub>, esparcimiento &mu;<sub>s</sub>, n, g) las cuales ayudarán a describir cómo se comportarán los fotones 
                             dentro del material. Todo esto con el objetivo de obtener la <strong>fluencia relativa</strong> a distintas profundidades, esto es qué tanta 
@@ -712,7 +712,7 @@
                             El programa inicia lanzando <strong>N</strong> fotones a los que se les asigna un valor inicial de 1 (su peso), cada fotón hará algún 
                             tipo de interacción con el tejido, será esparcido o absorbido. Se simulan varios pasos donde cada fotón se propaga a 
                             través del medio y mientras esto ocurre una fracción de su peso inicial se deposita a cierta profundidad del tejido, 
-                            estos valores se almacenan, son procesados y presentados como la fluencia relativa del material.
+                            estos valores se almacenan, son procesados y presentados como la fluencia relativa del material.')}}
                         </p>
                     </div>
                     <div class="col m5">
@@ -721,19 +721,19 @@
                                 <img class="materialboxed" src="../static/img/FlowChart.jpeg" />
                             </div>
                             <div class="card-content">
-                                Diagrama de flujo del algoritmo general del método de Montecarlo.
+                                {{_('Diagrama de flujo del algoritmo general del método de Montecarlo.')}}
                             </div>
                         </div>
                     </div>
                 </div>
 
-                <h5>Sistemas de coordenadas</h5>
+                <h5>{{_('Sistemas de coordenadas')}}</h5>
                 <p>
-                    Como se explicó anteriormente cada fotón se propaga dentro del medio, es esparcido o absorbido y durante este proceso una 
+                    {{_('Como se explicó anteriormente cada fotón se propaga dentro del medio, es esparcido o absorbido y durante este proceso una 
                     parte de su peso inicial es absorbido a cierta profundidad del medio, para cuantificar esto el medio es dividido en pequeños 
                     depósitos o <em>bins</em> donde se va almacenando la energía absorbida de los fotones. Es posible dividir al medio de distintas formas, 
                     por pequeños cubos, capas esféricas o capas cilíndricas y para esta simulación se muestran los resultados para estos tres tipos 
-                    de depósitos, ello implica hacer un cambio de coordenadas durante la simulación entre cartesianas, esféricas y cilíndricas.
+                    de depósitos, ello implica hacer un cambio de coordenadas durante la simulación entre cartesianas, esféricas y cilíndricas.')}}
                 </p>
                 <div class="row">
                     <div class="col m6 offset-m3">
@@ -742,16 +742,16 @@
                                 <img class="materialboxed" src="../static/img/coords.jpeg" />
                             </div>
                             <div class="card-content">
-                                Comparación de los distintos sistemas de coordenadas en 3 dimensiones. Imagen obtenida de 
+                                {{_('Comparación de los distintos sistemas de coordenadas en 3 dimensiones. Imagen obtenida de')}}
                                 <a href="https://www.contemporarycalculus.com/dh/Calculus_all/CC12_4.pdf">Link</a>
                             </div>
                         </div>
                     </div>
                 </div>
 
-                <h5>Lanzamiento de fotones</h5>
+                <h5>{{_('Lanzamiento de fotones')}}</h5>
                 <p>
-                    Se pueden lanzar fotones de tres tipos distintos de fuentes.
+                    {{_('Se pueden lanzar fotones de tres tipos distintos de fuentes.')}}
                 </p>
 
                 <div class="row">
@@ -761,18 +761,18 @@
                               <img class="activator tooltipped" data-position="top" data-tooltip="Haz click para más información" src="../static/img/colimada.jpeg">
                             </div>
                             <div class="card-content">
-                              <span class="card-title activator">Fuente colimada<i class="material-icons right">more_vert</i></span>
+                              <span class="card-title activator">{{_('Fuente colimada')}}<i class="material-icons right">more_vert</i></span>
                               <p>
-                                Distribución de los fotones al utilizar una fuente plana colimada de radio infinito.
+                                {{_('Distribución de los fotones al utilizar una fuente plana colimada de radio infinito.')}}
                               </p>
                             </div>
                             <div class="card-reveal">
-                              <span class="card-title">Fuente colimada<i class="material-icons right">close</i></span>
+                              <span class="card-title">{{_('Fuente colimada')}}<i class="material-icons right">close</i></span>
                               <p>
-                                El lanzar fotones colimados involucra el colocar la trayectoria de los fotones en una sola dirección 
+                                {{_('El lanzar fotones colimados involucra el colocar la trayectoria de los fotones en una sola dirección 
                                 (puede ser el eje z) entrando al tejido en el origen. Para este caso, se tiene la trayectoria inicial de 
                                 los fotones en una sola dirección, esto es, en un solo eje, por lo que, para el caso de incidencia paralela 
-                                al eje z, el vector de trayectoria se inicia como (0,0,1).
+                                al eje z, el vector de trayectoria se inicia como (0,0,1).')}}
                               </p>
                             </div>
                         </div>
@@ -783,17 +783,17 @@
                               <img class="activator tooltipped" data-position="top" data-tooltip="Haz click para más información" src="../static/img/isotropic.jpeg">
                             </div>
                             <div class="card-content">
-                              <span class="card-title activator">Fuente isotrópica<i class="material-icons right">more_vert</i></span>
+                              <span class="card-title activator">{{_('Fuente isotrópica')}}<i class="material-icons right">more_vert</i></span>
                               <p>
-                                Distribución de los fotones al utilizar una fuente puntual isotrópica colocada en el origen.
+                                {{_('Distribución de los fotones al utilizar una fuente puntual isotrópica colocada en el origen.')}}
                               </p>
                             </div>
                             <div class="card-reveal">
-                              <span class="card-title">Fuente isotrópica<i class="material-icons right">close</i></span>
+                              <span class="card-title">{{_('Fuente isotrópica')}}<i class="material-icons right">close</i></span>
                               <p>
-                                El lanzar fotones de una fuente puntual isotrópica requiere de colocar esta fuente en un punto (x,y,z) ya sea dentro o fuera 
+                                {{_('El lanzar fotones de una fuente puntual isotrópica requiere de colocar esta fuente en un punto (x,y,z) ya sea dentro o fuera 
                                 del tejido. Posteriormente se debe de asegurar que la distribución de los fotones sea uniforme de forma radial, esto es que 
-                                los fotones salgan de la fuente en todas direcciones con la misma probabilidad. 
+                                los fotones salgan de la fuente en todas direcciones con la misma probabilidad.')}}
                               </p>
                             </div>
                         </div>
@@ -804,48 +804,48 @@
                               <img class="activator tooltipped" data-position="top" data-tooltip="Haz click para más información" src="../static/img/radioFinito.jpeg">
                             </div>
                             <div class="card-content">
-                              <span class="card-title activator">Haz de radio finito<i class="material-icons right">more_vert</i></span>
+                              <span class="card-title activator">{{_('Haz de radio finito')}}<i class="material-icons right">more_vert</i></span>
                               <p>
-                                Distribución de los fotones al utilizar una fuente plana colimada de diámetro finito.
+                                {{_('Distribución de los fotones al utilizar una fuente plana colimada de diámetro finito.')}}
                               </p>
                             </div>
                             <div class="card-reveal">
-                              <span class="card-title">Haz de radio finito<i class="material-icons right">close</i></span>
+                              <span class="card-title">{{_('Haz de radio finito')}}<i class="material-icons right">close</i></span>
                               <p>
-                                Cuando se considera lanzar un haz colimado de radio finito a, la posición del lanzamiento de los fotones debe variar de una 
-                                forma aleatoria para que se logre una distribución parcial uniforme de los fotones lanzados.
+                                {{_('Cuando se considera lanzar un haz colimado de radio finito a, la posición del lanzamiento de los fotones debe variar de una 
+                                forma aleatoria para que se logre una distribución parcial uniforme de los fotones lanzados.')}}
                               </p>
                             </div>
                         </div>
                     </div>
                 </div>
 
-                <h5>Interacción del fotón con el medio</h5>
+                <h5>{{_('Interacción del fotón con el medio')}}</h5>
 
                 <div class="row">
                     <div class="col m6">
                         <ul>
                             <li class="bulleted">
-                                En cada paso de la simulación el fotón da un salto de una longitud determinada al muestrear la función de densidad de 
-                                probabilidad exponencial para el tamaño del paso s del movimiento.
+                                {{_('En cada paso de la simulación el fotón da un salto de una longitud determinada al muestrear la función de densidad de 
+                                probabilidad exponencial para el tamaño del paso s del movimiento.')}}
                             </li>
                             <li class="bulleted">
-                                El fotón pierde una fracción de su peso inicial debido a la absorción el cual se acumula en contenedores 
-                                (cartesianos, cilíndricos y esféricos).
+                                {{_('El fotón pierde una fracción de su peso inicial debido a la absorción el cual se acumula en contenedores 
+                                (cartesianos, cilíndricos y esféricos).')}}
                             </li>
                             <li class="bulleted">
-                                El peso restante del fotón se esparce en una nueva trayectoria la cuál depende en gran medida de la anisotropía g del material.
+                                {{_('El peso restante del fotón se esparce en una nueva trayectoria la cuál depende en gran medida de la anisotropía g del material.')}}
                             </li>
                             <li class="bulleted">
-                                Si el peso del fotón toma un valor menor a un umbral (0.01 en este caso), la supervivencia del fotón se decide mediante un 
+                                {{_('Si el peso del fotón toma un valor menor a un umbral (0.01 en este caso), la supervivencia del fotón se decide mediante un 
                                 número aleatorio, si este es menor que un valor determinado entonces el fotón es desechado, si esto no ocurre entonces el peso 
-                                de fotón es incrementado en 1/umbral (10 veces para este caso) y el fotón continúa propagándose.
+                                de fotón es incrementado en 1/umbral (10 veces para este caso) y el fotón continúa propagándose.')}}
                             </li>
                             <li class="bulleted">
-                                El proceso continúa hasta que el último fotón sea lanzado y por entonces se genera una gráfica y un archivo con los 
+                                {{_('El proceso continúa hasta que el último fotón sea lanzado y por entonces se genera una gráfica y un archivo con los 
                                 resultados de la simulación, el ritmo de fluencia relativo <strong>F/P [cm<sup>-2</sup>]</strong> donde 
                                 <strong>F [W/cm<sup>-2</sup>]</strong> es el ritmo de fluencia y <strong>P[W]</strong> 
-                                es la fuente de luz.
+                                es la fuente de luz.')}}
                             </li>
                         </ul>
                     </div>
@@ -855,8 +855,8 @@
                                 <img class="materialboxed" src="../static/img/foton.jpeg" />
                             </div>
                             <div class="card-content">
-                                Movimiento del fotón por la malla del tejido, en donde pierde una fracción de su peso W el cual se deposita en un "bin" 
-                                de la malla, para posteriormente cambiar de dirección. 
+                                {{_('Movimiento del fotón por la malla del tejido, en donde pierde una fracción de su peso W el cual se deposita en un "bin" 
+                                de la malla, para posteriormente cambiar de dirección.')}}
                             </div>
                         </div>
                     </div>
@@ -864,7 +864,7 @@
 
                 <br>
                 <hr>
-                <h5>Referencias</h5>
+                <h5>{{_('Referencias')}}</h5>
                 <p class="reference" id="ref4_p2">[1] M. H. Niemz, Laser-Tissue interactions: Fundamentals and Applications. Springer Science & Business Media, 2007.
                 </p>
 

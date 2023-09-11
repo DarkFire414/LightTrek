@@ -14,6 +14,7 @@
     --btn-bg-color: #D25380;
     --btn-font-color: white;
     --icon-color: black;
+    --icon-navbar-color: white;
     --input-font-color: black;
     --input-bg-color: #E08E6D;
 }
@@ -34,6 +35,7 @@
     --btn-bg-color: #3282B8;
     --btn-font-color: white;
     --icon-color: white;
+    --icon-navbar-color: white;
     --input-font-color: white;
     --input-bg-color: #BBE1FA;
 }
@@ -140,4 +142,7 @@ input {
 }
 i {
     color: var(--icon-color);
+}
+.navbar-icon {
+    color: var(--icon-navbar-color);
 }
