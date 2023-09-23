@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2023-09-10 22:36-0600\n"
+"POT-Creation-Date: 2023-09-23 04:10-0600\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -41,11 +41,11 @@ msgstr ""
 msgid "Simulación"
 msgstr ""
 
-#: templates/index.html:66 templates/index.html:676
+#: templates/index.html:66 templates/index.html:673
 msgid "Montecarlo aplicado"
 msgstr ""
 
-#: templates/index.html:67 templates/index.html:881
+#: templates/index.html:67 templates/index.html:878
 msgid "Ejecutar simulación"
 msgstr ""
 
@@ -189,7 +189,7 @@ msgid ""
 "simulación</a>."
 msgstr ""
 
-#: templates/index.html:205 templates/index.html:962 templates/index.html:984
+#: templates/index.html:205 templates/index.html:959 templates/index.html:981
 msgid "Resultados"
 msgstr ""
 
@@ -215,7 +215,7 @@ msgid ""
 "contiene los resultados, junto con los parámetros ingresados."
 msgstr ""
 
-#: templates/index.html:232 templates/index.html:893 templates/index.html:1014
+#: templates/index.html:232 templates/index.html:890 templates/index.html:1011
 msgid "Número de fotones"
 msgstr ""
 
@@ -257,8 +257,8 @@ msgstr ""
 msgid "Gráfico generado en Matlab."
 msgstr ""
 
-#: templates/index.html:302 templates/index.html:426 templates/index.html:650
-#: templates/index.html:867 templates/index.html:1062
+#: templates/index.html:302 templates/index.html:426 templates/index.html:647
+#: templates/index.html:864 templates/index.html:1059
 msgid "Referencias"
 msgstr ""
 
@@ -632,7 +632,7 @@ msgid ""
 "la longitud de onda."
 msgstr ""
 
-#: templates/index.html:616 templates/index.html:1018
+#: templates/index.html:616 templates/index.html:1015
 msgid "Índice de refracción"
 msgstr ""
 
@@ -652,16 +652,10 @@ msgid ""
 "                            Cuanto mayor sea el índice de refracción de "
 "un material para cierta longitud de onda, más lenta será la velocidad \n"
 "                            de la luz en ese material, y más se desviará "
-"la luz cuando pase de un medio a otro.\n"
-"                            <br><br><br>\n"
-"                            En el siguiente video se muestra una "
-"animación de terapia laser en la piel, una de las tantas aplicaciones que"
-" tiene\n"
-"                            el estudiar las propiedades ópticas de los "
-"materiales."
+"la luz cuando pase de un medio a otro."
 msgstr ""
 
-#: templates/index.html:639
+#: templates/index.html:636
 msgid ""
 "Refracción de la luz en la interfaz entre dos medios con diferentes "
 "índices de refracción (n2 > n1). Como la \n"
@@ -671,7 +665,7 @@ msgid ""
 "medio de índice mayor es cercano al vector normal."
 msgstr ""
 
-#: templates/index.html:679
+#: templates/index.html:676
 msgid ""
 "El método de Montecarlo es bastante poderoso al simular el comportamiento"
 " de partículas cuya dinámica puede modelarse mediante  \n"
@@ -688,13 +682,13 @@ msgid ""
 "otras aplicaciones."
 msgstr ""
 
-#: templates/index.html:693
+#: templates/index.html:690
 msgid ""
 "Simulación de Montecarlo de migración de fotones en un medio turbio, en "
 "este caso un cerebro humano. Imagen obtenida de:"
 msgstr ""
 
-#: templates/index.html:702
+#: templates/index.html:699
 msgid ""
 "La simulación consiste en lanzar fotones desde una fuente de luz a un "
 "medio semi infinito sin fronteras, es decir que es \n"
@@ -736,15 +730,15 @@ msgid ""
 "presentados como la fluencia relativa del material."
 msgstr ""
 
-#: templates/index.html:724
+#: templates/index.html:721
 msgid "Diagrama de flujo del algoritmo general del método de Montecarlo."
 msgstr ""
 
-#: templates/index.html:730
+#: templates/index.html:727
 msgid "Sistemas de coordenadas"
 msgstr ""
 
-#: templates/index.html:732
+#: templates/index.html:729
 msgid ""
 "Como se explicó anteriormente cada fotón se propaga dentro del medio, es "
 "esparcido o absorbido y durante este proceso una \n"
@@ -762,35 +756,35 @@ msgid ""
 "cilíndricas."
 msgstr ""
 
-#: templates/index.html:745
+#: templates/index.html:742
 msgid ""
 "Comparación de los distintos sistemas de coordenadas en 3 dimensiones. "
 "Imagen obtenida de"
 msgstr ""
 
-#: templates/index.html:752
+#: templates/index.html:749
 msgid "Lanzamiento de fotones"
 msgstr ""
 
-#: templates/index.html:754
+#: templates/index.html:751
 msgid "Se pueden lanzar fotones de tres tipos distintos de fuentes."
 msgstr ""
 
-#: templates/index.html:761 templates/index.html:783 templates/index.html:804
+#: templates/index.html:758 templates/index.html:780 templates/index.html:801
 msgid "Haz click para más información"
 msgstr ""
 
-#: templates/index.html:764 templates/index.html:770
+#: templates/index.html:761 templates/index.html:767
 msgid "Fuente colimada"
 msgstr ""
 
-#: templates/index.html:766
+#: templates/index.html:763
 msgid ""
 "Distribución de los fotones al utilizar una fuente plana colimada de "
 "radio infinito."
 msgstr ""
 
-#: templates/index.html:772
+#: templates/index.html:769
 msgid ""
 "El lanzar fotones colimados involucra el colocar la trayectoria de los "
 "fotones en una sola dirección \n"
@@ -802,17 +796,17 @@ msgid ""
 "inicia como (0,0,1)."
 msgstr ""
 
-#: templates/index.html:786 templates/index.html:792
+#: templates/index.html:783 templates/index.html:789
 msgid "Fuente isotrópica"
 msgstr ""
 
-#: templates/index.html:788
+#: templates/index.html:785
 msgid ""
 "Distribución de los fotones al utilizar una fuente puntual isotrópica "
 "colocada en el origen."
 msgstr ""
 
-#: templates/index.html:794
+#: templates/index.html:791
 msgid ""
 "El lanzar fotones de una fuente puntual isotrópica requiere de colocar "
 "esta fuente en un punto (x,y,z) ya sea dentro o fuera \n"
@@ -823,17 +817,17 @@ msgid ""
 "direcciones con la misma probabilidad."
 msgstr ""
 
-#: templates/index.html:807 templates/index.html:813
+#: templates/index.html:804 templates/index.html:810
 msgid "Haz de radio finito"
 msgstr ""
 
-#: templates/index.html:809
+#: templates/index.html:806
 msgid ""
 "Distribución de los fotones al utilizar una fuente plana colimada de "
 "diámetro finito."
 msgstr ""
 
-#: templates/index.html:815
+#: templates/index.html:812
 msgid ""
 "Cuando se considera lanzar un haz colimado de radio finito a, la posición"
 " del lanzamiento de los fotones debe variar de una \n"
@@ -841,11 +835,11 @@ msgid ""
 "distribución parcial uniforme de los fotones lanzados."
 msgstr ""
 
-#: templates/index.html:823
+#: templates/index.html:820
 msgid "Interacción del fotón con el medio"
 msgstr ""
 
-#: templates/index.html:829
+#: templates/index.html:826
 msgid ""
 "En cada paso de la simulación el fotón da un salto de una longitud "
 "determinada al muestrear la función de densidad de \n"
@@ -853,20 +847,20 @@ msgid ""
 "del paso s del movimiento."
 msgstr ""
 
-#: templates/index.html:833
+#: templates/index.html:830
 msgid ""
 "El fotón pierde una fracción de su peso inicial debido a la absorción el "
 "cual se acumula en contenedores \n"
 "                                (cartesianos, cilíndricos y esféricos)."
 msgstr ""
 
-#: templates/index.html:837
+#: templates/index.html:834
 msgid ""
 "El peso restante del fotón se esparce en una nueva trayectoria la cuál "
 "depende en gran medida de la anisotropía g del material."
 msgstr ""
 
-#: templates/index.html:840
+#: templates/index.html:837
 msgid ""
 "Si el peso del fotón toma un valor menor a un umbral (0.01 en este caso),"
 " la supervivencia del fotón se decide mediante un \n"
@@ -877,7 +871,7 @@ msgid ""
 "veces para este caso) y el fotón continúa propagándose."
 msgstr ""
 
-#: templates/index.html:845
+#: templates/index.html:842
 msgid ""
 "El proceso continúa hasta que el último fotón sea lanzado y por entonces "
 "se genera una gráfica y un archivo con los \n"
@@ -888,7 +882,7 @@ msgid ""
 "                                es la fuente de luz."
 msgstr ""
 
-#: templates/index.html:858
+#: templates/index.html:855
 msgid ""
 "Movimiento del fotón por la malla del tejido, en donde pierde una "
 "fracción de su peso W el cual se deposita en un \"bin\" \n"
@@ -896,59 +890,59 @@ msgid ""
 "de dirección."
 msgstr ""
 
-#: templates/index.html:887
+#: templates/index.html:884
 msgid "Características de la fuente luminosa"
 msgstr ""
 
-#: templates/index.html:897 templates/index.html:1019
+#: templates/index.html:894 templates/index.html:1016
 msgid "Tipo de fuente:"
 msgstr ""
 
-#: templates/index.html:899
+#: templates/index.html:896
 msgid "Elija un tipo de fuente"
 msgstr ""
 
-#: templates/index.html:900
+#: templates/index.html:897
 msgid "Puntual Isotrópica"
 msgstr ""
 
-#: templates/index.html:901
+#: templates/index.html:898
 msgid "Colimada"
 msgstr ""
 
-#: templates/index.html:902
+#: templates/index.html:899
 msgid "Haz finito (radio de 5 cm)"
 msgstr ""
 
-#: templates/index.html:907
+#: templates/index.html:904
 msgid "Propiedades ópticas del materia"
 msgstr ""
 
-#: templates/index.html:913 templates/index.html:1015
+#: templates/index.html:910 templates/index.html:1012
 msgid "Coef. de Absorción"
 msgstr ""
 
-#: templates/index.html:918 templates/index.html:1016
+#: templates/index.html:915 templates/index.html:1013
 msgid "Coef. de Esparcimiento"
 msgstr ""
 
-#: templates/index.html:925
+#: templates/index.html:922
 msgid "Coef. de Anisotropía g"
 msgstr ""
 
-#: templates/index.html:930
+#: templates/index.html:927
 msgid "Índice de refracción n"
 msgstr ""
 
-#: templates/index.html:934
+#: templates/index.html:931
 msgid "Iniciar"
 msgstr ""
 
-#: templates/index.html:954
+#: templates/index.html:951
 msgid "Mensaje"
 msgstr ""
 
-#: templates/index.html:975
+#: templates/index.html:972
 msgid ""
 "Representación conceptual de las interacciones generales entre la luz y "
 "el tejido,\n"
@@ -957,30 +951,30 @@ msgid ""
 "                                        otras."
 msgstr ""
 
-#: templates/index.html:995
+#: templates/index.html:992
 msgid "Valor máximo a mostrar (cm)"
 msgstr ""
 
-#: templates/index.html:999
+#: templates/index.html:996
 msgid ""
 "Modifica el límite superior en el eje horizontal para visualizar mejor "
 "los datos, <br> una vez que haya establecido un nuevo valor presione el "
 "botón ACTUALIZAR"
 msgstr ""
 
-#: templates/index.html:1005
+#: templates/index.html:1002
 msgid "Actualizar"
 msgstr ""
 
-#: templates/index.html:1012
+#: templates/index.html:1009
 msgid "Parámetros"
 msgstr ""
 
-#: templates/index.html:1017
+#: templates/index.html:1014
 msgid "Coef. de Anisotropía"
 msgstr ""
 
-#: templates/index.html:1029
+#: templates/index.html:1026
 msgid ""
 "Descarga los resultados de la simulación en un archivo .out, <br> este "
 "incluye además los paŕametros ingresados."
