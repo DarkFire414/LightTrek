@@ -11,7 +11,7 @@ app = Flask(__name__)
 app.secret_key = "spedapapr8siwrubls3itey8v8thob"
 
 # Se importa la librería a utilizar
-lib = ctypes.CDLL("/home/user_name/Python/RandomWalk/mc_sim/mc321_mod.so");
+lib = ctypes.CDLL("/home/joahan/Python/RandomWalk/mc_sim/mc321_mod.so");
 """
 Las funciones declaradas dentro del archivo .c ahora están disponibles 
 a través del objeto lib, mediante la notación del punto
