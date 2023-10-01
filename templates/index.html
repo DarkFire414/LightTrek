@@ -930,8 +930,8 @@
                             <div class="center">
                                 <button type="submit" class="btn">{{_('Iniciar')}}
                                 </button>
-
-                                <div hx-get="/progress" hx-trigger="every 1s"></div>
+                                
+                                <div hx-get="/progress" hx-trigger="every 10s"></div>
  
                             </div>
                         </form>
@@ -1086,6 +1086,40 @@
     <script>
         detectColorScheme();
     </script>
+
+<script>
+    function checkState() {
+        // Realiza una solicitud a /get_state
+        fetch('/get_sim_state')
+            .then(response => response.text())
+            .then(data => {
+                // Maneja la respuesta
+                const state = parseInt(data);
+                
+                if (state == 0){
+                    console.log("No hay simulación activa");
+                    window.history.pushState({}, "", "/");
+                }
+                if (state === 1) {
+                    // Muestra la barra de carga
+                    console.log("Simulación activa");
+                    //document.getElementById('loading-bar').style.display = 'block';
+                } else if (state === 2) {
+                    // Redirige a /res
+                    console.log("Resultados listos");
+                    window.location.href = '/res';
+                }
+            })
+            .catch(error => {
+                // Maneja errores si es necesario
+                console.error("Error al obtener el estado:", error);
+            });
+    }
+
+    // Inicia la verificación del estado al cargar la página y repite cada 2 segundos
+    checkState();
+    setInterval(checkState, 2000); // Realiza la siguiente solicitud cada 2 segundos
+</script>
     
     <script src="../static/js/prism.js"></script>
 </body>

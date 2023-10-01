@@ -1,5 +1,7 @@
-from flask import Flask, render_template, request, session, redirect
+from flask import Flask, render_template, request, session, redirect, url_for
 from flask_babel import Babel, gettext 
+
+import threading
 
 import ctypes # Librería requerida para el manejo de archivos .so
 from numpy.ctypeslib import ndpointer
@@ -36,6 +38,82 @@ lib.getFsph.restype = ndpointer(dtype=ctypes.c_double, shape=(2001,))
 lib.getFcypl.restype = ndpointer(dtype=ctypes.c_double, shape=(2001,))
 lib.getFcpla.restype = ndpointer(dtype=ctypes.c_double, shape=(2001,))
 
+global sim_parameters
+global r_lst, data
+def run_simulation_in_thread(Num_fotones, coef_abs, coef_esp, coef_anis, ind_ref, fuente, callback):
+	setOperation(1)
+	app.logger.error("Iniciando simulacion en hilo")
+	res = lib.initSim(int(Num_fotones), float(coef_abs), float(coef_esp), float(coef_anis), float(ind_ref), int(fuente))
+	try:
+		timestr = time.strftime("%Y%m%d-%H%M%S")
+		fileName = './static/mc321_' + timestr + '.out' 
+		#app.logger.warning(name.encode('utf-8'))
+		lib.saveToFile(ctypes.c_char_p(fileName.encode('utf-8')))
+	except:
+		setOperation(0)
+		return render_template("/index.html", msg = 'Error: No se ha podido guardar el archivo de simulación!')
+
+	r = lib.getr()
+	fsph = lib.getFsph()
+	fcypl = lib.getFcypl()
+	fcpla = lib.getFcpla()
+
+	# Se requiere pasar a un formato de lista
+	global r_lst
+	r_lst = r[:2001]
+	fsph_lst = fsph[:2001]
+	fcypl_lst = fcypl[:2001]
+	fcpla_lst = fcpla[:2001]
+
+	app.logger.warning('Simulacion terminada')
+	#app.logger.warning(res1[0])
+	#app.logger.warning(res2[0])
+	global data
+	data = [{
+			'data': fsph_lst.tolist(),
+			'label': 'Depósito esférico'
+		},{
+			'data': fcypl_lst.tolist(),
+			'label': 'Depósito cilíndrico'
+		},{
+			'data': fcpla_lst.tolist(),
+			'label': 'Depósito cartesiano'
+		}
+	]
+
+	global sim_parameters
+	sim_parameters = []
+	sim_parameters.append(Num_fotones)
+	sim_parameters.append(coef_abs)
+	sim_parameters.append(coef_esp)
+	sim_parameters.append(coef_anis)
+	sim_parameters.append(ind_ref)
+	sim_parameters.append(fuente)
+	sim_parameters.append(fileName)
+	time.sleep(5)
+
+	setOperation(2)
+
+@app.route('/get_sim_state')
+def get_sim_state():
+	return str(getOperation())
+
+@app.route('/res')
+def finish_sim():
+	app.logger.error("Simulacion en hilo terminada")
+	sourceType = ['Puntual Isotrópica', 'Colimada', 'Haz infinito (radio 5 cm)']
+	
+	setOperation(0)
+
+	global sim_parameters
+	global r_lst
+	global data
+	return render_template("/index.html", x = r_lst.tolist(), y = data,
+			 					 msg = "Simulación terminada", fileName = sim_parameters[6],
+								 Num_fotones = sim_parameters[0], coef_abs = sim_parameters[1],
+								 coef_esp = sim_parameters[2], coef_anis = sim_parameters[3],
+								 ind_ref = sim_parameters[4], fuente = sourceType[int(sim_parameters[5])-1])
+
 """
 Permite a Flask Babel obtener el lenguaje elegido por el usuario,
 este se guarda en una cookie llamada lang.
@@ -68,18 +146,17 @@ def change_lang_es():
 
 """
 Esta variable indica si se está ejecutando una simulación
+0: No hay simulación en curso
 1: La simulación está en curso
-0: La simulación ha terminado
+2: La simulación ha terminado
 """
 operation = 0
 def setOperation(val):
 	global operation
-	if (val):
-		operation = 1
-	else:
-		operation = 0
+	operation = val
 
 def getOperation():
+	global operation
 	return operation
 
 """
@@ -98,9 +175,10 @@ Función principal
 """
 @app.route('/', methods=["GET", "POST"])
 def index():
+	setOperation(0)
 	if (request.method == 'POST'):
 		setOperation(1)
-		sourceType = ['Puntual Isotrópica', 'Colimada', 'Haz infinito (radio 5 cm)']
+		
 		try:
 			Num_fotones = request.form['Num_fotones']
 			#app.logger.warning('Num_fotones: ' + str(Num_fotones))
@@ -119,53 +197,17 @@ def index():
 			return render_template("/index.html", msg = 'Error: Ha ocurrido un problema al recibir el formulario!')
 		#res = lib.initSim(100000, 35, 450, 0.8, 1.33, 1)
 		try:
-			res = lib.initSim(int(Num_fotones), float(coef_abs), float(coef_esp), float(coef_anis), float(ind_ref), int(fuente))
+			#res = lib.initSim(int(Num_fotones), float(coef_abs), float(coef_esp), float(coef_anis), float(ind_ref), int(fuente))
 			#res = lib.initSim(100000, 12.2, 173.5, 0.93, 1.5, 1)
+			app.logger.error("Inicio")
+			simulation_thread = threading.Thread(target=run_simulation_in_thread, args=(Num_fotones, coef_abs, coef_esp, coef_anis, ind_ref, fuente, finish_sim,))
+			simulation_thread.start()
 		except:
 			setOperation(0)
 			return render_template("/index.html", msg = 'Error: No se ha podido ejecutar la simulación!')
-		try:
-			timestr = time.strftime("%Y%m%d-%H%M%S")
-			fileName = './static/mc321_' + timestr + '.out' 
-			#app.logger.warning(name.encode('utf-8'))
-			lib.saveToFile(ctypes.c_char_p(fileName.encode('utf-8')))
-		except:
-			setOperation(0)
-			return render_template("/index.html", msg = 'Error: No se ha podido guardar el archivo de simulación!')
-
-		r = lib.getr()
-		fsph = lib.getFsph()
-		fcypl = lib.getFcypl()
-		fcpla = lib.getFcpla()
-
-		# Se requiere pasar a un formato de lista
-		r_lst = r[:2001]
-		fsph_lst = fsph[:2001]
-		fcypl_lst = fcypl[:2001]
-		fcpla_lst = fcpla[:2001]
-
-		app.logger.warning('Simulacion terminada')
-		#app.logger.warning(res1[0])
-		#app.logger.warning(res2[0])
-
-		data = [{
-				'data': fsph_lst.tolist(),
-				'label': 'Depósito esférico'
-			},{
-				'data': fcypl_lst.tolist(),
-				'label': 'Depósito cilíndrico'
-			},{
-				'data': fcpla_lst.tolist(),
-				'label': 'Depósito cartesiano'
-			}
-		]
-
-		setOperation(0)
-		return render_template("/index.html", x = r_lst.tolist(), y = data,
-			 					 msg = "Simulación terminada", fileName = fileName,
-								 Num_fotones = Num_fotones, coef_abs = coef_abs,
-								 coef_esp = coef_esp, coef_anis = coef_anis,
-								 ind_ref = ind_ref, fuente = sourceType[int(fuente)-1])
+		
+		return render_template("/index.html")
+		
 	else:
 		return render_template("/index.html")
 
