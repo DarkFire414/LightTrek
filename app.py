@@ -1,5 +1,5 @@
-from flask import Flask, render_template, request, session, redirect, url_for
-from flask_babel import Babel, gettext 
+from flask import Flask, render_template, request, session, redirect
+from flask_babel import Babel
 
 import threading
 
@@ -38,9 +38,27 @@ lib.getFsph.restype = ndpointer(dtype=ctypes.c_double, shape=(2001,))
 lib.getFcypl.restype = ndpointer(dtype=ctypes.c_double, shape=(2001,))
 lib.getFcpla.restype = ndpointer(dtype=ctypes.c_double, shape=(2001,))
 
+"""
+Variables globales que sirven para compartir los resultados de la
+simulación entre el el hilo creado y el programa principal.
+"""
 global sim_parameters
 global r_lst, data
-def run_simulation_in_thread(Num_fotones, coef_abs, coef_esp, coef_anis, ind_ref, fuente, callback):
+
+def run_simulation_in_thread(Num_fotones, coef_abs, coef_esp, coef_anis, ind_ref, fuente):
+	"""
+	Ejecuta una simulación en un hilo
+
+	Args:
+		Num_fotones (int): 	Npumero de fotones
+		coef_abs (float):	Coeficiente de absorción
+		coef_esp (float):	Coefieicnte de esparcimiento
+		coef_anis (float):	Coeficiente de anisotropía
+		fuente (int):		Tipo de fuente (0, 1, 2)
+	
+	Returns:
+		None
+	"""
 	setOperation(1)
 	app.logger.error("Iniciando simulacion en hilo")
 	res = lib.initSim(int(Num_fotones), float(coef_abs), float(coef_esp), float(coef_anis), float(ind_ref), int(fuente))
@@ -69,6 +87,7 @@ def run_simulation_in_thread(Num_fotones, coef_abs, coef_esp, coef_anis, ind_ref
 	app.logger.warning('Simulacion terminada')
 	app.logger.warning(r_lst[0])
 	app.logger.warning(fsph_lst[0])
+
 	global data
 	data = [{
 			'data': fsph_lst.tolist(),
@@ -91,19 +110,51 @@ def run_simulation_in_thread(Num_fotones, coef_abs, coef_esp, coef_anis, ind_ref
 	sim_parameters.append(ind_ref)
 	sim_parameters.append(fuente)
 	sim_parameters.append(fileName)
-	time.sleep(5)
 
 	setOperation(2)
 
+"""
+Esta variable indica si se está ejecutando una simulación
+0: No hay simulación en curso
+1: La simulación está en curso
+2: La simulación ha terminado
+"""
+operation = 0
+def setOperation(val):
+	global operation
+	operation = val
+
+def getOperation():
+	global operation
+	return operation
+
 @app.route('/get_sim_state')
 def get_sim_state():
+	"""
+	Retorna el estado actual de la simulación
+
+	Args:
+		None
+	
+	Returns:
+		Sim_state (int): Estado de la simulación (0, 1, 2)
+	"""
 	return str(getOperation())
 
 @app.route('/res')
 def finish_sim():
+	"""
+	Actualiza la página index.html con los resultados de la
+	simulación.
+	"""
 	app.logger.error("Simulacion en hilo terminada")
 	sourceType = ['Puntual Isotrópica', 'Colimada', 'Haz infinito (radio 5 cm)']
 	
+	if (getOperation() == 0 or getOperation == 1):
+		# No hay simuación o está en curso
+		# Sin resultados para mostrar
+		return redirect('/')
+
 	setOperation(0)
 
 	global sim_parameters
@@ -115,13 +166,13 @@ def finish_sim():
 								 coef_esp = sim_parameters[2], coef_anis = sim_parameters[3],
 								 ind_ref = sim_parameters[4], fuente = sourceType[int(sim_parameters[5])-1])
 
-"""
-Permite a Flask Babel obtener el lenguaje elegido por el usuario,
-este se guarda en una cookie llamada lang.
-	en: inglés
-	es: español
-"""
 def get_locale():
+	"""
+	Permite a Flask Babel obtener el lenguaje elegido por el usuario,
+	este se guarda en una cookie llamada lang.
+		en: inglés
+		es: español
+	"""
 	if session.get('lang') == 'en':
 		return 'en'
 	else:
@@ -146,40 +197,11 @@ def change_lang_es():
 	return redirect('/')
 
 """
-Esta variable indica si se está ejecutando una simulación
-0: No hay simulación en curso
-1: La simulación está en curso
-2: La simulación ha terminado
-"""
-operation = 0
-def setOperation(val):
-	global operation
-	operation = val
-
-def getOperation():
-	global operation
-	return operation
-
-"""
-Devuelve un elemento tipo loader em caso de que 
-haya una simulación en curso
-"""
-@app.route('/progress')
-def progress_html():
-	if getOperation():
-		return '<div id="progressBar" class="progress"> <div class="indeterminate"></div> </div>'
-	else:
-		return ''
-
-"""
 Función principal
 """
 @app.route('/', methods=["GET", "POST"])
 def index():
-	setOperation(0)
 	if (request.method == 'POST'):
-		setOperation(1)
-		
 		try:
 			Num_fotones = request.form['Num_fotones']
 			#app.logger.warning('Num_fotones: ' + str(Num_fotones))
@@ -194,14 +216,13 @@ def index():
 			fuente = request.form['fuente']
 			#app.logger.warning('fuente: ' + str(fuente))
 		except:
-			setOperation(0)
 			return render_template("/index.html", msg = 'Error: Ha ocurrido un problema al recibir el formulario!')
 		#res = lib.initSim(100000, 35, 450, 0.8, 1.33, 1)
 		try:
 			#res = lib.initSim(int(Num_fotones), float(coef_abs), float(coef_esp), float(coef_anis), float(ind_ref), int(fuente))
 			#res = lib.initSim(100000, 12.2, 173.5, 0.93, 1.5, 1)
 			app.logger.error("Inicio")
-			simulation_thread = threading.Thread(target=run_simulation_in_thread, args=(Num_fotones, coef_abs, coef_esp, coef_anis, ind_ref, fuente, finish_sim,))
+			simulation_thread = threading.Thread(target=run_simulation_in_thread, args=(Num_fotones, coef_abs, coef_esp, coef_anis, ind_ref, fuente,))
 			simulation_thread.start()
 		except:
 			setOperation(0)

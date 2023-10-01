@@ -127,6 +127,7 @@ double* getFcpla() {
 
 void saveToFile(char* name) {
     	/* Abrir el archivo para escritura */
+	namf = (char*)malloc(40);
     namf = name;
 	target = fopen(namf, "w");
 
