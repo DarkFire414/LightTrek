@@ -44,6 +44,7 @@ def run_simulation_in_thread(Num_fotones, coef_abs, coef_esp, coef_anis, ind_ref
 	setOperation(1)
 	app.logger.error("Iniciando simulacion en hilo")
 	res = lib.initSim(int(Num_fotones), float(coef_abs), float(coef_esp), float(coef_anis), float(ind_ref), int(fuente))
+	
 	try:
 		timestr = time.strftime("%Y%m%d-%H%M%S")
 		fileName = './static/mc321_' + timestr + '.out' 
@@ -66,8 +67,8 @@ def run_simulation_in_thread(Num_fotones, coef_abs, coef_esp, coef_anis, ind_ref
 	fcpla_lst = fcpla[:2001]
 
 	app.logger.warning('Simulacion terminada')
-	#app.logger.warning(res1[0])
-	#app.logger.warning(res2[0])
+	app.logger.warning(r_lst[0])
+	app.logger.warning(fsph_lst[0])
 	global data
 	data = [{
 			'data': fsph_lst.tolist(),
