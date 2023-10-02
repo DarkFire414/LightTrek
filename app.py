@@ -13,7 +13,7 @@ app = Flask(__name__)
 app.secret_key = "spedapapr8siwrubls3itey8v8thob"
 
 # Se importa la librería a utilizar
-lib = ctypes.CDLL("/home/joahan/Git/LightTrek/files/mc321_mod.so");
+lib = ctypes.CDLL("/home/DarkFire414/Git/LightTrek/files/mc321_mod.so");
 """
 Las funciones declaradas dentro del archivo .c ahora están disponibles 
 a través del objeto lib, mediante la notación del punto
@@ -60,14 +60,16 @@ def run_simulation_in_thread(Num_fotones, coef_abs, coef_esp, coef_anis, ind_ref
 		None
 	"""
 	setOperation(1)
-	app.logger.error("Iniciando simulacion en hilo")
+	#app.logger.error("Iniciando simulacion en hilo")
 	res = lib.initSim(int(Num_fotones), float(coef_abs), float(coef_esp), float(coef_anis), float(ind_ref), int(fuente))
 	
 	try:
-		timestr = time.strftime("%Y%m%d-%H%M%S")
-		fileName = './static/mc321_' + timestr + '.out' 
+		timestr = time.strftime("%Y%M%D-%H%M%S")
+		supPath = '/home/DarkFire414/Git/LightTrek/'
+		staticPath = 'static/mc321_' + timestr.replace('/', '_') + '.out'
+		path = supPath + staticPath
 		#app.logger.warning(name.encode('utf-8'))
-		lib.saveToFile(ctypes.c_char_p(fileName.encode('utf-8')))
+		lib.saveToFile(ctypes.c_char_p(path.encode('utf-8')))
 	except:
 		setOperation(0)
 		return render_template("/index.html", msg = 'Error: No se ha podido guardar el archivo de simulación!')
@@ -84,9 +86,9 @@ def run_simulation_in_thread(Num_fotones, coef_abs, coef_esp, coef_anis, ind_ref
 	fcypl_lst = fcypl[:2001]
 	fcpla_lst = fcpla[:2001]
 
-	app.logger.warning('Simulacion terminada')
-	app.logger.warning(r_lst[0])
-	app.logger.warning(fsph_lst[0])
+	#app.logger.warning('Simulacion terminada')
+	#app.logger.warning(r_lst[0])
+	#app.logger.warning(fsph_lst[0])
 
 	global data
 	data = [{
@@ -109,7 +111,7 @@ def run_simulation_in_thread(Num_fotones, coef_abs, coef_esp, coef_anis, ind_ref
 	sim_parameters.append(coef_anis)
 	sim_parameters.append(ind_ref)
 	sim_parameters.append(fuente)
-	sim_parameters.append(fileName)
+	sim_parameters.append(staticPath)
 
 	setOperation(2)
 
@@ -147,7 +149,7 @@ def finish_sim():
 	Actualiza la página index.html con los resultados de la
 	simulación.
 	"""
-	app.logger.error("Simulacion en hilo terminada")
+	#app.logger.error("Simulacion en hilo terminada")
 	sourceType = ['Puntual Isotrópica', 'Colimada', 'Haz infinito (radio 5 cm)']
 	
 	if (getOperation() == 0 or getOperation == 1):
@@ -221,7 +223,7 @@ def index():
 		try:
 			#res = lib.initSim(int(Num_fotones), float(coef_abs), float(coef_esp), float(coef_anis), float(ind_ref), int(fuente))
 			#res = lib.initSim(100000, 12.2, 173.5, 0.93, 1.5, 1)
-			app.logger.error("Inicio")
+			#app.logger.error("Inicio")
 			simulation_thread = threading.Thread(target=run_simulation_in_thread, args=(Num_fotones, coef_abs, coef_esp, coef_anis, ind_ref, fuente,))
 			simulation_thread.start()
 		except:
